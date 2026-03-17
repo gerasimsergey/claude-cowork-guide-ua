@@ -7,6 +7,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+- **Workflow: PPTX reusable template** (`workflows/presentation-slides.md` + `.en.md`): new variation "Reusable template from existing file" — 3-step workflow (reference file → generate template → produce final presentation), copy-paste prompts with `/pptx` skill, link to `/skill-creator` for automation. Inspired by community feedback (Arnaud Gaches) on real Cowork usage with company PPTX files.
+- **Capabilities cross-reference** (`guide/02-capabilities.fr.md`): added pointer to PPTX template workflow in the "PowerPoint (.pptx)" matrix row and a contextual note in the "Excel & PowerPoint Integrations" section.
+
+## [1.6.1] - 2026-03-17
+
+### Added
+- **Visuels interactifs** (bêta, 12 mars 2026) : Claude génère désormais des graphiques, diagrammes et visualisations interactifs directement dans le chat (HTML/CSS/JS/Chart.js). Disponible sur tous les plans. Inclut : sliders de calcul, arbres de décision cliquables, prévisions météo, fiches recettes formatées, inputs à choix multiples. Météo/recettes desktop uniquement (pas iOS).
+- **Promotion usage mars 2026** (13-27 mars 2026) : limites d'utilisation doublées hors heures de pointe (weekdays en dehors de 14h-20h heure FR / 8AM-2PM ET, weekends toute la journée). Tous les plans sauf Enterprise. Aucune activation manuelle requise.
+
+### Changed
+- **Add-ins Excel × PowerPoint** (11 mars 2026) : partage du contexte de conversation complet entre les deux applications. Ajout des Skills avec slash commands dans les add-ins (ex. `/quarterly-update` respectant le template entreprise).
+
 ## [1.6.0] - 2026-03-04
 
 ### Added

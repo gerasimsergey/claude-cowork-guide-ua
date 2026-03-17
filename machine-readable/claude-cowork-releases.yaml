@@ -2,8 +2,8 @@
 # Source: CHANGELOG.md + Anthropic product announcements
 # Purpose: Track Cowork documentation + product releases
 
-latest: "1.6.0"
-updated: "2026-03-04"
+latest: "1.6.1"
+updated: "2026-03-17"
 
 # ════════════════════════════════════════════════════════════════
 # RELEASES (newest first, condensed highlights only)
@@ -13,6 +13,14 @@ releases:
   # ─────────────────────────────────────────────────────────────
   # 1.6.x Series (March 2026)
   # ─────────────────────────────────────────────────────────────
+
+  - version: "1.6.1"
+    date: "2026-03-17"
+    highlights:
+      - "⭐ Visuels interactifs (bêta, 12 mars) : graphiques, diagrammes et visualisations HTML/JS directement dans le chat — sliders, arbres de décision, météo, recettes, inputs à choix multiples (desktop)"
+      - "Add-ins Excel × PowerPoint (11 mars) : partage du contexte complet entre les deux apps + Skills avec slash commands (ex. /quarterly-update)"
+      - "Promotion usage mars 2026 (13-27 mars) : limites doublées hors heures de pointe pour tous les plans sauf Enterprise"
+    breaking: []
 
   - version: "1.6.0"
     date: "2026-03-04"
