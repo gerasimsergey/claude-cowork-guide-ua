@@ -1,66 +1,74 @@
 # cowork-reference.yaml
-# Quick lookup for Claude Cowork - ~1.5K tokens target
-# Source: cowork/ documentation
+# Quick lookup for Claude Cowork - ~2K tokens target
+# Source: guide/ documentation
 # Purpose: Condensed index for LLMs to quickly answer user questions about Cowork
 
-version: "1.5.0"
-updated: "2026-02-28"
+version: "1.6.1"
+updated: "2026-04-01"
 status: "research-preview"
 
 # ════════════════════════════════════════════════════════════════
 # CORE DOCUMENTATION - File paths for detailed info
 # ════════════════════════════════════════════════════════════════
 docs:
-  hub: "cowork/README.md"
-  overview: "cowork/guide/00-overview.md"
-  getting_started: "cowork/guide/01-getting-started.md"
-  capabilities: "cowork/guide/02-capabilities.md"
-  security: "cowork/guide/03-security.md"
-  troubleshooting: "cowork/guide/04-troubleshooting.md"
-  cheatsheet: "cowork/reference/cheatsheet.md"
-  faq: "cowork/reference/faq.md"
-  comparison: "cowork/reference/comparison.md"
-  glossary: "cowork/reference/glossary.md"
+  hub: "README.md"
+  overview: "guide/00-overview.md"
+  getting_started: "guide/01-getting-started.md"
+  capabilities: "guide/02-capabilities.md"
+  security: "guide/03-security.md"
+  troubleshooting: "guide/04-troubleshooting.md"
+  cheatsheet: "reference/cheatsheet.md"
+  faq: "reference/faq.md"
+  comparison: "reference/comparison.md"
+  glossary: "reference/glossary.md"
 
 # ════════════════════════════════════════════════════════════════
-# PROMPTS LIBRARY (67 ready-to-use)
+# PROMPTS LIBRARY (70 ready-to-use)
 # ════════════════════════════════════════════════════════════════
 prompts:
-  file_ops: "cowork/prompts/file-ops.md"  # 20 prompts
-  document_creation: "cowork/prompts/document-creation.md"  # 15 prompts
-  data_extraction: "cowork/prompts/data-extraction.md"  # 15 prompts
-  research: "cowork/prompts/research.md"  # 17 prompts
+  file_ops: "prompts/file-ops.md"  # 20 prompts
+  document_creation: "prompts/document-creation.md"  # 15 prompts
+  data_extraction: "prompts/data-extraction.md"  # 15 prompts
+  research: "prompts/research.md"  # 17 prompts
+  # FR versions mirror same structure with .fr.md suffix
 
 # ════════════════════════════════════════════════════════════════
-# WORKFLOWS (24 step-by-step guides)
+# WORKFLOWS (28 step-by-step guides)
 # ════════════════════════════════════════════════════════════════
 workflows:
-  client_followup_tracker: "cowork/workflows/client-followup-tracker.md"
-  competitor_analysis: "cowork/workflows/competitor-analysis.md"
-  compliance_checklist: "cowork/workflows/compliance-checklist.md"
-  email_templates: "cowork/workflows/email-templates.md"
-  expense_tracking: "cowork/workflows/expense-tracking.md"
-  file_organization: "cowork/workflows/file-organization.md"
-  financial_model_validation: "cowork/workflows/financial-model-validation.md"
-  inventory_tracking: "cowork/workflows/inventory-tracking.md"
-  invoice_generation: "cowork/workflows/invoice-generation.md"
-  knowledge_transfer: "cowork/workflows/knowledge-transfer.md"
-  meeting_prep: "cowork/workflows/meeting-prep.md"
-  newsletter_creation: "cowork/workflows/newsletter-creation.md"
-  payment_reminders: "cowork/workflows/payment-reminders.md"
-  presentation_slides: "cowork/workflows/presentation-slides.md"
-  price_comparison: "cowork/workflows/price-comparison.md"
-  project_planning: "cowork/workflows/project-planning.md"
-  prospect_research: "cowork/workflows/prospect-research.md"
-  quality_checklist: "cowork/workflows/quality-checklist.md"
-  quote_creation: "cowork/workflows/quote-creation.md"
-  quote_to_invoice: "cowork/workflows/quote-to-invoice.md"
-  review_response: "cowork/workflows/review-response.md"
-  social_media_posts: "cowork/workflows/social-media-posts.md"
-  supplier_order: "cowork/workflows/supplier-order.md"
-  website_audit: "cowork/workflows/website-audit.md"
-  work_log: "cowork/workflows/work-log.md"
-  workforce_planning: "cowork/workflows/workforce-planning.md"
+  # Administrative (6)
+  client_followup_tracker: "workflows/client-followup-tracker.md"
+  compliance_checklist: "workflows/compliance-checklist.md"
+  invoice_generation: "workflows/invoice-generation.md"
+  payment_reminders: "workflows/payment-reminders.md"
+  price_comparison: "workflows/price-comparison.md"
+  quote_to_invoice: "workflows/quote-to-invoice.md"
+  # Sales & Marketing (5)
+  competitor_analysis: "workflows/competitor-analysis.md"
+  newsletter_creation: "workflows/newsletter-creation.md"
+  presentation_slides: "workflows/presentation-slides.md"
+  prospect_research: "workflows/prospect-research.md"
+  quote_creation: "workflows/quote-creation.md"
+  # Operations (5)
+  financial_model_validation: "workflows/financial-model-validation.md"
+  inventory_tracking: "workflows/inventory-tracking.md"
+  project_planning: "workflows/project-planning.md"
+  quality_checklist: "workflows/quality-checklist.md"
+  supplier_order: "workflows/supplier-order.md"
+  # Communication (6)
+  email_templates: "workflows/email-templates.md"
+  knowledge_transfer: "workflows/knowledge-transfer.md"
+  review_response: "workflows/review-response.md"
+  social_media_posts: "workflows/social-media-posts.md"
+  website_audit: "workflows/website-audit.md"
+  workforce_planning: "workflows/workforce-planning.md"
+  # Organization (6)
+  expense_tracking: "workflows/expense-tracking.md"
+  file_organization: "workflows/file-organization.md"
+  meeting_prep: "workflows/meeting-prep.md"
+  memory_setup: "workflows/memory-setup.md"
+  scheduled_automation: "workflows/scheduled-automation.md"
+  work_log: "workflows/work-log.md"
 
 # ════════════════════════════════════════════════════════════════
 # QUICK REFERENCE - Essential facts
@@ -91,10 +99,11 @@ capabilities:
     - "Agent Teams (research preview - multi-agent coordination)"
     - "Context compaction (beta - longer sessions)"
     - "Direct Excel and PowerPoint integrations"
+    - "Desktop Commander (cross-session memory + advanced file ops)"
   cannot_do:
     - "Execute code or scripts"
-    - "Make API calls"
-    - "Access cloud storage directly (except via plugins)"
+    - "Make API calls (except via plugins)"
+    - "Access cloud storage directly (except Google Drive plugin)"
     - "Process audio/video"
     - "Work with VPN active"
     - "Run on Linux"
@@ -113,17 +122,9 @@ extensions:
       - "Risk and compliance issue identification"
       - "NDA and agreement triage"
       - "Regulatory compliance tracking"
-    use_cases:
-      - "Automated contract verification before signing"
-      - "Detection of problematic clauses in vendor agreements"
-      - "Compliance checklist generation for sector regulations"
-      - "Invoice and agreement term cross-checking"
     disclaimer: "Does NOT provide legal advice - review by qualified legal professional required"
     model_support: "Opus 4.6 achieved 90.2% on BigLaw Bench (Feb 2026)"
 
-# ════════════════════════════════════════════════════════════════
-# PLUGINS (11 official, announced Jan 30, 2026)
-# ════════════════════════════════════════════════════════════════
 plugins:
   announced: "2026-01-30"
   count: 11
@@ -227,28 +228,18 @@ open_source:
       focus: "Desktop app with UI"
       ease_of_use: "User-friendly (GUI)"
       security: "Asks permission per action"
-      stars: "559 (Jan 2026)"
       best_for: "Non-technical users who need GUI"
     langchain_openwork:
       url: "https://github.com/langchain-ai/openwork"
       focus: "CLI tool"
       ease_of_use: "Requires terminal knowledge"
       security: "Full file access"
-      stars: "236 (Jan 2026)"
       best_for: "Developers wanting quick setup (npx openwork)"
-    composio_open_claude_cowork:
-      url: "https://github.com/ComposioHQ/open-claude-cowork"
-      focus: "500+ integrations"
-      ease_of_use: "Desktop app, moderate"
-      security: "Full file access"
-      stars: "123 (Jan 2026)"
-      best_for: "Users needing specific tool integrations"
     kuse_cowork:
       url: "https://github.com/kuse-ai/kuse_cowork"
       focus: "Offline/privacy"
       ease_of_use: "Requires Docker setup"
       security: "Sandboxed (Docker container)"
-      stars: "~50 (Jan 2026)"
       best_for: "Developers prioritizing security/isolation"
   recommendations:
     non_technical: "Only different-ai/openwork (GUI interface)"
@@ -283,7 +274,7 @@ limitations:
   workflow:
     - "Pro tier exhausts in ~1-1.5h intensive use"
     - "Usage resets every 5 hours (not daily)"
-    - "No cross-session memory (context compaction helps within sessions)"
+    - "No cross-session memory (Desktop Commander + memory-setup workflow solves this)"
     - "Connector reliability inconsistent"
 
 # ════════════════════════════════════════════════════════════════
@@ -292,15 +283,16 @@ limitations:
 decide:
   use_cowork_when:
     - "Need to organize/rename files"
-    - "Create Office documents"
+    - "Create Office documents (Word, Excel, PowerPoint)"
     - "Extract data from images/receipts"
     - "Compile research → documents"
     - "Batch file operations"
     - "Browser automation tasks"
+    - "Recurring scheduled tasks"
   use_alternative_when:
     - "Need code execution → Claude Code"
     - "Need best OCR → Microsoft Copilot"
-    - "Need 1M+ context → Gemini Advanced"
+    - "Need 1M+ context native → Gemini Advanced"
     - "Privacy critical → Apple Intelligence"
     - "On Linux → Copilot or ChatGPT"
     - "VPN required → Claude Code"
