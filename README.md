@@ -33,6 +33,16 @@
 > Complete guide to Claude's desktop assistant for knowledge workers and small businesses.
 > Invoices, quotes, follow-ups, prospecting — automated without coding.
 
+<p align="center">
+  <a href="https://starmapper.bruniaux.com/FlorianBruniaux/claude-cowork-guide">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://starmapper.bruniaux.com/api/map-image/FlorianBruniaux/claude-cowork-guide?theme=dark" />
+      <source media="(prefers-color-scheme: light)" srcset="https://starmapper.bruniaux.com/api/map-image/FlorianBruniaux/claude-cowork-guide?theme=light" />
+      <img alt="StarMapper — see who stars this repo on a world map" src="https://starmapper.bruniaux.com/api/map-image/FlorianBruniaux/claude-cowork-guide" />
+    </picture>
+  </a>
+</p>
+
 ---
 
 ## ⚡ Quick Start
