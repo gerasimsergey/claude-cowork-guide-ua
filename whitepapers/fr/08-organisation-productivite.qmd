@@ -1,0 +1,323 @@
+---
+title: "Organisation et Productivité"
+subtitle: "Structures, systèmes et automatisations pour récupérer 5h par semaine"
+author: "Florian BRUNIAUX"
+date: 2026-04-09
+date-format: "MMMM YYYY"
+version: "1.6.1"
+wp-version: "1.0.0"
+series: "Claude Cowork Guide"
+wp-number: "08"
+format:
+  whitepaper-typst:
+    toc: true
+    toc-depth: 2
+    section-numbering: "1.1"
+lang: fr
+filters:
+  - fix-lists.lua
+---
+
+::: {.callout-tip title="Pour qui ce whitepaper ?"}
+**Audience principale** : Dirigeants et équipes TPE/PME qui veulent récupérer du temps sur leur organisation quotidienne
+
+**Prérequis** : Utiliser Cowork depuis 2 à 3 semaines
+
+**Temps de lecture** : 16 min
+
+**Ce que vous allez retenir** :
+
+- Un système d'organisation complet adapté à Cowork
+- Les automatisations récurrentes les plus rentables (quotidien, hebdo, mensuel)
+- Comment pallier l'absence de mémoire entre les sessions
+- Comment impliquer son équipe sans la former pendant des semaines
+:::
+
+> **En 5 lignes :** L'organisation n'est pas une contrainte, c'est un multiplicateur. La même tâche faite dans un contexte désorganisé prend 3 fois plus de temps. Cowork combiné à une structure claire ne fait pas que vous faire gagner du temps sur une tâche, il vous fait gagner du temps sur toutes les tâches. Ce whitepaper donne le système complet : structure de workspace, automatisations par fréquence, mémoire cross-session, et kit de délégation à l'équipe.
+
+# Un système, pas des astuces
+
+## Pourquoi les "astuces productivité" ne marchent pas
+
+La majorité des guides productivité donnent des astuces isolées. Utilise la technique Pomodoro. Traite tes emails deux fois par jour. Fais une to-do liste la veille.
+
+Ces astuces peuvent fonctionner individuellement. Ce qu'elles ne font pas : s'adapter à la réalité d'un dirigeant de TPE qui change de contexte toutes les 20 minutes, gère des urgences non planifiées et travaille souvent seul sans filet.
+
+Un système est différent. Il tient même quand tu es fatigué, même quand une urgence arrive, même quand tu n'as pas envie. Il est simple, documenté, et transférable.
+
+## Le principe de base
+
+Avant Cowork, l'organisation demandait de la discipline personnelle constante. Avec Cowork, elle peut être partiellement automatisée. La discipline est remplacée par des déclencheurs et des workflows prédéfinis.
+
+Exemple : au lieu de "je me rappelle de faire mon rapport hebdomadaire chaque vendredi", le déclencheur est "chaque vendredi, j'ouvre Cowork et je lance le prompt de rapport hebdo". La discipline se réduit à lancer le prompt, pas à rédiger le rapport.
+
+## La structure de workspace recommandée
+
+```
+~/Cowork-Workspace/
+├── input/
+│   ├── inbox/          ← tout ce qui entre (à traiter)
+│   ├── temp/           ← traitement en cours
+│   └── archives/       ← traité, classé par date
+├── output/
+│   ├── 2026/
+│   │   ├── clients/
+│   │   ├── fournisseurs/
+│   │   └── admin/
+│   └── templates/      ← modèles réutilisables
+├── prompts/
+│   └── bibliotheque.md ← prompts validés de l'équipe
+└── CONTEXT.md          ← mémoire cross-session (voir section 3)
+```
+
+Cette structure fait deux choses : elle évite de chercher des fichiers (tout a une place prédéfinie) et elle rend les prompts Cowork plus prévisibles (les chemins ne changent pas).
+
+---
+
+# Les automatisations par fréquence
+
+## Quotidien (5 à 15 minutes)
+
+Les automatisations quotidiennes sont les plus légères. Elles évitent l'accumulation qui devient une tâche de fond pesante.
+
+**Tri de l'inbox**
+
+Chaque matin, déplacer les fichiers reçus la veille dans `input/inbox/`. Puis :
+
+```
+CONTEXTE : J'ai des fichiers dans ~/Cowork-Workspace/input/inbox/ reçus ce matin.
+TÂCHE : Identifier le type de chaque fichier (facture, devis, contrat, communication, autre)
+et me donner la liste avec le dossier de destination dans output/2026/.
+SORTIE : Liste en texte dans le chat, une ligne par fichier.
+CONTRAINTES : Si le type est ambigu, indiquer "à vérifier" plutôt que de deviner.
+```
+
+Temps : 3 minutes au lieu de 15 minutes à trier manuellement.
+
+**Vérification des alertes**
+
+Si tu suis des clients importants ou des sujets sectoriels :
+
+```
+CONTEXTE : Je veux vérifier les actualités sur [NOM CLIENT ou SECTEUR] du jour.
+TÂCHE : Rechercher les dernières nouvelles pertinentes sur ce sujet.
+SORTIE : 3 à 5 points clés en bullets, dans le chat.
+CONTRAINTES : Sources françaises en priorité. Si rien de nouveau, dire "Rien de notable."
+```
+
+## Hebdomadaire (30 à 60 minutes)
+
+C'est là que se jouent les gains les plus importants.
+
+| Tâche | Fréquence | Temps avant | Temps avec Cowork |
+|-------|-----------|------------|-------------------|
+| Rapport d'activité | Chaque vendredi | 1h30 | 15 min |
+| Relances factures impayées | Chaque lundi | 45 min | 10 min |
+| Posts réseaux sociaux de la semaine | Chaque dimanche | 2h | 20 min |
+| Compte-rendu réunion hebdo | Après chaque réunion | 30 min | 5 min |
+
+**Prompt rapport hebdomadaire**
+
+```
+CONTEXTE : Nous sommes vendredi. Je veux faire le point sur la semaine.
+Voici mes notes brutes : [coller tes notes ou dicter vocalement].
+TÂCHE : Structurer un rapport hebdo avec : réalisations, en cours, bloquants, priorités semaine prochaine.
+SORTIE : Fichier Markdown dans ~/Cowork-Workspace/output/2026/rapports/hebdo-[date].md
+CONTRAINTES : Format concis, une phrase par point. Pas de mise en forme excessive.
+```
+
+## Mensuel (2 à 4 heures)
+
+Les tâches mensuelles sont souvent les plus redoutées. Ce sont aussi celles où Cowork apporte le plus.
+
+**Extraction comptable**
+
+À faire le 1er du mois pour le mois précédent :
+
+```
+CONTEXTE : J'ai toutes les factures de [mois] dans ~/Cowork-Workspace/input/archives/[mois]/.
+TÂCHE : Extraire de chaque facture : date, fournisseur, montant HT, TVA, montant TTC, catégorie.
+SORTIE : Fichier Excel dans ~/Cowork-Workspace/output/2026/admin/comptabilite-[mois].xlsx,
+une ligne par facture, une feuille pour les achats et une pour les ventes.
+CONTRAINTES : Si un champ est illisible, écrire "À VÉRIFIER". Trier par date croissante.
+```
+
+**Bilan stock (commerçants)**
+
+```
+CONTEXTE : Voici les photos de mes rayons prises ce matin [joindre les photos].
+TÂCHE : Lister les références visibles et estimer les quantités approximatives.
+Comparer avec le fichier de stock théorique ~/Cowork-Workspace/input/stock-theorique.xlsx.
+SORTIE : Rapport d'écart dans ~/Cowork-Workspace/output/2026/admin/stock-[mois].xlsx.
+CONTRAINTES : Mettre en rouge les articles en rupture ou quasi-rupture (moins de 20% du stock cible).
+```
+
+**Synthèse des avis clients**
+
+```
+CONTEXTE : Voici les avis reçus sur [Google / TrustPilot / autre] ce mois.
+[Coller les avis].
+TÂCHE : Identifier les points forts récurrents, les points faibles récurrents,
+et les mentions spécifiques à traiter (avis négatifs non répondus, questions clients).
+SORTIE : Synthèse en 3 sections dans le chat.
+CONTRAINTES : Citer des verbatim clients pour les points importants.
+```
+
+---
+
+# La mémoire cross-session
+
+## Le problème
+
+Cowork n'a pas de mémoire entre les sessions. Chaque nouvelle conversation repart de zéro. Ça signifie que le contexte que tu as fourni la semaine dernière (tes clients, ta structure de fichiers, tes conventions) doit être fourni à nouveau à chaque fois.
+
+Sans solution, ça crée deux problèmes. D'abord, tu perds du temps à réexpliquer le contexte. Ensuite, les résultats sont moins bons parce que Cowork n'a pas le contexte métier spécifique.
+
+## La solution : CONTEXT.md
+
+Un fichier `~/Cowork-Workspace/CONTEXT.md` que tu glisses dans Cowork en début de chaque session (ou que tu cites dans tes prompts complexes).
+
+Structure recommandée :
+
+```markdown
+# Mon contexte Cowork
+
+## Qui je suis
+[Ton métier, ta structure, ton secteur]
+
+## Mes clients principaux
+[3 à 5 clients avec un mot sur leur profil]
+
+## Mes fournisseurs habituels
+[Noms et ce qu'ils fournissent]
+
+## Ma structure de fichiers
+[L'arborescence de ton workspace]
+
+## Mes conventions
+[Nommage des fichiers, format des dates, monnaie...]
+
+## Prompts validés cette semaine
+[Les prompts qui ont bien fonctionné, à garder]
+
+## Dernière mise à jour : [date]
+```
+
+Mise à jour recommandée : une fois par semaine, 5 minutes, en fin de session.
+
+## Comment l'utiliser
+
+Au lieu de réécrire le contexte dans chaque prompt :
+
+```
+CONTEXTE : Consulte mon fichier de contexte
+~/Cowork-Workspace/CONTEXT.md avant de commencer.
+TÂCHE : [ta tâche]
+...
+```
+
+Cowork lit le fichier, intègre le contexte, produit un résultat aligné avec ta réalité métier.
+
+---
+
+# Impliquer son équipe
+
+## La règle des trois avant tout
+
+Avant de déployer Cowork à toute une équipe, avoir :
+
+- 3 prompts validés qui fonctionnent dans votre contexte spécifique
+- 3 utilisateurs pilotes qui l'ont testé et peuvent répondre aux questions
+- 3 semaines de recul sur au moins une tâche
+
+Sans ces trois éléments, le déploiement produit souvent de la frustration plutôt que de l'adoption.
+
+## Former en montrant, pas en expliquant
+
+La formation la plus efficace n'est pas "voici comment utiliser Cowork". C'est "regarde-moi faire cette tâche avec Cowork, puis fais-la toi-même pendant que je regarde".
+
+Une session de 30 minutes de co-travail vaut 2 heures de formation théorique.
+
+## La bibliothèque de prompts partagée
+
+Un fichier `~/Cowork-Workspace/prompts/bibliotheque.md` accessible à toute l'équipe.
+
+Structure par fiche :
+
+```markdown
+## [Nom de la tâche]
+
+**Usage** : [Quand utiliser ce prompt]
+**Temps économisé** : [X min → Y min]
+
+**Prompt :**
+[Le prompt complet]
+
+**Ce qu'il faut personnaliser :**
+- [Variable 1 : description]
+- [Variable 2 : description]
+
+**Ce qu'il faut vérifier dans l'output :**
+- [Point de contrôle 1]
+- [Point de contrôle 2]
+
+**Ajouté le** : [date] par [prénom]
+```
+
+## Métriques d'adoption
+
+| Métrique | Comment mesurer | Seuil sain après 1 mois |
+|---------|----------------|------------------------|
+| Utilisateurs actifs | Qui a utilisé Cowork cette semaine | > 50% de l'équipe |
+| Prompts en bibliothèque | Compter les fiches | > 5 prompts validés |
+| Temps économisé déclaré | Question directe | > 2h/semaine/personne |
+| Satisfaction | Note sur 5 (question directe) | > 3,5/5 |
+
+---
+
+# Plan de mise en place
+
+## Semaine 1 : Structurer l'espace de travail
+
+- Créer la structure de dossiers recommandée
+- Créer `CONTEXT.md` avec ses informations de base
+- Identifier les 3 tâches récurrentes les plus chronophages
+
+## Semaine 2 : Automatiser le quotidien
+
+- Tester le workflow de tri de l'inbox
+- Mettre en place le rapport hebdomadaire
+- Documenter le premier prompt dans la bibliothèque
+
+## Semaine 3 : Ajouter l'hebdomadaire
+
+- Automatiser les relances factures
+- Mettre en place les posts réseaux sociaux (si applicable)
+- Partager la bibliothèque avec une première personne de l'équipe
+
+## Semaine 4 : Préparer le mensuel
+
+- Tester l'extraction comptable sur un mois passé (pour valider sans risque)
+- Former un deuxième membre de l'équipe
+- Faire le premier bilan : temps économisé, erreurs détectées, ajustements
+
+---
+
+# La Série
+
+| # | Titre | Statut |
+|---|-------|--------|
+| WP-00 | De Zéro à Productif | Disponible |
+| WP-01 | Prompts Efficaces pour Non-Devs | Disponible |
+| WP-02 | Automatisation Administrative | Disponible |
+| WP-03 | IA pour Artisans et BTP | Disponible |
+| WP-04 | IA pour Commerçants et Retail | Disponible |
+| WP-05 | IA pour Consultants et Professions Libérales | Disponible |
+| WP-06 | Prospection et Relation Client | Disponible |
+| WP-07 | Communication et Visibilité | Disponible |
+| **WP-08** | **Organisation et Productivité** (ce document) | Disponible |
+| WP-09 | Sécurité et Confidentialité pour TPE | Disponible |
+| WP-10 | Apprendre l'IA quand on n'est pas Dev | À venir |
+| WP-11 | ROI et Déploiement pour Dirigeants | Disponible |
+
+Tous les whitepapers sur [cowork.bruniaux.com/whitepapers/](https://cowork.bruniaux.com/whitepapers/).

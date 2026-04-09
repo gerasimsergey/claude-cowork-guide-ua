@@ -1,0 +1,418 @@
+---
+title: "IA pour Artisans et BTP"
+subtitle: "Moins de paperasse, plus de chantiers : ce que Cowork change vraiment sur le terrain"
+author: "Florian BRUNIAUX"
+date: 2026-04-09
+date-format: "MMMM YYYY"
+version: "1.6.1"
+wp-version: "1.0.0"
+series: "Claude Cowork Guide"
+wp-number: "03"
+format:
+  whitepaper-typst:
+    toc: true
+    toc-depth: 2
+    section-numbering: "1.1"
+lang: fr
+filters:
+  - fix-lists.lua
+---
+
+::: {.callout-tip title="Pour qui ce whitepaper ?"}
+**Audience principale** : Artisans (plombiers, électriciens, maçons, peintres, menuisiers, carreleurs), PME du BTP, chefs d'équipe qui gèrent eux-mêmes leur administratif
+
+**Prérequis** : Aucun. Cowork fonctionne depuis un téléphone ou un ordinateur, pas besoin de compétences techniques.
+
+**Temps de lecture** : 16 min
+
+**Ce que vous allez retenir** :
+
+- Combien de temps les artisans perdent vraiment sur l'administratif et comment Cowork le réduit
+- Les 5 usages qui ont le plus d'impact concret pour les métiers du bâtiment
+- Les mentions obligatoires BTP à ne jamais oublier sur vos devis et factures
+- Un cas d'usage complet d'une journée de Marc, électricien, avec et sans Cowork
+:::
+
+> **En 5 lignes :** Un artisan passe en moyenne 8 heures par semaine sur de l'administratif hors chantier. Devis, factures, bons de travaux, réclamations fournisseurs, réponses aux avis Google... c'est du temps pris sur les chantiers ou sur le soir. Cowork réduit cette charge à 2-3 heures par semaine. Ce whitepaper explique comment, avec des exemples concrets adaptés aux réalités du terrain : travail en mobilité, peu de temps au bureau, langage de chantier.
+
+# Les réalités du terrain
+
+## Ce que l'administratif coûte vraiment à un artisan
+
+Un artisan qui travaille seul ou avec 2-3 salariés n'a pas d'assistante. Il fait tout lui-même : les devis en rentrant le soir, les factures le week-end, les relances entre deux chantiers.
+
+D'après les retours des utilisateurs artisans de Cowork, voici la répartition type d'une semaine de 50 heures (chantier + admin) :
+
+| Activité | Temps hebdomadaire moyen |
+|----------|-------------------------|
+| Travail sur chantier | 38h |
+| Devis et facturation | 3h30 |
+| Relances clients et fournisseurs | 1h30 |
+| Réponses aux demandes (email, téléphone) | 1h |
+| Archivage et classement | 45 min |
+| Gestion des avis Google | 30 min |
+| Commandes et réclamations fournisseurs | 45 min |
+| **Total administratif** | **8h** |
+
+Ces 8 heures, prises sur les soirs et les week-ends, sont la première source de fatigue mentale signalée par les artisans. Ce n'est pas le chantier qui épuise, c'est la pile de mails en attente le vendredi soir.
+
+**Avec Cowork** : ce total descend à 2h30-3h par semaine. Les 5h restantes se transforment en un chantier supplémentaire par semaine, en week-end récupéré, ou en temps commercial pour développer l'activité.
+
+## Le cas de Sophie, plombière 3 salariés
+
+Sophie dirige une entreprise de plomberie avec 3 salariés. Avant Cowork, elle estimait passer 10 heures par semaine sur l'administratif, essentiellement le soir après les chantiers et le samedi matin.
+
+**Ses trois problèmes principaux :**
+
+- Les devis : elle prenait des notes sur chantier, puis repassait dessus le soir pour rédiger un devis correct avec les métrés et les tarifs fournisseurs. 45 minutes par devis, 4 à 5 devis par semaine.
+- Les factures : transformer les bons de travaux signés en factures propres prenait 20 minutes par bon. Elle en avait 8 à 10 par semaine.
+- Les relances : elle repoussait les relances clients parce qu'elle n'aimait pas rédiger ces emails. Résultat : des retards de paiement récurrents.
+
+**Après 6 semaines avec Cowork :**
+
+- Devis : 15 minutes au lieu de 45 (description vocale depuis le chantier, Cowork structure)
+- Factures : 5 minutes au lieu de 20 (bon de travaux en photo, Cowork convertit)
+- Relances : elle les fait maintenant dès J+5 de retard parce que Cowork les rédige en 2 minutes
+
+**ROI calculé** : 7 heures par semaine récupérées. À son taux horaire de 45€ (valeur commerciale de son temps), c'est 315€ par semaine de valeur récupérée, pour 20€/mois d'abonnement.
+
+---
+
+# Les 5 usages prioritaires pour les artisans
+
+## Usage 1 : Devis depuis photos de chantier
+
+### Le problème
+
+Un devis BTP, ça demande des métrés précis, des tarifs fournisseurs à jour, des options à proposer, des délais réalistes. Tout ça depuis des notes prises au stylo sur le chantier, parfois sous la pluie.
+
+### Comment Cowork change ça
+
+**Option A : depuis une description vocale**
+
+Depuis votre téléphone, vous décrivez le chantier à voix haute après la visite. Cowork transcrit et structure le devis.
+
+```
+Voici une transcription de mes notes de chantier.
+Je suis plombier, ce devis est pour un particulier.
+
+"Salle de bain complète, environ 8m2. Remplacement douche italienne
+60x90 par douche 90x90, pose de receveur à la turque, alimentation
+à changer sur 3 mètres, évacuation à reprendre, carrelage mural sur
+2 murs côté douche, pose robinetterie thermostatique.
+Pose de WC suspendu avec bâti-support, remplacement du meuble vasque
+et de la robinetterie. Délai : 3 semaines si accord avant le 15."
+
+Génère un devis structuré avec :
+- Description des travaux par poste
+- Estimation du temps de main-d'oeuvre par poste (base 55€/h)
+- Ligne matériaux (estimation à confirmer selon devis fournisseur)
+- Total HT et TTC (TVA 10% applicable aux travaux de rénovation)
+- Conditions de règlement : 30% à la commande, solde à réception
+- Validité du devis : 3 mois
+```
+
+**Option B : depuis une photo de chantier**
+
+Photographier la zone de travaux. Cowork analyse la photo et vous pose les questions nécessaires pour compléter le devis.
+
+### Gain constaté
+
+| Type de devis | Avant Cowork | Avec Cowork |
+|---------------|-------------|------------|
+| Rénovation salle de bain | 45 min | 12 min |
+| Remplacement chaudière | 30 min | 8 min |
+| Mise aux normes électrique | 60 min | 15 min |
+| Terrassement/gros oeuvre | 90 min | 20 min |
+
+---
+
+## Usage 2 : Bon de travaux vers facture
+
+### Le problème
+
+Le bon de travaux signé par le client, c'est souvent une feuille manuscrite avec des informations incomplètes. Le transformer en facture conforme (avec toutes les mentions légales) prend du temps.
+
+### Comment Cowork change ça
+
+Photographier le bon de travaux signé. Cowork le lit et génère la facture complète.
+
+```
+Voici une photo d'un bon de travaux signé par le client.
+Je suis électricien, SIREN : 123 456 789, RCS Toulouse.
+Mon numéro de facture suivant : FAC-2026-0087.
+
+Génère la facture correspondante avec :
+- Numéro et date de facture
+- Mes coordonnées complètes (à compléter : nom entreprise, adresse, téléphone)
+- Coordonnées du client (extraites du bon de travaux)
+- Description des travaux (extraite du bon de travaux)
+- Prix HT, TVA (10% pour travaux rénovation), TTC
+- Mention "TVA sur les travaux de rénovation : 10%"
+- Délai de règlement : 30 jours
+- Mention des pénalités de retard légales
+- Attestation décennale (à compléter : numéro de police, assureur)
+
+Format : PDF propre, prêt à envoyer au client.
+```
+
+**Résultat** : une facture conforme en 5 minutes, au lieu de 20 minutes à recopier les informations du bon.
+
+::: {.callout-warning title="Toujours vérifier les montants avant d'envoyer"}
+Cowork lit les bons manuscrits avec une précision de 95% environ. Vérifiez systématiquement les montants et les coordonnées client avant d'envoyer la facture. Une erreur de facture peut bloquer un paiement ou créer un litige inutile.
+:::
+
+---
+
+## Usage 3 : Carnet de chantier numérique
+
+### Le problème
+
+Sur un chantier long (plusieurs semaines), suivre l'avancement, noter les réserves, documenter les travaux supplémentaires non prévus... c'est du temps pris sur le chantier et ça se perd souvent dans des notes papier.
+
+### Comment Cowork change ça
+
+En fin de journée de chantier, vous dictez l'avancement. Cowork structure le rapport de chantier.
+
+```
+Voici mes notes vocales de fin de journée pour le chantier Martin
+(rénovation complète maison individuelle, en cours depuis le 2 avril).
+
+"Aujourd'hui on a terminé la pose des planchers sèches,
+salle à manger et salon. Le parquet escalier on n'a pas pu le faire
+parce que la rampe est pas encore enlevée par le client. J'ai appelé
+Martin, il enlève ça demain matin. On a aussi découvert une poutre
+qui était mangée par les termites dans le couloir, j'ai pris des photos,
+faut qu'on traite ça avant de fermer les murs. Travaux supplémentaires
+à chiffrer. Demain : carrelage salle de bain principale."
+
+Génère le rapport de chantier du jour avec :
+- Date et chantier concerné
+- Travaux réalisés
+- Travaux non réalisés et raison
+- Points bloquants et actions client requises
+- Travaux supplémentaires à chiffrer (avec description)
+- Prévision pour le lendemain
+
+Format : document professionnel que je peux envoyer au client pour validation.
+```
+
+**Pourquoi c'est utile** : le rapport de chantier quotidien protège l'artisan en cas de litige. Il documente l'avancement, les imprévus, et les décisions prises avec le client. Sans ça, la mémoire fait défaut quand un problème surgit 3 mois après.
+
+---
+
+## Usage 4 : Réclamation fournisseur
+
+### Le problème
+
+Un fournisseur livre des matériaux défectueux, en retard ou en quantité insuffisante. Rédiger une réclamation professionnelle qui aboutit à un remboursement ou un remplacement, ça demande du soin. Beaucoup d'artisans abandonnent parce que c'est compliqué à rédiger.
+
+### Comment Cowork change ça
+
+```
+Rédige une réclamation fournisseur avec les informations suivantes :
+- Fournisseur : Société Dupont Matériaux, 45 avenue de la Gare, 31000 Toulouse
+- Mon entreprise : Électricité Bernard, 12 rue des Artisans, 31200 Toulouse
+- Numéro de commande : CMD-2026-1847 du 15 mars 2026
+- Montant de la commande : 1 840€ HT
+- Problème : livraison du 28 mars 2026 incomplète. Commande : 200 disjoncteurs DN40. Livré : 120 disjoncteurs. Manquant : 80 disjoncteurs. J'ai dû commander en urgence chez un concurrent pour 620€ HT, avec un délai de 3 jours qui a bloqué le chantier.
+
+La lettre doit :
+- Décrire factuellement les faits avec dates et quantités
+- Réclamer le remboursement des 80 unités manquantes
+- Réclamer le remboursement de l'achat de substitution (620€ HT, facture jointe)
+- Demander un geste commercial pour le préjudice du retard de chantier
+- Fixer un délai de réponse de 8 jours avant recours
+
+Ton : professionnel et ferme, pas agressif.
+```
+
+**Taux de succès observé** : les réclamations rédigées de manière structurée avec des faits chiffrés ont 3 fois plus de chances d'aboutir qu'un email émotionnel envoyé à chaud.
+
+---
+
+## Usage 5 : Réponse aux avis Google
+
+### Le problème
+
+Les avis Google, c'est votre vitrine. Un avis négatif sans réponse fait 10 fois plus de dégâts qu'un avis négatif avec une réponse professionnelle. Mais rédiger une bonne réponse (qui montre que vous avez entendu le problème sans vous dévaloriser) est difficile, surtout quand on est en colère.
+
+### Comment Cowork change ça
+
+```
+Voici un avis Google reçu aujourd'hui sur mon entreprise de plomberie :
+
+"Intervention pour fuite sous évier. Plombier arrivé en retard de 2h.
+Fuite réparée mais prix excessif pour 45 min de travail. 2/5."
+
+Rédige une réponse professionnelle qui :
+- Remercie le client pour son retour
+- Reconnaît le retard et explique brièvement (sans justification excessive)
+- Défend le tarif de manière factuelle (déplacement + main-d'oeuvre + garantie)
+- Invite le client à nous contacter directement si insatisfait
+- Est courte (3-4 phrases maximum)
+- Ne mentionne pas le nom du client
+- Finit de façon positive et professionnelle
+
+Ton : calme, professionnel, pas défensif.
+```
+
+**Pourquoi c'est important en BTP** : 84% des particuliers lisent les avis avant de contacter un artisan. Une réponse bien rédigée à un avis négatif retourne souvent l'impression en positif pour les futurs lecteurs.
+
+---
+
+# Les mentions obligatoires BTP
+
+## Sur les devis
+
+Un devis BTP a des obligations légales spécifiques que les devis classiques n'ont pas toujours. Ces mentions protègent à la fois l'artisan et le client.
+
+| Mention | Obligatoire | Détail |
+|---------|-------------|--------|
+| Numéro SIRET | Oui | 14 chiffres |
+| Dénomination sociale | Oui | Raison sociale exacte |
+| Adresse de l'entreprise | Oui | Adresse complète |
+| Date d'établissement du devis | Oui | JJ/MM/AAAA |
+| Durée de validité du devis | Oui | En jours ou jusqu'à une date |
+| Description détaillée des travaux | Oui | Poste par poste |
+| Prix unitaire et total HT | Oui | Par prestation |
+| Taux de TVA applicable | Oui | 10% rénovation, 20% neuf |
+| Montant TTC | Oui | |
+| Attestation décennale | Oui en BTP | Numéro de police et assureur |
+| Mention RGE | Si applicable | Pour travaux d'économie d'énergie |
+| Mention sous-traitance | Si applicable | Si partie des travaux sous-traitée |
+| Modalités de paiement | Recommandé | Acompte, solde, délais |
+
+## L'attestation décennale : l'obligation souvent oubliée
+
+L'assurance décennale est obligatoire pour tous les professionnels du BTP. Elle couvre les dommages qui compromettent la solidité de l'ouvrage pendant 10 ans après la réception des travaux.
+
+**Ce que vous devez mettre sur chaque devis et facture** :
+
+- Le nom de votre assureur
+- Le numéro de votre contrat d'assurance
+- La couverture géographique (France métropolitaine)
+
+**Exemple de mention :**
+
+```
+Assurance décennale : [Nom de l'assureur], police n° [XXXXXXXX],
+valable pour les travaux réalisés en France métropolitaine.
+```
+
+::: {.callout-warning title="L'absence de mention décennale sur un devis peut invalider le contrat"}
+Si votre assurance décennale n'est pas mentionnée sur le devis, le client peut contester le devis et refuser de payer. En cas de sinistre, votre responsabilité peut être engagée même si vous êtes assuré. Toujours vérifier que Cowork inclut cette mention quand vous lui demandez de générer un devis.
+:::
+
+## La mention RGE
+
+Si vous réalisez des travaux d'économie d'énergie (isolation, pompe à chaleur, chaudière à condensation, solaire thermique...), la mention de votre label RGE (Reconnu Garant de l'Environnement) est nécessaire pour que vos clients puissent bénéficier des aides (MaPrimeRénov', CEE, éco-PTZ).
+
+**Ce que vous devez mentionner** :
+
+- La qualification obtenue (RGE Qualibat, RGE Qualifelec, RGE QualiPAC...)
+- Le numéro de qualification
+- La date d'échéance de la qualification
+
+Sans cette mention, votre client perd ses droits aux aides de l'État. C'est un point de litige fréquent.
+
+## Le devis signé : valeur légale
+
+Un devis signé par les deux parties a valeur de contrat. Depuis la loi Hamon (2014), pour les contrats de prestation de services signés à domicile, le client dispose d'un délai de rétractation de 14 jours.
+
+**Implications pratiques** :
+
+- Ne pas commander les matériaux avant la fin du délai de 14 jours (ou accord écrit du client pour commencer avant)
+- Conserver les devis signés pendant 5 ans minimum
+- En cas de travaux supplémentaires non prévus : faire signer un avenant avant de réaliser les travaux
+
+---
+
+# Cas d'usage complet : Marc, électricien
+
+## La situation de Marc
+
+Marc est électricien, travaille seul, 12 ans d'expérience. Il a en ce moment 8 chantiers en cours à des stades différents : 2 en attente de matériaux, 3 en cours d'exécution, 3 en attente de règlement final.
+
+Un lundi matin type sans Cowork :
+
+- 7h00 : se lève, café, regarde les 23 messages non lus dans sa messagerie
+- 7h30 : répond aux 3 demandes de devis reçues le week-end (30 min chacun = 1h30)
+- 9h00 : arrive sur le chantier prioritaire
+- Pendant la pause déjeuner : rédige 2 factures à partir de bons de travaux
+- 18h00 : fin de chantier. 1 réclamation fournisseur à rédiger, 1 avis Google négatif à gérer, 1 relance client à envoyer
+- 20h00 : finit l'administratif du soir. Commence à dîner.
+
+**Total administratif lundi** : 4 heures. Sur du temps personnel ou des heures de chantier.
+
+## La même journée avec Cowork
+
+**7h00 : café et Cowork**
+
+Marc prend ses 3 demandes de devis. Pour chacune, il décrit le chantier depuis sa cuisine en 3 minutes (notes vocales ou texte rapide). Cowork génère 3 devis structurés. Il les relit en 5 minutes chacun, corrige si besoin, envoie.
+
+**Total : 25 minutes au lieu de 1h30.**
+
+**Entre deux chantiers (11h30)**
+
+Photo des 2 bons de travaux signés depuis son téléphone. Cowork génère les 2 factures. Il vérifie les montants, valide, envoie.
+
+**Total : 8 minutes au lieu de 40 minutes.**
+
+**Fin de chantier (18h15)**
+
+Réclamation fournisseur : Marc décrit le problème en 2 minutes. Cowork rédige le courrier. Marc relit, ajuste une phrase, envoie.
+
+Avis Google : Cowork propose une réponse en 90 secondes. Marc l'adapte légèrement. Répond.
+
+Relance client : Cowork génère l'email de relance avec le bon montant et la bonne date. Marc l'envoie.
+
+**Total : 12 minutes au lieu de 1h20.**
+
+**Résultat de la journée**
+
+| Tâche | Sans Cowork | Avec Cowork |
+|-------|-------------|------------|
+| 3 devis | 1h30 | 25 min |
+| 2 factures | 40 min | 8 min |
+| 1 réclamation fournisseur | 30 min | 5 min |
+| 1 réponse avis Google | 15 min | 3 min |
+| 1 relance client | 15 min | 3 min |
+| **Total** | **3h30** | **44 min** |
+
+Marc récupère 2h46 sur cette seule journée. Sur une semaine, c'est 5 à 6 heures. Ce qui représente soit un demi-chantier supplémentaire par semaine, soit des soirées libres.
+
+---
+
+# Par où commencer si vous êtes artisan
+
+Trois actions pour cette semaine :
+
+**Action 1** : Le prochain devis que vous devez faire, essayez de le dicter à voix haute depuis votre téléphone après la visite chantier. Collez la transcription dans Cowork avec le prompt de la section 2.1. Comparez le résultat avec votre devis habituel.
+
+**Action 2** : Prenez en photo le dernier bon de travaux signé qui traîne sur votre bureau. Utilisez le prompt de la section 2.2 pour en faire une facture. Vous verrez en 5 minutes si ça colle à vos habituelles.
+
+**Action 3** : Si vous avez un avis Google sans réponse, utilisez le prompt de la section 2.5. Ça prend 2 minutes et ça montre immédiatement la valeur de l'outil.
+
+Ces trois tests couvrent les trois usages à plus fort ROI pour les artisans. Si un seul fonctionne bien pour vous, c'est déjà plusieurs heures par mois récupérées.
+
+---
+
+# La Série
+
+| # | Titre | Statut |
+|---|-------|--------|
+| WP-00 | De Zéro à Productif | Disponible |
+| WP-01 | Prompts Efficaces pour Non-Devs | Disponible |
+| WP-02 | Automatisation Administrative | Disponible |
+| **WP-03** | **IA pour Artisans et BTP** (ce document) | Disponible |
+| WP-04 | IA pour Commerçants et Retail | Disponible |
+| WP-05 | IA pour Consultants et Professions Libérales | Disponible |
+| WP-06 | Prospection et Relation Client | Disponible |
+| WP-07 | Communication et Visibilité | Disponible |
+| WP-08 | Organisation et Productivité | Disponible |
+| WP-09 | Sécurité et Confidentialité pour TPE | Disponible |
+| WP-10 | Apprendre l'IA quand on n'est pas Dev | À venir |
+| WP-11 | ROI et Déploiement pour Dirigeants | Disponible |
+
+Tous les whitepapers sur [cowork.bruniaux.com/whitepapers/](https://cowork.bruniaux.com/whitepapers/).

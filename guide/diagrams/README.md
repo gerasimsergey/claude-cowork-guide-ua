@@ -6,7 +6,7 @@ tags: [reference, diagrammes, mermaid, workflows]
 
 # Claude Cowork — Diagrammes visuels
 
-32 diagrammes Mermaid interactifs organisés en 8 fichiers thématiques. Chaque diagramme inclut une version Mermaid (rendue nativement sur GitHub) et un fallback ASCII.
+32 diagrammes planifiés, 23 disponibles (Phase 2), organisés en 8 fichiers thématiques. Chaque diagramme inclut une version Mermaid (rendue nativement sur GitHub) et un fallback ASCII.
 
 ---
 
@@ -40,7 +40,7 @@ Tous les diagrammes utilisent la palette Bold Guy :
 
 | Fichier | Diagrammes | Sujets |
 |---------|-----------|--------|
-| [01-getting-started.md](./01-getting-started.md) | 3 | Cowork vs Chat vs Code, setup workspace, CTOC anatomie |
+| [01-getting-started.md](./01-getting-started.md) | 5 | Cowork vs Chat vs Code, setup workspace, CTOC anatomie, choix du modèle, décision d'usage |
 | [02-capabilities.md](./02-capabilities.md) | 3 | Carte des capacités, écosystème 11 plugins, automatisation planifiée |
 | [03-security.md](./03-security.md) | 2 | "Où vont mes données ?", arbre décision document sensible |
 | [04-troubleshooting.md](./04-troubleshooting.md) | 1 | Arbre diagnostic "ça marche pas" |
@@ -48,7 +48,7 @@ Tous les diagrammes utilisent la palette Bold Guy :
 | [06-workflows-commercial.md](./06-workflows-commercial.md) | 3 | Prospection SIREN, analyse concurrence, cycle client |
 | [07-workflows-production.md](./07-workflows-production.md) | 3 | Planification projet, inventaire, contrôle qualité |
 | [08-workflows-commu-orga.md](./08-workflows-commu-orga.md) | 4 | Création contenu, templates email, organisation fichiers, transfert connaissances |
-| **Total** | **23** | Phase 1-2 : 16 diagrammes |
+| **Total** | **25 disponibles** | 32 planifiés — Phase 2 complète |
 
 ---
 
@@ -61,6 +61,8 @@ Tous les diagrammes utilisent la palette Bold Guy :
 **Je veux démarrer**
 → [D02 — Setup workspace](./01-getting-started.md#d02)
 → [D03 — CTOC anatomie](./01-getting-started.md#d03)
+→ [D04 — Choisir le bon modèle Claude](./01-getting-started.md#d04)
+→ [D05 — Dois-je utiliser Cowork pour cette tâche ?](./01-getting-started.md#d05)
 
 **Je veux sécuriser mon usage**
 → [D11 — Où vont mes données ?](./03-security.md#d11)

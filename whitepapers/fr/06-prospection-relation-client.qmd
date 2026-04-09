@@ -1,0 +1,418 @@
+---
+title: "Prospection et Relation Client"
+subtitle: "Trouver des clients, les convaincre, les garder : la méthode Cowork pour TPE"
+author: "Florian BRUNIAUX"
+date: 2026-04-09
+date-format: "MMMM YYYY"
+version: "1.6.1"
+wp-version: "1.0.0"
+series: "Claude Cowork Guide"
+wp-number: "06"
+format:
+  whitepaper-typst:
+    toc: true
+    toc-depth: 2
+    section-numbering: "1.1"
+lang: fr
+filters:
+  - fix-lists.lua
+---
+
+::: {.callout-tip title="Pour qui ce whitepaper ?"}
+**Audience principale** : Dirigeants TPE, commerciaux, indépendants qui cherchent activement des clients ou veulent structurer leur démarche commerciale
+
+**Prérequis** : WP-00 recommandé (connaître les bases de Claude Cowork)
+
+**Temps de lecture** : 16 min
+
+**Ce que vous allez retenir** :
+
+- Les étapes du pipeline où Cowork a le plus d'impact (et celles réservées à l'humain)
+- Comment trouver des prospects qualifiés avec Infogreffe, Pappers et Google Maps
+- La structure d'un email de prospection qui convertit, généré en 30 min pour 20 cibles
+- Le timing exact des relances et les templates pour chaque étape
+- Comment transformer un client satisfait en source de recommandations
+:::
+
+> **En 5 lignes :** La prospection est la tâche que tous les indépendants et dirigeants de TPE remettent à "quand j'aurai le temps". Ce temps n'arrive jamais. Cowork ne remplace pas la relation humaine qui convertit un prospect en client, mais il automatise tout ce qui vient avant et après : identification des cibles, personnalisation des prises de contact, relances, et fidélisation. Ce whitepaper donne une méthode complète, avec des sources françaises concrètes et des templates prêts à l'emploi.
+
+# Le pipeline de prospection : où Cowork intervient
+
+## Les 6 étapes d'un pipeline commercial
+
+Toute démarche commerciale suit la même structure, qu'on vende des travaux de plomberie ou du conseil en stratégie.
+
+| Étape | Description | Cowork |
+|---|---|---|
+| 1. Définir la cible | Qui est mon client idéal | Aide à structurer le profil cible |
+| 2. Identifier | Trouver des entreprises/personnes | Enrichit et organise les listes |
+| 3. Qualifier | Est-ce que ça vaut le coup de contacter ? | **Humain obligatoire** |
+| 4. Contacter | Premier contact | Génère les messages personnalisés |
+| 5. Relancer | Maintenir le contact sans harceler | Génère les relances avec le bon ton |
+| 6. Convertir | Transformer en client | **Humain obligatoire** |
+
+Les étapes 3 et 6 sont irréductiblement humaines. Qualifier un prospect, ça demande du jugement contextuel que Cowork n'a pas. Convertir, ça demande une relation de confiance que seul un humain construit.
+
+Tout le reste se délègue.
+
+## Pourquoi la plupart des TPE n'ont pas de pipeline
+
+La prospection est perçue comme une activité "quand j'ai le temps". Le problème structurel : quand on a du travail, on ne prospecte pas. Quand le travail se tarit, on prospecte en urgence, avec une énergie de désespoir qui se sent à la lecture des emails.
+
+La solution : une prospection régulière, peu intensive, maintenue même en période chargée. Cowork rend ça possible en réduisant le temps nécessaire à chaque action de 60 à 80%.
+
+---
+
+# Trouver des prospects qualifiés avec les sources françaises
+
+## Infogreffe et Pappers.fr : le point de départ
+
+Infogreffe et Pappers.fr donnent accès aux données légales de toutes les entreprises françaises immatriculées. Secteur, code NAF, zone géographique, taille, dirigeants, date de création, chiffre d'affaires déclaré.
+
+**Cas d'usage typique :**
+
+Vous êtes expert-comptable ou conseiller en gestion, et vous cherchez des TPE dans votre région en phase de croissance (CA en augmentation deux années consécutives, moins de 10 salariés, créées depuis 3 à 7 ans). Pappers permet ce filtre.
+
+Résultat : une liste de 50 à 200 entreprises avec les coordonnées du dirigeant.
+
+Vous exportez la liste en CSV, vous la déposez dans `~/Cowork-Workspace/prospection/listes/`. Cowork structure ensuite la liste selon vos critères de priorisation.
+
+```
+Contexte : fichier CSV prospection/listes/pme-idf-2026-04.csv
+contenant 120 entreprises extraites de Pappers.
+Colonnes : raison sociale, SIREN, NAF, CA N-1, CA N-2, ville, dirigeant, email.
+
+Tâche : crée un tableau de priorisation avec un score de 1 à 3
+basé sur ces critères :
+- Score 3 : CA en croissance > 15%, moins de 5 ans d'existence, CA entre 300K et 2M€
+- Score 2 : CA stable, entre 5 et 10 ans, CA entre 100K et 300K€
+- Score 1 : le reste
+
+Output : ~/Cowork-Workspace/prospection/listes/pme-idf-priorisees.xlsx
+avec une colonne "score" et une colonne "motif" expliquant le score.
+
+Contraintes : trier par score décroissant, conserver toutes les colonnes d'origine.
+```
+
+## Google Maps et les avis clients : un angle différent
+
+Google Maps est une source sous-exploitée pour la prospection locale. Pour les artisans, les commerces de proximité, ou toute activité B2C avec une composante géographique, c'est une mine d'information.
+
+**Ce que vous pouvez faire :**
+
+Identifiez les entreprises de votre zone géographique qui exercent votre secteur cible. Lisez leurs avis Google. Les avis négatifs sont des signaux de problèmes non résolus. Un restaurant avec 40% d'avis mentionnant "le service lent" a peut-être besoin d'un conseil en organisation. Un hôtel avec des plaintes sur "les équipements vieillissants" est peut-être en réflexion sur une rénovation.
+
+Le prompt pour analyser les avis :
+
+```
+Contexte : ci-dessous les 20 derniers avis Google de [nom de l'établissement],
+copiés depuis Google Maps.
+
+Tâche : analyse ces avis et identifie :
+1. Les 3 problèmes récurrents mentionnés par les clients
+2. Ce que ces problèmes suggèrent comme besoins non satisfaits
+3. L'angle d'approche le plus pertinent pour proposer [votre service]
+
+Output : note de 1 page dans ~/Cowork-Workspace/prospection/analyses/[nom-etablissement].docx
+
+Contraintes : rester factuel, s'appuyer uniquement sur les avis fournis,
+ne pas sur-interpréter.
+```
+
+## LinkedIn : enrichissement manuel
+
+LinkedIn ne se scrape pas légalement de façon automatisée. Mais la méthode manuelle reste puissante quand elle est couplée à Cowork.
+
+**La méthode en 3 étapes :**
+
+1. Vous faites une recherche LinkedIn selon vos critères (secteur, taille, poste, région). Vous copiez les profils pertinents dans un fichier texte brut : nom, poste, entreprise, résumé du profil, articles récents publiés si disponibles.
+
+2. Cowork enrichit et structure ces données brutes.
+
+3. Vous priorisez sur la base du fichier structuré.
+
+```
+Contexte : fichier prospection/linkedin-brut.txt contient des données
+copiées manuellement depuis LinkedIn : 15 profils de directeurs RH
+de PME industrielles en Auvergne-Rhône-Alpes.
+
+Tâche : crée un tableau structuré avec pour chaque personne :
+- Nom, entreprise, poste, lien profil
+- Résumé en 1 ligne de leur activité récente visible
+- Signal d'intérêt potentiel pour [votre offre] (s'il existe)
+- Priorité de contact : haute / moyenne / faible
+
+Output : ~/Cowork-Workspace/prospection/linkedin-enrichi.xlsx
+```
+
+## Les annuaires sectoriels
+
+Pages Jaunes, Kompass, et les annuaires métier (BTP, restauration, hôtellerie, professions réglementées) complètent le dispositif. Ils sont moins précis que Pappers mais plus accessibles et souvent filtrable par code postal.
+
+Pour les artisans, le répertoire des métiers (Chambre des métiers et de l'artisanat) est une source fiable et légalement accessible.
+
+---
+
+# Personnaliser les prises de contact
+
+## La différence entre un email qui atterrit et un email supprimé
+
+Un email de prospection générique se lit en 2 secondes et se supprime. Ce qui change la donne : 2 lignes de contexte spécifique qui prouvent que vous avez regardé ce que fait l'entreprise avant d'écrire.
+
+Pas besoin de 10 lignes. Deux suffisent :
+
+- "J'ai vu que vous venez d'ouvrir votre deuxième boutique à Lyon."
+- "Votre dernier post LinkedIn sur les difficultés de recrutement dans votre secteur m'a interpellé."
+
+Ce contexte spécifique, Cowork peut le générer à partir des données que vous lui donnez.
+
+## Générer 20 emails personnalisés en 30 minutes
+
+La méthode :
+
+1. Vous préparez un fichier `prospects-semaine.csv` avec les 20 cibles de la semaine : nom, entreprise, secteur, 1 information spécifique par prospect (récente actualité, avis Google notable, article LinkedIn, etc.)
+
+2. Un seul prompt génère les 20 emails :
+
+```
+Contexte : fichier prospection/prospects-semaine.csv contient 20 prospects
+avec une colonne "contexte_specifique" remplie pour chacun.
+Mon offre : [description en 2 lignes de ce que vous vendez].
+Mon nom et coordonnées : [vos infos].
+
+Tâche : rédige 20 emails de prospection, un par ligne du tableau.
+Chaque email doit :
+- Commencer par une accroche qui utilise le contexte_specifique du prospect
+- Présenter mon offre en 2-3 phrases maximum
+- Proposer un appel de 20 minutes avec 2 créneaux
+- Se terminer par une formule de politesse simple
+
+Output : fichier prospection/emails-semaine-[date].docx avec les 20 emails
+formatés, séparés par une ligne de séparation et le nom du prospect.
+
+Contraintes : ton direct et chaleureux, aucun jargon commercial,
+longueur max 150 mots par email, pas de formule de politesse ampoulée.
+```
+
+30 minutes plus tard : 20 emails prêts, personnalisés, à copier-coller dans votre messagerie.
+
+## Les canaux à considérer
+
+| Canal | Taux de réponse moyen | Quand l'utiliser |
+|---|---|---|
+| Email froid | 2 à 5% | B2B, cibles identifiées, message personnalisé |
+| LinkedIn message | 5 à 15% | Relations du 2e degré, profils actifs sur la plateforme |
+| Appel téléphonique | 10 à 25% | Quand email + LinkedIn n'ont pas répondu |
+| Courrier postal | 15 à 30% | Pour les cibles peu digitales (artisans, certains commerçants) |
+
+La combinaison qui fonctionne le mieux : email J1, relance LinkedIn J+3 si non répondu, appel J+7.
+
+---
+
+# Les relances : timing, ton, templates
+
+## Pourquoi la relance est plus importante que la première prise de contact
+
+La majorité des réponses positives n'arrivent pas au premier contact. Elles arrivent à la deuxième ou troisième relance. Non pas parce que le prospect était intéressé et avait oublié, mais parce que la persévérance douce démontre le sérieux.
+
+La règle : 3 relances maximum sur 14 jours. Au-delà, vous passez dans la catégorie "harcèlement" et vous fermez la porte définitivement.
+
+## Le timing optimal et le ton de chaque relance
+
+**J+3 : la relance cordiale**
+
+Ton : "Je me permets de revenir vers vous, au cas où mon email serait passé à travers les mailles." Simple, sans pression, on suppose que le prospect n'a pas eu le temps.
+
+```
+Objet : Re : [objet de l'email initial]
+
+Bonjour [prénom],
+
+Je me permets de revenir vers vous car mon email du [date] est peut-être
+passé entre les mailles. Je propose [l'offre en 1 ligne].
+
+Avez-vous 20 minutes la semaine prochaine pour en discuter ?
+
+[Votre signature]
+```
+
+**J+7 : la relance directe**
+
+Ton : on pose la question franchement. Est-ce que c'est un non ou un "pas maintenant" ?
+
+```
+Objet : [Prénom], une dernière question
+
+Bonjour [prénom],
+
+Je ne veux pas prendre plus de votre temps si le sujet ne vous parle pas.
+Est-ce que je peux vous demander directement : est-ce que [votre offre]
+est quelque chose de pertinent pour vous en ce moment ?
+
+Un "non, pas maintenant" est une réponse tout à fait valide.
+
+[Votre signature]
+```
+
+**J+14 : la relance de fermeture**
+
+Ton : vous fermez le dossier de votre côté, vous laissez une porte ouverte.
+
+```
+Objet : Je ferme ce sujet de mon côté
+
+Bonjour [prénom],
+
+Sans nouvelles de votre part, je comprends que le moment n'est peut-être
+pas le bon. Je ferme ce sujet de mon côté.
+
+Si votre situation change dans les prochains mois, n'hésitez pas à me
+recontacter. Je serai ravi d'échanger.
+
+[Votre signature]
+```
+
+Cette dernière relance génère souvent plus de réponses que les deux premières. Psychologiquement, la fermeture déclenche une réaction.
+
+## Générer les relances avec Cowork
+
+```
+Contexte : j'ai envoyé l'email de prospection ci-joint à [prénom] [nom]
+de [entreprise] le [date]. Aucune réponse à ce jour.
+Nous sommes à J+[X].
+
+Tâche : rédige la relance adaptée à ce délai (J+3 = cordiale,
+J+7 = directe, J+14 = fermeture).
+
+Output : email prêt à envoyer, objet inclus.
+
+Contraintes : ton cohérent avec l'email initial, max 100 mots,
+aucune pression commerciale agressive.
+```
+
+---
+
+# Fidélisation : transformer un client en source de revenus récurrents
+
+## Le rapport de fin de mission
+
+La fin d'une mission ou d'une prestation est un moment sous-exploité. La plupart des prestataires envoient la dernière facture et disparaissent. Un rapport de fin de mission change la dynamique.
+
+Ce rapport n'a pas besoin d'être long. 2 pages suffisent :
+
+- Ce qui a été fait (rappel des livrables)
+- Les résultats observés (chiffrés si possible)
+- Les recommandations pour la suite
+- Une question ouverte sur les prochains enjeux du client
+
+Ce document :
+1. Laisse une trace positive de la collaboration
+2. Ouvre naturellement la conversation sur la suite
+3. Démontre un niveau de professionnalisme que peu de concurrents atteignent
+
+```
+Contexte : dossier missions/[client]/ contient tous les livrables
+de la mission terminée le [date].
+Durée : [X] mois. Budget : [montant].
+
+Tâche : rédige un rapport de fin de mission de 2 pages avec :
+- Rappel des objectifs initiaux
+- Liste des livrables produits avec statut
+- Résultats mesurables obtenus (à partir des données du dossier)
+- 3 recommandations pour la suite
+- Question ouverte sur les prochains enjeux
+
+Output : ~/Cowork-Workspace/missions/[client]/rapport-fin-mission.docx
+
+Contraintes : ton positif mais factuel, chiffres réels uniquement,
+les recommandations doivent être actionnables sans votre intervention directe.
+```
+
+## La proposition de renouvellement
+
+Ne jamais attendre que le client demande. La proposition de renouvellement arrive naturellement dans la conversation ouverte par le rapport de fin de mission.
+
+Elle prend 3 formes selon la situation :
+
+- **Renouvellement direct** : vous proposez une mission de suite sur un sujet identifié dans les recommandations
+- **Contrat de maintenance** : vous proposez un accompagnement récurrent (mensuel ou trimestriel) à tarif préférentiel
+- **Pack "fidélité"** : vous proposez un tarif dégressif si le client s'engage sur 6 mois ou un an
+
+Cowork génère ces propositions à partir du rapport de fin de mission.
+
+## Le programme de recommandation
+
+Un client satisfait est la meilleure source de nouveaux clients. Le problème : les clients satisfaits ne pensent pas spontanément à recommander. Il faut le leur demander, et le leur demander de la bonne façon.
+
+La bonne façon, c'est simple :
+
+"Si vous connaissez une entreprise qui pourrait bénéficier de [ce que vous avez fait ensemble], je serais ravi que vous me mettiez en contact. C'est comme ça que je développe mon activité."
+
+Cowork peut personnaliser ce message pour chaque client à partir de l'historique de la mission.
+
+## La newsletter de veille : rester dans l'esprit du client
+
+Une newsletter mensuelle envoyée à vos anciens clients maintient le lien sans effort commercial apparent. Le contenu : 3 tendances de votre secteur, 1 cas pratique, 1 question qui les incite à réfléchir à leur situation.
+
+Avec le système de veille décrit dans WP-05, cette newsletter est générée en moins d'une heure par mois.
+
+L'impact : quand un client a un nouveau besoin dans votre domaine, il pense à vous en premier parce que vous êtes dans sa boîte mail tous les mois avec du contenu utile.
+
+---
+
+# Mesurer pour ajuster
+
+## Les métriques qui comptent
+
+Ne pas mesurer, c'est ne pas savoir ce qui fonctionne. Mais trop mesurer, c'est perdre du temps sur de l'analyse.
+
+3 métriques suffisent :
+
+| Métrique | Calcul | Cible réaliste |
+|---|---|---|
+| Taux de réponse | Réponses / Emails envoyés | 5 à 15% sur prospection froide |
+| Taux de conversion appel | Rendez-vous obtenus / Réponses positives | 40 à 70% |
+| Taux de transformation RDV | Clients signés / Rendez-vous | 20 à 40% |
+
+Un tableau simple suffit. Cowork peut le maintenir à jour chaque semaine :
+
+```
+Contexte : fichier prospection/suivi-pipeline.xlsx contient le suivi
+hebdomadaire de mes actions commerciales depuis [date de début].
+
+Tâche : mets à jour le tableau avec les données de cette semaine
+(que je vais te dicter) et génère un résumé des tendances sur 4 semaines.
+
+Données semaine du [date] :
+- Emails envoyés : [X]
+- Réponses reçues : [X]
+- Rendez-vous obtenus : [X]
+- Propositions envoyées : [X]
+- Clients signés : [X]
+```
+
+## Le cycle d'amélioration
+
+Tous les mois, un bilan de 30 minutes avec Cowork pour analyser ce qui fonctionne et ce qui ne fonctionne pas. Quelle accroche a eu le meilleur taux de réponse ce mois-ci ? Quel secteur répond le mieux ? Quelle formulation de l'offre convertit le mieux en rendez-vous ?
+
+Ces ajustements itératifs améliorent les résultats de façon continue sans nécessiter de refonte complète de l'approche.
+
+---
+
+# La Série
+
+| # | Titre | Statut |
+|---|-------|--------|
+| WP-00 | De Zéro à Productif | Disponible |
+| WP-01 | Prompts Efficaces pour Non-Devs | Disponible |
+| WP-02 | Automatisation Administrative | Disponible |
+| WP-03 | IA pour Artisans et BTP | Disponible |
+| WP-04 | IA pour Commerçants et Retail | Disponible |
+| WP-05 | IA pour Consultants et Professions Libérales | Disponible |
+| **WP-06** | **Prospection et Relation Client (ce document)** | Disponible |
+| WP-07 | Communication et Visibilité | Disponible |
+| WP-08 | Organisation et Productivité | Disponible |
+| WP-09 | Sécurité et Confidentialité pour TPE | Disponible |
+| WP-10 | Apprendre l'IA quand on n'est pas Dev | À venir |
+
+Tous les whitepapers sur [cowork.bruniaux.com/whitepapers/](https://cowork.bruniaux.com/whitepapers/).
