@@ -319,3 +319,128 @@ rules:
   5: "Budget 30-50% time for OCR error correction"
   6: "Disconnect VPN before using"
   7: "Backup before destructive operations"
+
+# ════════════════════════════════════════════════════════════════
+# WHITEPAPERS (12 PDF livres blancs)
+# ════════════════════════════════════════════════════════════════
+whitepapers:
+  base_url: "https://cowork.bruniaux.com/whitepapers/"
+  available:
+    wp00:
+      title: "De Zéro à Productif"
+      audience: "all"
+      file: "whitepapers/fr/00-de-zero-a-productif.qmd"
+    wp01:
+      title: "Prompts Efficaces pour Non-Devs"
+      audience: "all"
+      file: "whitepapers/fr/01-prompts-efficaces-non-devs.qmd"
+    wp02:
+      title: "Automatisation Administrative"
+      audience: "admin, dirigeant"
+      file: "whitepapers/fr/02-automatisation-administrative.qmd"
+    wp03:
+      title: "IA pour Artisans et BTP"
+      audience: "artisan, btp"
+      file: "whitepapers/fr/03-ia-artisans-btp.qmd"
+    wp04:
+      title: "IA pour Commerçants et Retail"
+      audience: "commercant, retail"
+      file: "whitepapers/fr/04-ia-commercants-retail.qmd"
+    wp05:
+      title: "IA pour Consultants et Professions Libérales"
+      audience: "consultant, freelance"
+      file: "whitepapers/fr/05-ia-consultants-professions-liberales.qmd"
+    wp06:
+      title: "Prospection et Relation Client"
+      audience: "commercial, dirigeant"
+      file: "whitepapers/fr/06-prospection-relation-client.qmd"
+    wp07:
+      title: "Communication et Visibilité"
+      audience: "all"
+      file: "whitepapers/fr/07-communication-visibilite.qmd"
+    wp08:
+      title: "Organisation et Productivité"
+      audience: "all"
+      file: "whitepapers/fr/08-organisation-productivite.qmd"
+    wp09:
+      title: "Sécurité et Confidentialité pour TPE"
+      audience: "all"
+      file: "whitepapers/fr/09-securite-confidentialite-tpe.qmd"
+    wp10:
+      title: "Apprendre l'IA quand on n'est pas Dev"
+      audience: "all"
+      file: "whitepapers/fr/10-apprendre-ia-non-dev.qmd"
+    wp11:
+      title: "ROI et Déploiement pour Dirigeants"
+      audience: "dirigeant"
+      file: "whitepapers/fr/11-roi-deploiement-dirigeants.qmd"
+
+# ════════════════════════════════════════════════════════════════
+# RECAP CARDS (5 fiches A4 one-pager)
+# ════════════════════════════════════════════════════════════════
+recap_cards:
+  base_url: "https://cowork.bruniaux.com/whitepapers/recap-cards/"
+  available:
+    P01:
+      title: "Premiers Pas"
+      topic: "workspace, ctoc, regles-or"
+      file: "whitepapers/recap-cards/fr/P01-premiers-pas.qmd"
+    C01:
+      title: "Framework CTOC"
+      topic: "ctoc, prompting, batch"
+      file: "whitepapers/recap-cards/fr/C01-framework-ctoc.qmd"
+    C04:
+      title: "Sécurité et Confidentialité"
+      topic: "securite, rgpd, donnees"
+      file: "whitepapers/recap-cards/fr/C04-securite-confidentialite.qmd"
+    M04:
+      title: "Kit Dirigeant TPE"
+      topic: "roi, deploiement, equipe"
+      file: "whitepapers/recap-cards/fr/M04-dirigeant-tpe.qmd"
+    C05:
+      title: "Mesurer son ROI"
+      topic: "roi, metriques, progression"
+      file: "whitepapers/recap-cards/fr/C05-mesurer-roi.qmd"
+
+# ════════════════════════════════════════════════════════════════
+# LEARNING SECTION
+# ════════════════════════════════════════════════════════════════
+learning:
+  index: "guide/learning/README.md"
+  files:
+    learning_with_ai_en: "guide/learning/learning-with-ai.md"
+    learning_with_ai_fr: "guide/learning/learning-with-ai.fr.md"
+    building_prompting_en: "guide/learning/building-prompting-skills.md"
+    building_prompting_fr: "guide/learning/building-prompting-skills.fr.md"
+    measuring_progress_en: "guide/learning/measuring-progress.md"
+    measuring_progress_fr: "guide/learning/measuring-progress.fr.md"
+
+# ════════════════════════════════════════════════════════════════
+# DIAGRAMS (25 disponibles, 32 planifiés)
+# ════════════════════════════════════════════════════════════════
+diagrams:
+  index: "guide/diagrams/README.md"
+  files:
+    getting_started: "guide/diagrams/01-getting-started.md"
+    capabilities: "guide/diagrams/02-capabilities.md"
+    security: "guide/diagrams/03-security.md"
+    troubleshooting: "guide/diagrams/04-troubleshooting.md"
+    workflows_admin: "guide/diagrams/05-workflows-admin.md"
+    workflows_commercial: "guide/diagrams/06-workflows-commercial.md"
+    workflows_production: "guide/diagrams/07-workflows-production.md"
+    workflows_commu_orga: "guide/diagrams/08-workflows-commu-orga.md"
+
+# ════════════════════════════════════════════════════════════════
+# EXAMPLES
+# ════════════════════════════════════════════════════════════════
+examples:
+  templates:
+    artisan_btp: "examples/claude-md-templates/artisan-btp.md"
+    commercant: "examples/claude-md-templates/commercant.md"
+    consultant: "examples/claude-md-templates/consultant.md"
+    dirigeant_tpe: "examples/claude-md-templates/dirigeant-tpe.md"
+  workflows_before_after:
+    admin_invoicing: "examples/workflows-before-after/admin-invoicing.md"
+    commercial_prospecting: "examples/workflows-before-after/commercial-prospecting.md"
+    content_creation: "examples/workflows-before-after/content-creation.md"
+    file_organization: "examples/workflows-before-after/file-organization.md"

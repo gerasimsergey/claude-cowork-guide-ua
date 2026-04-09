@@ -1,0 +1,92 @@
+---
+title: "Kit Dirigeant TPE"
+subtitle: "Tâches prioritaires, calcul ROI, plan déploiement équipe"
+card-number: "M04"
+category: "Métier"
+difficulty: "beginner"
+author: "Florian BRUNIAUX"
+version: "1.6.1"
+date: "Avril 2026"
+layout: "two-col"
+lang: fr
+format:
+  recap-card-typst: default
+---
+
+## Calcul ROI en 30 secondes
+
+```
+ROI mensuel =
+(heures gagnées/mois × valeur de votre heure)
+- coût Cowork (20€/mois)
+```
+
+**Votre taux horaire :**
+
+| CA annuel cible | Taux horaire |
+|----------------|-------------|
+| 60 000€ | 34€/h |
+| 100 000€ | 57€/h |
+| 150 000€ | 85€/h |
+| 200 000€ | 114€/h |
+
+**Exemple :** 4h gagnées/semaine × 4 semaines × 57€/h - 20€ = **888€/mois net**
+
+## Tâches à fort ROI par fréquence
+
+| Tâche | Fréquence | Gain |
+|-------|-----------|------|
+| Extraction données factures | Hebdo | 70-80% |
+| Génération devis/factures | Hebdo | 60-70% |
+| Relances impayées | Mensuel | 80-90% |
+| Tri et archivage fichiers | Mensuel | 85-95% |
+| Posts réseaux sociaux | Hebdo | 60-80% |
+| Emails commerciaux | Quotidien | 50-70% |
+
+## Vs les alternatives
+
+| Critère | Cowork (20€/mois) | VA (15-25€/h) | Stagiaire (600€/mois) |
+|---------|-------------------|---------------|----------------------|
+| Disponibilité | 24h/7j | Heures bureau | 6 mois |
+| Volume | Illimité | Limité aux heures | Limité |
+| Coût pour 20h/mois | 20€ | 300-500€ | 600€ + encadrement |
+| Tâches relationnelles | Non | Oui | Oui |
+
+## Plan de déploiement en 3 phases
+
+**Phase 1 — Validation (2 semaines)**
+
+Un seul utilisateur, une seule tâche. Mesurer avant/après. Documenter le prompt.
+
+**Phase 2 — Extension (1 mois)**
+
+2-3 tâches supplémentaires. Créer le guide interne "Nos prompts Cowork".
+
+**Phase 3 — Généralisation**
+
+Diffuser les prompts validés. Former en montrant, pas en expliquant. Maintenir la bibliothèque.
+
+## 4 Erreurs de déploiement à éviter
+
+**Tout déployer d'un coup** → abandon en semaine 2. Fix : une tâche à la fois.
+
+**Ne pas documenter les prompts** → chacun réinvente la roue. Fix : fiche prompt dès que ça marche.
+
+**Attendre la perfection** → on n'commence jamais. Fix : 80% suffit pour valider.
+
+**Oublier la vérification** → erreur dans un document officiel. Fix : relecture humaine systématique.
+
+## Métriques de suivi (mensuel)
+
+| Métrique | Cible à 1 mois |
+|---------|----------------|
+| Temps économisé/semaine | > 2h/personne |
+| Prompts en bibliothèque | > 5 |
+| Utilisateurs actifs | > 50% équipe |
+| Erreurs détectées en relecture | < 5% des outputs |
+
+## Les 3 actions de demain matin
+
+1. Chronométrer votre tâche la plus répétitive (vrai chrono, pas estimation)
+2. Tester le prompt correspondant dans ce guide
+3. Calculer votre ROI avec la formule ci-dessus

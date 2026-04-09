@@ -1,0 +1,100 @@
+---
+title: "Mesurer son ROI"
+subtitle: "4 métriques, template de suivi, jalons de progression"
+card-number: "C05"
+category: "Concepts"
+difficulty: "intermediate"
+author: "Florian BRUNIAUX"
+version: "1.6.1"
+date: "Avril 2026"
+layout: "two-col"
+lang: fr
+format:
+  recap-card-typst: default
+---
+
+## Pourquoi mesurer
+
+Sans mesure, les bonnes semaines semblent de la chance et les mauvaises font abandonner. La mesure montre que Cowork semaine 2 est déjà 30% plus rapide que le manuel baseline, même si ça ne le ressemble pas encore.
+
+## Les 4 métriques
+
+**1. Temps économisé par tâche**
+
+Chronométrer avant Cowork. Chronométrer après. La différence = votre économie réelle.
+
+Cible : 60-85% de réduction sur les tâches structurées.
+
+**2. Taille de la bibliothèque de prompts**
+
+| Délai | Cible |
+|-------|-------|
+| Fin semaine 2 | 1 prompt |
+| Fin mois 1 | 5 prompts |
+| Fin mois 3 | 15+ prompts |
+| État mature | 25-30 prompts |
+
+**3. Taux d'adoption équipe**
+
+Demander chaque lundi : "Tu as utilisé Cowork cette semaine ?"
+
+Cible : > 50% après mois 1, > 80% après mois 3.
+
+**4. Taux d'erreurs dans les outputs**
+
+| Type | Taux acceptable |
+|------|----------------|
+| Aucune correction | 60-70% |
+| Correction mineure | 25-35% |
+| Erreur factuelle | < 5% |
+| Output inutilisable | < 1% |
+
+Si erreurs factuelles > 5% : affiner le prompt avant de réutiliser.
+
+## Template suivi hebdomadaire
+
+```
+Semaine du [date]
+─────────────────────────────────────
+Tâche           | Manuel | Cowork | Notes
+─────────────────────────────────────
+[tâche 1]       | X min  | Y min  | ...
+[tâche 2]       | X min  | Y min  | ...
+─────────────────────────────────────
+Total économisé : [somme]
+Nouveaux prompts : [nombre]
+```
+
+10 minutes le vendredi. Après 4 semaines : données mensuelles automatiques.
+
+## Jalons de progression
+
+**Semaine 1**
+
+- 1 tâche chronométrée manuellement (base)
+- 1 test Cowork sur cette tâche
+- 1 prompt sauvegardé
+
+**Fin mois 1**
+
+- 5+ prompts, 3 tâches documentées avant/après
+- 2-4h économisées par semaine
+- 1-2 membres d'équipe utilisent un prompt partagé
+
+**Fin mois 3**
+
+- 15+ prompts, 5-8h/semaine économisées
+- 50%+ adoption équipe
+- Taux d'erreurs < 5% sur documents externes
+
+## Bilan mensuel (5 questions)
+
+1. Mes 3 meilleures tâches avec Cowork ?
+2. Quelle tâche je fais encore manuellement alors que je devrais automatiser ?
+3. Quel workflow Cowork me donne des résultats insatisfaisants ?
+4. Quelqu'un dans l'équipe a utilisé un prompt que je n'ai pas créé ?
+5. Que ferais-je avec le temps récupéré si j'en avais deux fois plus ?
+
+## Quand arrêter de mesurer
+
+Quand vous avez 20+ prompts validés, que le gain de temps est automatique, et que les nouveaux membres peuvent s'intégrer seuls via la bibliothèque. Garder le bilan mensuel (5 min), abandonner le tableau hebdomadaire.

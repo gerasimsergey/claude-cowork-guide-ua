@@ -1,0 +1,281 @@
+---
+title: "Apprendre l'IA quand on n'est pas Dev"
+subtitle: "Auto-diagnostic, plan 30 jours, pièges à éviter"
+author: "Florian BRUNIAUX"
+date: 2026-04-09
+date-format: "MMMM YYYY"
+version: "1.6.1"
+wp-version: "1.0.0"
+series: "Claude Cowork Guide"
+wp-number: "10"
+format:
+  whitepaper-typst:
+    toc: true
+    toc-depth: 2
+    section-numbering: "1.1"
+lang: fr
+filters:
+  - fix-lists.lua
+---
+
+::: {.callout-tip title="Pour qui ce whitepaper ?"}
+**Audience principale** : Toute personne non-technique qui veut apprendre à travailler avec Cowork de façon autonome
+
+**Prérequis** : Avoir un compte Cowork
+
+**Temps de lecture** : 20 min
+
+**Ce que vous allez retenir** :
+
+- Où vous en êtes (auto-diagnostic en 5 questions)
+- Comment progresser du copier-coller à l'autonomie complète
+- Les pièges qui font échouer 80% des adoptions
+- Un plan 30 jours concret avec des jalons vérifiables
+:::
+
+> **En 5 lignes :** Apprendre à travailler avec l'IA quand on n'est pas développeur, ce n'est pas apprendre à coder. C'est apprendre à déléguer intelligemment. Les mêmes compétences qui font un bon manager font un bon utilisateur de Cowork : savoir définir clairement ce qu'on veut, vérifier le travail rendu, et donner un feedback précis pour corriger. Ce whitepaper donne le cadre pour progresser à son rythme, sans jargon technique.
+
+# Où en êtes-vous ? Auto-diagnostic
+
+## Les trois profils
+
+Avant de proposer un plan, il faut savoir où on en est. Ces trois profils ne sont pas des jugements, ce sont des points de départ.
+
+**Le Dépendant**
+
+Signes : demande à Cowork avant d'essayer seul. Copie les prompts sans comprendre pourquoi ils fonctionnent. Si Cowork n'est pas disponible, le travail s'arrête.
+
+Ce que ça coûte : zéro capacité d'adaptation. Un prompt qui cesse de fonctionner devient un problème sans solution.
+
+**L'Évitant**
+
+Signes : a un compte Cowork mais l'ouvre rarement. Convaincu que les résultats ne seront pas assez bons. Refait manuellement ce que Cowork pourrait gérer.
+
+Ce que ça coûte : l'effet cumulatif n'existe pas. Chaque heure passée à faire une tâche manuellement est une heure perdue deux fois (le temps de la tâche + le temps non récupéré).
+
+**L'Augmenté**
+
+Signes : sait exactement quelles tâches déléguer. Relit les outputs plutôt que de les refaire. A une bibliothèque de prompts validés. Forme ses collègues.
+
+C'est la cible. Pas la perfection, la délégation efficace.
+
+## Auto-diagnostic en 5 questions
+
+Répondre honnêtement.
+
+**1.** Peux-tu écrire un prompt CTOC de zéro pour une nouvelle tâche, sans regarder le guide ?
+
+**2.** As-tu 5 prompts ou plus sauvegardés dans une bibliothèque personnelle ou partagée ?
+
+**3.** Sais-tu quelles tâches Cowork gère bien et lesquelles moins bien dans ton contexte spécifique ?
+
+**4.** As-tu formé au moins une autre personne sur un workflow Cowork ?
+
+**5.** Vérifies-tu systématiquement les outputs avant de les envoyer à l'extérieur ?
+
+**Interprétation :**
+
+| Réponses "Oui" | Profil | Action recommandée |
+|----------------|--------|--------------------|
+| 0-1 | Dépendant / Débutant | Commencer par la semaine 1 du plan 30 jours |
+| 2-3 | Intermédiaire | Aller directement à la semaine 3 du plan |
+| 4-5 | Augmenté | Passer à la section "Enseigner à son équipe" |
+
+---
+
+# Le bon modèle mental
+
+## Ce que "apprendre l'IA" ne signifie pas
+
+Apprendre à utiliser Cowork n'est pas apprendre à coder. Aucune ligne de code. Aucune connaissance technique requise.
+
+Ce n'est pas non plus apprendre à "parler à un robot" avec des formules magiques. Il n'y a pas de formule secrète. Il y a une méthode structurée (CTOC) et de la pratique.
+
+Ce n'est pas non plus un investissement de 100 heures. Les gains réels arrivent en semaine 2, pas en mois 6.
+
+## Ce que c'est vraiment
+
+C'est apprendre à déléguer.
+
+Un bon manager ne fait pas le travail lui-même quand il pourrait déléguer. Il ne délègue pas non plus à l'aveugle. Il définit clairement ce qu'il veut, vérifie le résultat, donne un feedback précis et construit la confiance dans le temps.
+
+Avec Cowork, le processus est identique :
+
+- Définir clairement le travail à faire (le prompt)
+- Vérifier le résultat (relecture)
+- Corriger avec précision si nécessaire (ajustement du prompt)
+- Documenter ce qui fonctionne (bibliothèque)
+
+La différence : Cowork ne se fatigue pas, ne prend pas de vacances et coûte 20€/mois.
+
+## Le protocole UVAL
+
+UVAL est une boucle en quatre étapes pour toute nouvelle tâche Cowork. Il prévient l'erreur la plus commune : abandonner après un mauvais premier résultat.
+
+**U — Understand (Comprendre)** : Qu'est-ce que je veux exactement ? Pas "aide-moi avec mes factures" mais "extraire le nom du fournisseur, la date et le total de ces 12 factures PDF dans un tableur."
+
+**V — Verify (Vérifier)** : Après l'output, vérifier 3 éléments manuellement. Est-ce que les données correspondent à la source ? Est-ce que le format est correct ? Deux minutes qui détectent 90% des problèmes.
+
+**A — Adjust (Ajuster)** : Si quelque chose est incorrect, donner à Cowork ce qui est spécifiquement faux. "Ligne 3 : mauvais format de date, devrait être JJ/MM/AAAA" vaut mieux que "c'est pas bon."
+
+**L — Log (Documenter)** : Noter ce qui a fonctionné. Le prompt, la structure de fichiers, les contraintes nécessaires. C'est la fondation de la bibliothèque.
+
+Une boucle UVAL sur une nouvelle tâche. Ensuite on a un template réutilisable.
+
+---
+
+# Plan 30 jours
+
+Le plan suppose 30 minutes par semaine de pratique délibérée, en plus de l'usage habituel.
+
+## Semaine 1 : Maîtriser une tâche
+
+**Objectif** : finir la semaine avec un prompt qui fonctionne et un avant/après mesuré.
+
+**Jour 1-2** : Choisir la tâche la plus répétitive de la semaine. Pas la plus importante : la plus répétitive. La faire manuellement et chronométrer.
+
+**Jour 3-4** : Utiliser un prompt de ce guide pour la même tâche. Chronométrer.
+
+**Jour 5-7** : Affiner le prompt jusqu'à ce que l'output nécessite peu de corrections. Sauvegarder le prompt.
+
+**À la fin de la semaine** : un prompt documenté, un gain de temps mesuré.
+
+::: {.callout-note title="Conseil pratique"}
+Ne pas choisir une tâche complexe pour commencer. L'extraction de données depuis des factures ou l'organisation de fichiers sont idéales : résultats rapides, faciles à vérifier.
+:::
+
+## Semaine 2 : Comprendre pourquoi ça marche
+
+**Objectif** : passer de "copier un prompt" à "comprendre un prompt".
+
+Reprendre le prompt de la semaine 1. Le décomposer bloc par bloc.
+
+Essayer de supprimer une contrainte et observer ce que ça change dans l'output. Essayer de modifier le format de sortie. Essayer de changer la formulation de la tâche.
+
+Chaque expérience prend 5 minutes et apprend quelque chose. C'est la différence entre quelqu'un qui utilise et quelqu'un qui comprend.
+
+**À la fin de la semaine** : capable d'expliquer pourquoi le prompt fonctionne, et d'identifier quels éléments sont essentiels.
+
+## Semaine 3 : Deux nouvelles tâches
+
+**Objectif** : écrire des prompts soi-même, sans copier depuis le guide.
+
+Appliquer ce qu'on a appris en semaine 2 à deux nouvelles tâches. Écrire les prompts depuis une feuille blanche avec la structure CTOC.
+
+Si un prompt ne fonctionne pas au premier essai : utiliser UVAL. Ajuster, ne pas abandonner. Le premier résultat est rarement parfait ; c'est normal.
+
+**À la fin de la semaine** : trois prompts dans la bibliothèque personnelle, écrits sans modèle.
+
+## Semaine 4 : Partager
+
+**Objectif** : un prompt utile à quelqu'un d'autre que soi.
+
+Si on travaille avec d'autres : partager un prompt avec un collègue et observer comment il l'utilise. Où se perd-il ? Que doit-il changer pour son contexte ?
+
+Si on travaille seul : documenter les trois prompts avec les notes de contexte, ce qu'il faut personnaliser, ce qu'il faut surveiller dans l'output. Le test : est-ce qu'on pourrait reprendre ce document après 6 mois et tout comprendre ?
+
+**À la fin du mois** : une bibliothèque de prompts documentée, utile au-delà de soi.
+
+---
+
+# Les pièges qui font échouer
+
+## Piège 1 : Tout automatiser le premier jour
+
+Le symptôme : lancer Cowork sur 10 tâches différentes la première semaine, obtenir des résultats mitigés sur toutes, conclure que l'outil ne fonctionne pas.
+
+La réalité : Cowork fonctionne très bien sur les tâches structurées. Il faut du temps pour apprendre lesquelles et comment les prompter. Une tâche maîtrisée vaut mieux que dix tâches abandonnées.
+
+Le correctif : une tâche, une semaine, un prompt validé. Puis expansion.
+
+## Piège 2 : Attendre la perfection
+
+Le symptôme : le premier output est à 80%. Conclusion : Cowork ne fonctionne pas.
+
+La réalité : 80% est le point de départ normal. La relecture humaine fait passer à 100% en 2 minutes. C'est le workflow : Cowork fait 95% du travail, l'humain valide.
+
+Le correctif : accepter que le premier output soit imparfait. Le corriger avec précision. Documenter ce qui a changé. Le deuxième output sera meilleur.
+
+## Piège 3 : Ne pas vérifier
+
+Le symptôme : envoyer l'output Cowork directement à un client sans relecture.
+
+Le risque : une erreur dans un document officiel (mauvais montant sur une facture, mauvaise date sur un contrat) qui arrive chez le client.
+
+Le correctif : systématiser la relecture. Pas une relecture complète ligne par ligne : une vérification ciblée des 3 à 5 points qui comptent le plus (montants, noms, dates, mentions obligatoires).
+
+## Piège 4 : Ne pas documenter
+
+Le symptôme : un prompt fonctionne parfaitement. La semaine suivante, on ne s'en souvient plus et on recommence à zéro.
+
+Le coût : chaque prompt réinventé est du temps perdu. Sur 50 prompts sur un an, ça représente des dizaines d'heures.
+
+Le correctif : dès qu'un prompt fonctionne, le noter dans un fichier. Même 3 lignes. Le contexte d'utilisation, le prompt, ce qu'il faut personnaliser. C'est suffisant.
+
+## Piège 5 : Partager des prompts sans contexte
+
+Le symptôme : un prompt efficace est partagé avec un collègue. Il ne fonctionne pas pour lui. Conclusion : Cowork est incohérent.
+
+La réalité : le prompt fonctionnait avec une structure de fichiers spécifique, des conventions de nommage spécifiques, un contexte métier spécifique. Sans ces éléments, il échoue.
+
+Le correctif : toujours documenter "ce qu'il faut personnaliser" dans chaque prompt partagé. Les chemins de fichiers, les noms de colonnes, les particularités métier.
+
+---
+
+# Enseigner à son équipe
+
+## Quand vous êtes prêt
+
+Trois signaux que vous êtes prêt à former votre équipe :
+
+- Vous avez 5+ prompts validés qui fonctionnent dans votre contexte
+- Vous pouvez expliquer pourquoi ils fonctionnent (pas juste les copier)
+- Vous avez mesuré les gains : vous avez des chiffres concrets à partager
+
+Sans ces trois éléments, la formation produira de la frustration plutôt que de l'adoption.
+
+## Comment former efficacement
+
+La formation la plus efficace n'est pas "voici comment utiliser Cowork". C'est "regarde-moi faire cette tâche avec Cowork de bout en bout, puis fais-la toi-même pendant que je regarde."
+
+30 minutes de co-travail valent 2 heures de formation théorique.
+
+Pour chaque tâche qu'on forme :
+
+1. Faire la démonstration complète (10 min)
+2. Laisser la personne refaire avec le même prompt (10 min)
+3. Débriefing : qu'est-ce qui était clair ? Qu'est-ce qui pose question ? (5 min)
+4. Lui confier la tâche en autonomie, avec une relecture du premier output
+
+## La bibliothèque partagée
+
+Le vrai multiplicateur : une bibliothèque de prompts accessible à toute l'équipe, avec pour chaque prompt :
+
+- Le nom de la tâche
+- Le prompt complet
+- Ce qu'il faut personnaliser
+- Ce qu'il faut vérifier dans l'output
+- La date d'ajout et par qui
+
+Quand quelqu'un ajoute un prompt validé à la bibliothèque, toute l'équipe en bénéficie immédiatement. C'est l'effet cumulatif qui justifie l'investissement initial dans la formation.
+
+---
+
+# La Série
+
+| # | Titre | Statut |
+|---|-------|--------|
+| WP-00 | De Zéro à Productif | Disponible |
+| WP-01 | Prompts Efficaces pour Non-Devs | Disponible |
+| WP-02 | Automatisation Administrative | Disponible |
+| WP-03 | IA pour Artisans et BTP | Disponible |
+| WP-04 | IA pour Commerçants et Retail | Disponible |
+| WP-05 | IA pour Consultants et Professions Libérales | Disponible |
+| WP-06 | Prospection et Relation Client | Disponible |
+| WP-07 | Communication et Visibilité | Disponible |
+| WP-08 | Organisation et Productivité | Disponible |
+| WP-09 | Sécurité et Confidentialité pour TPE | Disponible |
+| **WP-10** | **Apprendre l'IA quand on n'est pas Dev** (ce document) | Disponible |
+| WP-11 | ROI et Déploiement pour Dirigeants | Disponible |
+
+Tous les whitepapers sur [cowork.bruniaux.com/whitepapers/](https://cowork.bruniaux.com/whitepapers/).

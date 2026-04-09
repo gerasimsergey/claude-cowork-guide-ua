@@ -1,0 +1,102 @@
+---
+title: "Framework CTOC"
+subtitle: "De la vague demande au prompt qui marche"
+card-number: "C01"
+category: "Concepts"
+difficulty: "beginner"
+author: "Florian BRUNIAUX"
+version: "1.6.1"
+date: "Avril 2026"
+layout: "two-col"
+lang: fr
+format:
+  recap-card-typst: default
+---
+
+## Les 4 blocs CTOC
+
+**CONTEXTE** — la situation de départ
+
+> Ce que Cowork doit savoir pour commencer. Fichiers impliqués, contexte métier, point de départ.
+
+**TÂCHE** — ce qu'on veut exactement
+
+> Un objectif précis, une seule action. Si tu as envie d'écrire "et aussi", c'est un deuxième prompt.
+
+**OUTPUT** — le résultat attendu
+
+> Format exact (Excel, Word, PDF, texte). Chemin complet du fichier de sortie. Jamais "quelque part".
+
+**CONTRAINTES** — les règles à respecter
+
+> Format de date, devise, nomenclature, cas limites. Ce que Cowork doit faire si quelque chose ne va pas.
+
+## Avant / Après CTOC
+
+**Prompt vague :**
+```
+Aide-moi avec mes factures
+```
+Résultat : questions, réponse générique, 10 min perdues.
+
+**Prompt CTOC :**
+```
+CONTEXTE : 12 factures PDF dans
+~/Cowork-Workspace/input/factures-mars/
+
+TÂCHE : Extraire de chaque facture :
+fournisseur, date, montant HT, TVA, TTC
+
+SORTIE : ~/Cowork-Workspace/output/
+mars-2026.xlsx, une ligne par facture
+
+CONTRAINTES : Dates JJ/MM/AAAA, EUR.
+Si champ illisible → écrire "À VÉRIFIER"
+```
+
+## Erreurs CTOC fréquentes
+
+| Erreur | Fix |
+|--------|-----|
+| Pas de chemin de sortie | Toujours donner le chemin complet |
+| Pas de format spécifié | "Fichier Excel avec colonnes X, Y, Z" |
+| Plusieurs tâches dans un prompt | Séparer en prompts distincts |
+| Pas de gestion des cas limites | Ajouter "si X, alors Y" |
+| Contraintes vagues | "Ton formel" → "Vouvoiement, pas d'abréviations" |
+
+## Raffinement itératif
+
+Ne pas viser la perfection au premier essai.
+
+**1. Brouillon** → version rapide, imparfaite
+
+**2. Revue** → noter ce qui manque ou pose problème
+
+**3. Ajustement** → donner les corrections précises à Cowork
+
+```
+CONTEXTE : Voici l'output précédent.
+Ligne 3 : la TVA est incorrecte,
+elle devrait être 10% pas 20%.
+TÂCHE : Corriger uniquement cette ligne.
+SORTIE : Ligne corrigée dans le chat.
+CONTRAINTES : Ne pas retraiter tout le fichier.
+```
+
+## Traitement par lots
+
+| Volume | Approche |
+|--------|----------|
+| 1-20 fichiers | Un seul prompt batch |
+| 20-50 fichiers | Batch avec plan → valider → exécuter |
+| 50-100 fichiers | 2 batches de ~50 |
+| 100+ fichiers | Batches de 20-30 séquentiels |
+
+**Template batch :**
+```
+CONTEXTE : [N] fichiers dans input/[dossier]/
+TÂCHE : Pour chaque fichier, [opération]
+SORTIE : output/[fichier].xlsx, une ligne/fichier
+CONTRAINTES : Si erreur → écrire "ERREUR", continuer
+Créer un résumé : succès / erreurs / à vérifier
+```
