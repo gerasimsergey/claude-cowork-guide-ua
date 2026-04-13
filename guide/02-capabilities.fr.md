@@ -511,6 +511,25 @@ Les tâches planifiées fonctionnent bien pour des opérations simples et répé
 
 Alternative pour l'automatisation avancée : **n8n** (open source) peut déclencher Cowork Desktop et offre une logique de scheduling plus sophistiquée avec conditions et branches.
 
+#### 3 méthodes : ce que Cowork peut et ne peut pas planifier
+
+Selon votre setup, les tâches automatiques ne fonctionnent pas toutes de la même façon :
+
+| Méthode | Comment ça marche | Prérequis | Fonctionne dans Cowork ? |
+|---------|------------------|-----------|--------------------------|
+| **Interface native Cowork** | Barre latérale → Planifié → Nouvelle tâche | Claude Desktop ouvert, Mac allumé | ✅ Oui |
+| **Mac éteint ou en veille** | La tâche se déclenche quand vous n'êtes pas là | Exécution distante | ❌ Non — utiliser Dispatch ou Claude Code |
+| **Serveur / headless** | Serveur sans interface graphique | Pas de Claude Desktop | ❌ Non — utiliser Claude Code |
+
+**La réponse honnête** : les tâches planifiées Cowork nécessitent que Claude Desktop soit ouvert et que votre Mac soit allumé. Si le Mac se met en veille ou que l'app est fermée au moment où la tâche doit s'exécuter, elle est ignorée et relancée au réveil.
+
+**Pour les deux cas non supportés :**
+
+- **Vous êtes absent mais le Mac est allumé** → utilisez [Dispatch](#dispatch--contrôler-cowork-depuis-votre-téléphone) : envoyez la tâche depuis votre téléphone, elle s'exécute sur votre bureau
+- **Entièrement automatique, Mac éteint, ou serveur** → passez à Claude Code avec un cron système. Exemple : tous les lundis à 7h, Claude Code résume les tickets de la semaine et envoie sur Slack — sans machine, sans interface, sans intervention.
+
+> **Règle de décision** : les tâches planifiées Cowork sont idéales pour les routines "pendant que vous travaillez" (brief matinal, compilation hebdo). Pour une automatisation qui doit tourner même quand vous n'êtes pas là, Claude Code est le bon outil.
+
 ### Automatisation du navigateur amelioree
 
 L'integration Chrome a ete renforcee pour permettre des workflows web plus complexes :

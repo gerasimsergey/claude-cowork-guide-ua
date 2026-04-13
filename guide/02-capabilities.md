@@ -511,6 +511,25 @@ Scheduled tasks work well for straightforward, repeatable operations. For comple
 
 Alternative for advanced automation: **n8n** (open source) can trigger Cowork Desktop via the n8n-nodes-claude-desktop community node, enabling more sophisticated scheduling and conditional logic.
 
+#### 3 Methods: What Cowork Can and Can't Schedule
+
+Not all scheduled automation works the same way depending on your setup:
+
+| Method | How It Works | Requirement | Works in Cowork? |
+|--------|-------------|-------------|-----------------|
+| **Cowork native UI** | Sidebar → Scheduled → New Task | Claude Desktop open, machine awake | ✅ Yes |
+| **Machine off / you're away** | Task fires while Mac is sleeping or closed | Remote execution | ❌ No — use Dispatch or Claude Code |
+| **Headless server / CI** | Automated server without a display | No Claude Desktop | ❌ No — use Claude Code |
+
+**The honest answer**: Cowork's scheduled tasks require Claude Desktop to be running and your Mac to be awake. If the Mac sleeps or the app closes when a task fires, it skips and re-runs once the device wakes.
+
+**For the two unsupported cases:**
+
+- **You're away but Mac is on** → use [Dispatch](#dispatch--control-cowork-from-your-phone): send the task from your phone, runs on your desktop
+- **Fully headless, machine off, or server** → switch to Claude Code with a system cron job. Example: every Monday at 7am, Claude Code summarizes last week's tickets and posts to Slack — no machine, no UI, no babysitting.
+
+> **Decision rule**: Cowork scheduling is best for "while I'm working" routines (morning brief, weekly compilation). For automation that must run reliably regardless of whether you're at your desk, Claude Code is the right tool.
+
 ### Improved Browser Automation
 
 Browser automation capabilities have been enhanced for more reliable web research, form interaction, and content extraction.
