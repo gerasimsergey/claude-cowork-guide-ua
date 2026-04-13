@@ -22,3 +22,6 @@ claudedocs/
 
 # Vitals provenance data
 .vitals/
+
+# Whitepapers (work in progress, not public yet)
+whitepapers/
