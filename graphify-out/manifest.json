@@ -1,0 +1,730 @@
+{
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/README.uk.md": {
+    "mtime": 1778150606.292075,
+    "hash": "e3be7600aded4d196ee9c68492526d78"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/README.fr.md": {
+    "mtime": 1778149064.754901,
+    "hash": "c69df23ea158c0feaedeb397f1157767"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/llms.txt": {
+    "mtime": 1778141936.0733538,
+    "hash": "89bfa5a978a22fedc4f3e5af9c74865c"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/CODE_OF_CONDUCT.md": {
+    "mtime": 1778141936.0663776,
+    "hash": "ce8ee5f4efa479f68555a216fdfefd39"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/IDEAS.md": {
+    "mtime": 1778141936.0666187,
+    "hash": "56e30ff5e6129f346f1af6f834affd76"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/CHANGELOG.md": {
+    "mtime": 1778141936.0659397,
+    "hash": "9796e8f8dbee196a12e9aaa93bcb6ca8"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/LOCALIZATION_LOG.uk.md": {
+    "mtime": 1778149627.3893464,
+    "hash": "92cc115c8e7a52ec4dc1c4ff20946040"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/README.md": {
+    "mtime": 1778143682.6836092,
+    "hash": "d0636a6af4fe5b418ebaf110b15898e8"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/MANIFEST.yaml": {
+    "mtime": 1778141936.066896,
+    "hash": "d85210464d6e78a5d29bdfc9beb02e29"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/CONTRIBUTING.md": {
+    "mtime": 1778141936.0665073,
+    "hash": "41596757af93bb2e598c5dd590d415a8"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/audit-prompt.md": {
+    "mtime": 1778141936.0676033,
+    "hash": "a03b9c798e179af91f03fc3d9a3373ac"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/LOCALIZATION_LOG.ru.md": {
+    "mtime": 1778148518.0461483,
+    "hash": "704c519d7f79af24eb7c51ff778550f6"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/docker-compose.yml": {
+    "mtime": 1778149474.104006,
+    "hash": "eb34b4f32efa02ff226430f5ad9f1769"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/README.ru.md": {
+    "mtime": 1778150611.9529831,
+    "hash": "42d92f20f39d3d25b7800faa3cce30b6"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/CLAUDE.md": {
+    "mtime": 1778141936.066272,
+    "hash": "1d748f95b54d4734c983d2ba079ce0f8"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/TRANSLATIONS.md": {
+    "mtime": 1778148931.8269804,
+    "hash": "c8666ce8115a14093c8626be744ab488"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/00-overview.md": {
+    "mtime": 1778143474.8221552,
+    "hash": "69a8d42da73825a6cd40662cd7c2cb6f"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/03-security.fr.md": {
+    "mtime": 1778149064.752606,
+    "hash": "4a96243f3d5baacadc4dded4d2a095e9"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/02-capabilities.md": {
+    "mtime": 1778143564.3057709,
+    "hash": "3783a30648eb8954173ed90449b74d61"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/00-overview.ru.md": {
+    "mtime": 1778149064.752665,
+    "hash": "b8ab2f8e93fb63e8c697aa5999f414d5"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/01-getting-started.md": {
+    "mtime": 1778143520.580532,
+    "hash": "509647fff0988f05d04a51c88ed2694b"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/04-troubleshooting.ru.md": {
+    "mtime": 1778149064.753103,
+    "hash": "7c8d533b6813107e0a1d60a5fe14008f"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/methodologies.md": {
+    "mtime": 1778141936.0732558,
+    "hash": "8642d5f1711c9d45143d3d4563241604"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/01-getting-started.fr.md": {
+    "mtime": 1778149064.752538,
+    "hash": "82019c2d732e7d81cb9c33c8e8cf1389"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/02-capabilities.ru.md": {
+    "mtime": 1778149064.752886,
+    "hash": "51394ab0e490558088d6584c1f3d299a"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/methodologies.ru.md": {
+    "mtime": 1778149064.753139,
+    "hash": "b007c4bf6ee39eedb21c6afd38f492fa"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/01-getting-started.ru.md": {
+    "mtime": 1778149064.752832,
+    "hash": "ff32119f5c4ab6ff53d60664cd0a8562"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/02-capabilities.fr.md": {
+    "mtime": 1778149064.752575,
+    "hash": "4d452dd66fe2afc8850b644693a61b8b"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/03-security.md": {
+    "mtime": 1778143599.6576574,
+    "hash": "577d0bf64d74690ba7bcb323b700442c"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/04-troubleshooting.fr.md": {
+    "mtime": 1778149064.752637,
+    "hash": "e667f13b34bffe808abfafa205bc66a6"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/00-overview.fr.md": {
+    "mtime": 1778149064.752059,
+    "hash": "92a3d3439433841eac270d65024902e5"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/04-troubleshooting.md": {
+    "mtime": 1778143630.4485383,
+    "hash": "69c068f14ef9c5939abec25746f2b11f"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/03-security.ru.md": {
+    "mtime": 1778149064.752923,
+    "hash": "dda813182001bc00b584b1ae35e5b104"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/learning/README.en.md": {
+    "mtime": 1778143889.623767,
+    "hash": "a9559b45404a89850f86b380516934d4"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/learning/measuring-progress.ru.md": {
+    "mtime": 1778143793.2496142,
+    "hash": "1da937bee25b4e376dca27b68c6a1b28"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/learning/measuring-progress.md": {
+    "mtime": 1778143870.3660033,
+    "hash": "92753f9d61315060e34ff6b46b90ecc0"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/learning/learning-with-ai.fr.md": {
+    "mtime": 1778143844.9658344,
+    "hash": "274199f0caf394fa0219b0cccdf28c59"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/learning/building-prompting-skills.ru.md": {
+    "mtime": 1778143776.4686108,
+    "hash": "56e63bde89368e908cd979c0992c775b"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/learning/learning-with-ai.md": {
+    "mtime": 1778143832.2557194,
+    "hash": "786d186ffc590e5dfb9186074de0f868"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/learning/README.md": {
+    "mtime": 1778143881.7325888,
+    "hash": "6bf616eddc9ebd0c77ecdbc001cd9454"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/learning/building-prompting-skills.fr.md": {
+    "mtime": 1778143864.6271904,
+    "hash": "d1b3ec8845d9a2b5821b7dd969104939"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/learning/learning-with-ai.ru.md": {
+    "mtime": 1778143757.7347896,
+    "hash": "0158e8dbaeb342a17b3119d19d653e9e"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/learning/building-prompting-skills.md": {
+    "mtime": 1778143851.6443603,
+    "hash": "0c91e2eea46635150b37700a86222848"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/learning/measuring-progress.fr.md": {
+    "mtime": 1778143876.0548804,
+    "hash": "26414dd2670c7ba55e45a338043ff09b"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/learning/README.ru.md": {
+    "mtime": 1778143742.6730206,
+    "hash": "3515d7b4335069ae932e7c875a4e6abc"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/diagrams/02-capabilities.md": {
+    "mtime": 1778141936.0711684,
+    "hash": "4da689bf6208e02b3a18b1a081c76191"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/diagrams/01-getting-started.md": {
+    "mtime": 1778141936.0710638,
+    "hash": "60cb7130d388e043f040b167053d4b4a"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/diagrams/05-workflows-admin.md": {
+    "mtime": 1778141936.0715055,
+    "hash": "c83077a017ca97d8a5b3e1dfe52d9f48"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/diagrams/07-workflows-production.md": {
+    "mtime": 1778141936.0717285,
+    "hash": "967fb3b6b32334ed502eec60a9b66cfd"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/diagrams/README.md": {
+    "mtime": 1778141936.0720897,
+    "hash": "b93dbce5a0ca912d65c5daa94922e2e0"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/diagrams/08-workflows-commu-orga.md": {
+    "mtime": 1778141936.0719867,
+    "hash": "2bbf2303794c9b1d6bce5e2470994759"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/diagrams/03-security.md": {
+    "mtime": 1778141936.0712702,
+    "hash": "859beb31f3e0b6097d1f1128782bad65"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/diagrams/04-troubleshooting.md": {
+    "mtime": 1778141936.0713725,
+    "hash": "028ddf31bf08c2053a4e692ccd27347b"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/guide/diagrams/06-workflows-commercial.md": {
+    "mtime": 1778141936.0716102,
+    "hash": "04597e8df76b0206ae9c7ef5671810e2"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/tools/onboarding-prompt.md": {
+    "mtime": 1778141936.077241,
+    "hash": "6f27c2c560a32ea86675270b73a6e7a1"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/machine-readable/llms.txt": {
+    "mtime": 1778141936.0737174,
+    "hash": "89bfa5a978a22fedc4f3e5af9c74865c"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/machine-readable/claude-cowork-releases.yaml": {
+    "mtime": 1778141936.0736198,
+    "hash": "a54a1d66e037bf92c6ef0855040d0168"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/machine-readable/README.md": {
+    "mtime": 1778141936.0734923,
+    "hash": "0508309d85237e238184d0863b78eb35"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/machine-readable/reference.yaml": {
+    "mtime": 1778141936.0738533,
+    "hash": "4761342c1f6dcfa36588a3101dbaba93"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/payment-reminders.md": {
+    "mtime": 1778144887.512129,
+    "hash": "dad30f8544c2949b9028ceed370bd8fb"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/price-comparison.md": {
+    "mtime": 1778145423.9795566,
+    "hash": "a345fbc4b07fd49c2b846118a3078ac3"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/quote-creation.ru.md": {
+    "mtime": 1778149064.749507,
+    "hash": "4c7bcde7193fa1e02a7ed2cca95f1255"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/README.en.md": {
+    "mtime": 1778149064.744324,
+    "hash": "6abcd7096912a72dfc0cb7421bd7d9d6"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/scheduled-automation.en.md": {
+    "mtime": 1778149064.746971,
+    "hash": "1ecd12e2024524174a2c003a5078afc9"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/invoice-generation.en.md": {
+    "mtime": 1778149064.744967,
+    "hash": "4da9449892becc477f511e9355705320"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/compliance-checklist.ru.md": {
+    "mtime": 1778149064.747752,
+    "hash": "80322d2df6a889a13eb04ceee75cae6f"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/scheduled-automation.md": {
+    "mtime": 1778141936.0838456,
+    "hash": "f16f3a5b995ffdf7cfbb90548916c729"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/newsletter-creation.en.md": {
+    "mtime": 1778149064.746099,
+    "hash": "14858d4080557a334c66274979934fa1"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/competitor-analysis.md": {
+    "mtime": 1778145347.539093,
+    "hash": "924f1bd436c853e378a485346a5e6550"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/prospect-research.ru.md": {
+    "mtime": 1778149064.749244,
+    "hash": "60c4755cd6f8f7901439830278676999"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/quote-to-invoice.ru.md": {
+    "mtime": 1778149064.749541,
+    "hash": "89a82c0ada784adbb1827d806e9a7733"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/payment-reminders.ru.md": {
+    "mtime": 1778149064.748858,
+    "hash": "3ca958bf8e82c909b5cbac2e1246d039"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/financial-model-validation.ru.md": {
+    "mtime": 1778149064.748288,
+    "hash": "8424b32d26497329ea98659b6cbb60c1"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/meeting-prep.md": {
+    "mtime": 1778148457.6406684,
+    "hash": "7ae7a4c208fa84313c98bdb34d12406c"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/inventory-tracking.en.md": {
+    "mtime": 1778149064.744936,
+    "hash": "9417a602034b5557b3b1166ecd9343f4"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/prospect-research.md": {
+    "mtime": 1778145272.2175775,
+    "hash": "1eb53e6ccd9b3f1ae0c96cf56b4b9d65"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/presentation-slides.en.md": {
+    "mtime": 1778149064.746298,
+    "hash": "d5bf8bfb56b24afb1d097a24475f163e"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/social-media-posts.en.md": {
+    "mtime": 1778149064.747006,
+    "hash": "494be7348c232b2e58e26712ebc02c29"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/client-followup-tracker.en.md": {
+    "mtime": 1778149064.744391,
+    "hash": "76cb5db8d5c780b571efaab970dbe2bf"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/newsletter-creation.md": {
+    "mtime": 1778148233.614845,
+    "hash": "d8ddd7817e354210be0c2d869ff099b0"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/email-templates.ru.md": {
+    "mtime": 1778149064.747796,
+    "hash": "c3ab82ec776fbe7dd917f001ad14e7c0"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/quality-checklist.md": {
+    "mtime": 1778146537.541309,
+    "hash": "633009c480ec36482c14103f65cf845d"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/workforce-planning.en.md": {
+    "mtime": 1778149064.747253,
+    "hash": "19519d2805dc745c33efc64a3d9a986b"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/presentation-slides.md": {
+    "mtime": 1778148202.800207,
+    "hash": "ceba1c9b8526a75d54d53a824e7f66a0"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/work-log.md": {
+    "mtime": 1778146508.445464,
+    "hash": "4fdd7c0b96948d9cc6c64876f0f0afba"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/review-response.ru.md": {
+    "mtime": 1778149064.7496,
+    "hash": "42655bbb35043acef9b9d5ea9ab1b7cb"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/invoice-generation.md": {
+    "mtime": 1778144704.5484703,
+    "hash": "3ba072df4f17cb2ac1a7876a4ab07d8b"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/memory-setup.en.md": {
+    "mtime": 1778149064.74607,
+    "hash": "878b576606b65bf95a6f51fb9c993eed"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/expense-tracking.ru.md": {
+    "mtime": 1778149064.748014,
+    "hash": "5a67983fb9405477c92e46dcc074cdcc"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/meeting-prep.en.md": {
+    "mtime": 1778149064.746038,
+    "hash": "d99e9eb35e239c2d0977c2b4894a33af"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/website-audit.ru.md": {
+    "mtime": 1778149064.751526,
+    "hash": "bf9f9515ebf095637aced563a8e3eb8a"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/expense-tracking.md": {
+    "mtime": 1778148314.8754737,
+    "hash": "69c32d52b72a3d74f76ae84b0fb13d95"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/file-organization.en.md": {
+    "mtime": 1778149064.744879,
+    "hash": "d901c87a1233f358d6bbd31b1f8789c4"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/competitor-analysis.ru.md": {
+    "mtime": 1778149064.747598,
+    "hash": "18d449c5300f261b3cb998b4a4ab3fe7"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/price-comparison.ru.md": {
+    "mtime": 1778149064.749089,
+    "hash": "555cd941e20a5a2e34251914f0c9f27d"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/quote-creation.md": {
+    "mtime": 1778145308.5866368,
+    "hash": "34f679d10d5b8e7ba2b4cc9368690582"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/project-planning.ru.md": {
+    "mtime": 1778149064.749212,
+    "hash": "6204811e75afca3d25f00b02a19b6818"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/knowledge-transfer.ru.md": {
+    "mtime": 1778149064.748387,
+    "hash": "9120a2c1529ab499a0def1715191f12a"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/supplier-order.ru.md": {
+    "mtime": 1778149064.751392,
+    "hash": "effa14859e1d39d344c19e90b4d3995e"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/social-media-posts.md": {
+    "mtime": 1778147928.3621106,
+    "hash": "20481339d80354238c6b84aaae829138"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/work-log.en.md": {
+    "mtime": 1778149064.747223,
+    "hash": "e9b4970b61926234b68beb33bd73cc34"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/quality-checklist.en.md": {
+    "mtime": 1778149064.746822,
+    "hash": "cb2972ead4ccd3a5d22879c54a52a072"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/project-planning.en.md": {
+    "mtime": 1778149064.746601,
+    "hash": "4aeff874da9940e022b11c93878596bb"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/knowledge-transfer.en.md": {
+    "mtime": 1778149064.745205,
+    "hash": "3b6600177270f018a79e4b61cecfa7de"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/supplier-order.en.md": {
+    "mtime": 1778149064.747035,
+    "hash": "236f0723407bbe05ba326b16a494e218"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/README.md": {
+    "mtime": 1778149052.8093488,
+    "hash": "f91e494fd2256d3feefa416ab83e3937"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/file-organization.ru.md": {
+    "mtime": 1778149064.748166,
+    "hash": "f46bca97fb4e23d6a7e998b71b549558"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/competitor-analysis.en.md": {
+    "mtime": 1778149064.744426,
+    "hash": "998329ad03041b9d72b63c7c4ed6f850"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/price-comparison.en.md": {
+    "mtime": 1778149064.746384,
+    "hash": "f6ce66f6fc2ebcea8296f1f2e9fddd9e"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/compliance-checklist.md": {
+    "mtime": 1778144921.93461,
+    "hash": "5f8aaa8695170564681a4b8d3896c517"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/supplier-order.md": {
+    "mtime": 1778147894.7741773,
+    "hash": "e85dccced9e0df99ee4052afb1e560e7"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/workforce-planning.md": {
+    "mtime": 1778144986.85262,
+    "hash": "be908de6587df71bc5737bea0d4d5b67"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/quality-checklist.ru.md": {
+    "mtime": 1778149064.749389,
+    "hash": "acd52747506769fae691b5b6809ec78a"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/inventory-tracking.md": {
+    "mtime": 1778146476.2598636,
+    "hash": "19f4e660fbbb4883212328de4f6540f9"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/file-organization.md": {
+    "mtime": 1778148266.9973085,
+    "hash": "c2d99728fd78a841b4284b4ae58d6a09"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/work-log.ru.md": {
+    "mtime": 1778149064.751763,
+    "hash": "3123aac14ce83991ccd4f46a40a9d59f"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/review-response.en.md": {
+    "mtime": 1778149064.74693,
+    "hash": "933f55fc5e401519cafd634e07c10f08"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/memory-setup.ru.md": {
+    "mtime": 1778149064.748568,
+    "hash": "db655a4f531d1584efbbafc726ac94d4"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/website-audit.en.md": {
+    "mtime": 1778149064.747188,
+    "hash": "4b8bbb68af1da2df07a6caef375f93ba"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/meeting-prep.ru.md": {
+    "mtime": 1778149064.748534,
+    "hash": "ed73d88c7d4091ec3c3ffc362a1ca564"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/review-response.md": {
+    "mtime": 1778147992.2815259,
+    "hash": "986c34e7eef58849437f612d776f3cf6"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/email-templates.md": {
+    "mtime": 1778147960.0956216,
+    "hash": "74540b7a6b9508c4320fa3a6254b775a"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/expense-tracking.en.md": {
+    "mtime": 1778149064.744849,
+    "hash": "fc7fd8ce28c57b4c6919d6f67a733cbe"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/inventory-tracking.ru.md": {
+    "mtime": 1778149064.748318,
+    "hash": "00890ae7b94e60fe1651307ef81e377f"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/presentation-slides.ru.md": {
+    "mtime": 1778149064.748889,
+    "hash": "aef2009a58451b75ce64572b1dae8267"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/memory-setup.md": {
+    "mtime": 1778148653.364472,
+    "hash": "a13147bd6f486b1937cf31290672c688"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/financial-model-validation.en.md": {
+    "mtime": 1778149064.744908,
+    "hash": "8e45a0b6bbf2b8e9e6a83a34574d86bd"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/quote-to-invoice.en.md": {
+    "mtime": 1778149064.7469,
+    "hash": "d04914880cd2fea67206ad5a185624eb"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/payment-reminders.en.md": {
+    "mtime": 1778149064.746193,
+    "hash": "2c00242333b95c687c623570ce20340c"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/prospect-research.en.md": {
+    "mtime": 1778149064.746669,
+    "hash": "fc86f2c94f7b3e978318edcff93e4d61"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/workforce-planning.ru.md": {
+    "mtime": 1778149064.751797,
+    "hash": "acb6f570f61300bcaa3cee129706e09c"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/financial-model-validation.md": {
+    "mtime": 1778144952.7112615,
+    "hash": "bd14d167d4b664d6c230188c6cad2a8d"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/email-templates.en.md": {
+    "mtime": 1778149064.74482,
+    "hash": "72ae11c46ea93e17d97419fe9ea256eb"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/client-followup-tracker.ru.md": {
+    "mtime": 1778149064.747438,
+    "hash": "613a5807a76427c87a4b9add8b288930"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/social-media-posts.ru.md": {
+    "mtime": 1778149064.751202,
+    "hash": "ee6ec5b34a6e704efc412ea3e6188fe2"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/README.ru.md": {
+    "mtime": 1778149064.747283,
+    "hash": "65146d8ae11a0b07123c1bea79fcbcb3"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/quote-creation.en.md": {
+    "mtime": 1778149064.746867,
+    "hash": "29672bec6e4be0df85aea97b1f9c23e2"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/scheduled-automation.ru.md": {
+    "mtime": 1778149064.749956,
+    "hash": "6249573ae4c58a85855b32d5d127be25"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/client-followup-tracker.md": {
+    "mtime": 1778145387.526081,
+    "hash": "20ffab5bcfc959ed8c116659072403cc"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/project-planning.md": {
+    "mtime": 1778146438.2317166,
+    "hash": "8834dfe8366b4c3c24bfb2134275639c"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/knowledge-transfer.md": {
+    "mtime": 1778148509.9218333,
+    "hash": "58eabbc32fef9018159d171de843d189"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/newsletter-creation.ru.md": {
+    "mtime": 1778149064.748714,
+    "hash": "b2d905c208324f96df23f8c8a737324d"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/website-audit.md": {
+    "mtime": 1778148022.3229768,
+    "hash": "cba7f86847fb599611625bc238b6ee3e"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/quote-to-invoice.md": {
+    "mtime": 1778144735.2116704,
+    "hash": "4c47dd65190b4bae9477d6851d390567"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/compliance-checklist.en.md": {
+    "mtime": 1778149064.744786,
+    "hash": "64d62554614e5083e5778c5b33ee1392"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/workflows/invoice-generation.ru.md": {
+    "mtime": 1778149064.748357,
+    "hash": "32df87ff60a7f3117d1682512f99d4f7"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/examples/CLAUDE.md": {
+    "mtime": 1778141936.0678055,
+    "hash": "f44acfb4b3cb2019051d177e8a1e92e7"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/examples/workflows-before-after/admin-invoicing.md": {
+    "mtime": 1778141936.0684962,
+    "hash": "bb002c67f443c76403ff8fdbe213e7c0"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/examples/workflows-before-after/commercial-prospecting.md": {
+    "mtime": 1778141936.0686,
+    "hash": "9681f3117cc03e066454e61a8efc12ba"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/examples/workflows-before-after/file-organization.md": {
+    "mtime": 1778141936.0688386,
+    "hash": "353cd752f2367bea3ef0ccc13e8ec75f"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/examples/workflows-before-after/content-creation.md": {
+    "mtime": 1778141936.0687222,
+    "hash": "df3e79206fb0c2068aedff70fd9b111f"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/examples/claude-md-templates/commercant.md": {
+    "mtime": 1778141936.0681114,
+    "hash": "e6050b2893d415fd5bb71698f0ba7e37"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/examples/claude-md-templates/dirigeant-tpe.md": {
+    "mtime": 1778141936.068337,
+    "hash": "7c2ac5d4c0aeb1be2afce27505decabc"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/examples/claude-md-templates/consultant.md": {
+    "mtime": 1778141936.0682154,
+    "hash": "d2bd72b7298c2a9e3c03dd9b379fa043"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/examples/claude-md-templates/artisan-btp.md": {
+    "mtime": 1778141936.0679994,
+    "hash": "570cc08a20f9d4a6847370a712c6e644"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/README.fr.md": {
+    "mtime": 1778149064.753169,
+    "hash": "bac9479f665467250454a2169b78d5c2"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/research.fr.md": {
+    "mtime": 1778149064.753279,
+    "hash": "fd91ee82810c3da3e4eb92464df8e050"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/data-extraction.ru.md": {
+    "mtime": 1778149064.753339,
+    "hash": "bf174058c4054e5475874d11cb37d388"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/file-ops.fr.md": {
+    "mtime": 1778149064.753251,
+    "hash": "8a39784e53a05eb6d5a9e06c1ca2d26b"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/document-creation.md": {
+    "mtime": 1778144515.5925918,
+    "hash": "bdfcb70c942a82897f415bd38b696bbd"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/data-extraction.md": {
+    "mtime": 1778144544.4210787,
+    "hash": "c7958e919dcf0cd361765b242aba94c1"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/file-ops.md": {
+    "mtime": 1778144487.53302,
+    "hash": "44ba4d701e9cef670c9167df68999564"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/document-creation.fr.md": {
+    "mtime": 1778149064.753225,
+    "hash": "570c93842bd60d80a5b0eb5bb00b2851"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/README.md": {
+    "mtime": 1778144456.3006501,
+    "hash": "a6e0160f0edfa45468a8f4a5c96b96dd"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/file-ops.ru.md": {
+    "mtime": 1778149064.754206,
+    "hash": "00046c5c05e9386b97c106bc4c0a07e0"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/research.md": {
+    "mtime": 1778144572.505891,
+    "hash": "7c30b3251c2863263feac2302fc97787"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/document-creation.ru.md": {
+    "mtime": 1778149064.75417,
+    "hash": "33c6571365a3d74e040c0442e7ce2799"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/data-extraction.fr.md": {
+    "mtime": 1778149064.753199,
+    "hash": "0c3844e5d4384050bcd86ea8c3d652f8"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/README.ru.md": {
+    "mtime": 1778149064.753305,
+    "hash": "257e8dfff2b0e30ea5f16d51c06b44a3"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/prompts/research.ru.md": {
+    "mtime": 1778149064.754365,
+    "hash": "8c4e14e76289dd0a946febe17891fa63"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/reference/comparison.ru.md": {
+    "mtime": 1778149064.754561,
+    "hash": "cfac3deea9756c8119988dfaa8939375"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/reference/glossary.fr.md": {
+    "mtime": 1778149064.754491,
+    "hash": "dc08bd24917812fc543d146000595cf4"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/reference/comparison.md": {
+    "mtime": 1778148868.025502,
+    "hash": "621b504254c7c04e28a7bc50fd5a9a06"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/reference/glossary.md": {
+    "mtime": 1778148698.42224,
+    "hash": "0ee8d0c354023addc1322a93b7882d55"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/reference/faq.md": {
+    "mtime": 1778148895.0447576,
+    "hash": "bdbcb94a86a3fd6a044d7e16061e1eaf"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/reference/cheatsheet.md": {
+    "mtime": 1778148793.9817543,
+    "hash": "9aa1409d6e992ce7ad18c4f5449d5bd8"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/reference/faq.fr.md": {
+    "mtime": 1778149064.75446,
+    "hash": "b46b0372b06e123be33ef8e252efa18a"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/reference/cheatsheet.fr.md": {
+    "mtime": 1778149064.754397,
+    "hash": "1b25b6e4620eb4d4bf7c70cc688025ce"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/reference/cheatsheet.ru.md": {
+    "mtime": 1778149064.754523,
+    "hash": "0644406bae7d2eb10f05d883f866373e"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/reference/faq.ru.md": {
+    "mtime": 1778149064.75474,
+    "hash": "78a8f17f83e51439d6f54b216dd6440a"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/reference/glossary.ru.md": {
+    "mtime": 1778149064.754866,
+    "hash": "5aac5f9f54260e9ee499e177936e4b93"
+  },
+  "/Users/sergey/Documents/CLAUDE COWORK/Cowork Guide/claude-cowork-guide/reference/comparison.fr.md": {
+    "mtime": 1778149064.754429,
+    "hash": "2b4995b66d65469141441ba064cac356"
+  }
+}

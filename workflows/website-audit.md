@@ -5,7 +5,7 @@
 > **Catégorie**: 📣 Communication
 > **Professions**: Tous (artisans, commerçants, indépendants)
 
-🌐 **Also available in [English](website-audit.en.md)**
+🌐 **Langues** : [Français](website-audit.md) | [English](website-audit.en.md)
 
 ---
 

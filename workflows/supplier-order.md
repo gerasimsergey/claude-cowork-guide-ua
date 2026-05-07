@@ -5,7 +5,7 @@
 > **Catégorie**: 🔧 Production
 > **Professions**: Commerçants, Artisans
 
-🌐 **Also available in [English](supplier-order.en.md)**
+🌐 **Langues** : [Français](supplier-order.md) | [English](supplier-order.en.md)
 
 ---
 

@@ -5,7 +5,7 @@
 > **Catégorie**: 📣 Communication
 > **Professions**: Dirigeants, Indépendants
 
-🌐 **Also available in [English](presentation-slides.en.md)**
+🌐 **Langues** : [Français](presentation-slides.md) | [English](presentation-slides.en.md)
 
 ---
 

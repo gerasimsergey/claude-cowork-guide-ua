@@ -1,6 +1,6 @@
 # Guide Claude Cowork
 
-🌐 **Langues** : [Français](README.fr.md) | [English](README.md)
+🌐 **Langues** : [English](README.md) | [Français](README.fr.md) | [Українська 🇺🇦](README.uk.md)
 
 ## Table des matières
 

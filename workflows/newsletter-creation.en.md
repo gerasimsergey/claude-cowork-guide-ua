@@ -5,7 +5,7 @@
 > **Category**: 💼 Commercial
 > **Professions**: Merchants, Business Owners
 
-🌐 **Disponible aussi en [Français](newsletter-creation.md)**
+🌐 **Languages**: [English](newsletter-creation.en.md) | [Français](newsletter-creation.md)
 
 ---
 

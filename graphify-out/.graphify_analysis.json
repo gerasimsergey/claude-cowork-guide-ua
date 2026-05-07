@@ -1,0 +1,291 @@
+{
+  "communities": {
+    "0": [
+      "cowork_desktop",
+      "invoice_generation_en",
+      "invoice_pdf",
+      "invoice_template",
+      "payment_reminders_workflow",
+      "price_comparison_workflow",
+      "quote_creation_workflow",
+      "quote_to_invoice_workflow",
+      "readme_en",
+      "scheduled_automation_en",
+      "scheduled_automation_fr"
+    ],
+    "1": [
+      "changelog_cowork_documentation",
+      "cowork_desktop_app",
+      "cowork_desktop_commander",
+      "cowork_mcp_connectors",
+      "cowork_scheduled_tasks",
+      "document_creation_status_report",
+      "file_ops_organize_by_file_type",
+      "file_ops_organize_by_project",
+      "guide_02_capabilities",
+      "guide_03_security"
+    ],
+    "2": [
+      "concept_ctoc_framework",
+      "concept_desktop_commander",
+      "docker_compose_yml",
+      "guide_00_overview",
+      "guide_01_getting_started",
+      "learning_with_ai_uval_protocol",
+      "manifest_cowork_documentation",
+      "readme_claude_cowork",
+      "readme_fr_claude_cowork"
+    ],
+    "3": [
+      "00_overview_cowork_overview",
+      "03_security_computer_use",
+      "03_security_cowork_security_guide",
+      "03_security_isolated_vm",
+      "03_security_prompt_injection",
+      "04_troubleshooting_guide",
+      "04_troubleshooting_vm_timeout",
+      "concept_claude_code"
+    ],
+    "4": [
+      "machine_readable_reference_yaml",
+      "prompts_data_extraction_md",
+      "prompts_document_creation_md",
+      "prompts_file_ops_md",
+      "prompts_readme_md",
+      "prompts_research_md",
+      "tools_onboarding_prompt_md"
+    ],
+    "5": [
+      "action_plan_xlsx",
+      "checklist_construction_xlsx",
+      "checklist_retail_xlsx",
+      "compliance_checklist_fr",
+      "compliance_checklist_workflow",
+      "sam_gov",
+      "status_report_pdf"
+    ],
+    "6": [
+      "client_followup_tracker_en",
+      "cowork_workspace",
+      "inventory_tracking_en",
+      "meeting_prep_workflow",
+      "prospect_research_workflow",
+      "workforce_planning_en",
+      "workspace_folder"
+    ],
+    "7": [
+      "prompts_data_extraction_fr_md",
+      "prompts_document_creation_fr_md",
+      "prompts_file_ops_fr_md",
+      "prompts_readme_fr_md",
+      "prompts_research_fr_md"
+    ],
+    "8": [
+      "email_templates_workflow",
+      "newsletter_creation_en",
+      "newsletter_creation_fr"
+    ],
+    "9": [
+      "presentation_slides_en",
+      "presentation_slides_fr"
+    ],
+    "10": [
+      "reference_glossary_fr_md",
+      "reference_glossary_md"
+    ],
+    "11": [
+      "reference_comparison_fr_md",
+      "reference_comparison_md"
+    ],
+    "12": [
+      "reference_cheatsheet_fr_md",
+      "reference_cheatsheet_md"
+    ],
+    "13": [
+      "reference_faq_fr_md",
+      "reference_faq_md"
+    ],
+    "14": [
+      "client_package_pdf",
+      "osha_compliance"
+    ],
+    "15": [
+      "competitor_analysis_workflow"
+    ],
+    "16": [
+      "social_media_posts_en"
+    ],
+    "17": [
+      "quality_checklist_workflow"
+    ],
+    "18": [
+      "guide_04_troubleshooting"
+    ],
+    "19": [
+      "file_ops_organize_by_date"
+    ],
+    "20": [
+      "file_ops_standardize_filenames"
+    ],
+    "21": [
+      "file_ops_find_duplicates"
+    ],
+    "22": [
+      "document_creation_meeting_summary"
+    ],
+    "23": [
+      "data_extraction_receipts"
+    ],
+    "24": [
+      "research_competitive_analysis"
+    ],
+    "25": [
+      "financial_model_validation_workflow"
+    ],
+    "26": [
+      "measuring_progress_metrics"
+    ]
+  },
+  "cohesion": {
+    "0": 0.2,
+    "1": 0.2,
+    "2": 0.28,
+    "3": 0.29,
+    "4": 0.43,
+    "5": 0.29,
+    "6": 0.29,
+    "7": 0.4,
+    "8": 0.67,
+    "9": 1.0,
+    "10": 1.0,
+    "11": 1.0,
+    "12": 1.0,
+    "13": 1.0,
+    "14": 1.0,
+    "15": 1.0,
+    "16": 1.0,
+    "17": 1.0,
+    "18": 1.0,
+    "19": 1.0,
+    "20": 1.0,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0
+  },
+  "gods": [
+    {
+      "id": "invoice_generation_en",
+      "label": "Workflow: Invoice Generation",
+      "degree": 6
+    },
+    {
+      "id": "compliance_checklist_workflow",
+      "label": "Workflow: Compliance Checklist",
+      "degree": 6
+    },
+    {
+      "id": "guide_00_overview",
+      "label": "Overview",
+      "degree": 5
+    },
+    {
+      "id": "machine_readable_reference_yaml",
+      "label": "Cowork Reference Index",
+      "degree": 5
+    },
+    {
+      "id": "prompts_readme_md",
+      "label": "Cowork Prompt Library",
+      "degree": 5
+    },
+    {
+      "id": "cowork_desktop_app",
+      "label": "Claude Desktop App",
+      "degree": 5
+    },
+    {
+      "id": "03_security_cowork_security_guide",
+      "label": "Cowork Security Guide",
+      "degree": 5
+    },
+    {
+      "id": "readme_claude_cowork",
+      "label": "Claude Cowork Guide",
+      "degree": 5
+    },
+    {
+      "id": "readme_en",
+      "label": "Cowork Workflows Index",
+      "degree": 4
+    },
+    {
+      "id": "concept_ctoc_framework",
+      "label": "CTOC Framework",
+      "degree": 4
+    }
+  ],
+  "surprises": [
+    {
+      "source": "Guide Claude Cowork",
+      "target": "Claude Cowork Guide",
+      "source_files": [
+        "README.fr.md",
+        "README.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "semantically_similar_to",
+      "why": "connects across different repos/directories; semantically similar concepts with no structural link; peripheral node `Guide Claude Cowork` unexpectedly reaches hub `Claude Cowork Guide`"
+    },
+    {
+      "source": "Docker Compose Sandbox",
+      "target": "Claude Cowork Guide",
+      "source_files": [
+        "docker-compose.yml",
+        "README.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; peripheral node `Docker Compose Sandbox` unexpectedly reaches hub `Claude Cowork Guide`"
+    },
+    {
+      "source": "Cowork Documentation Manifest",
+      "target": "Overview",
+      "source_files": [
+        "MANIFEST.yaml",
+        "guide/00-overview.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `Cowork Documentation Manifest` unexpectedly reaches hub `Overview`"
+    },
+    {
+      "source": "Guide Claude Cowork",
+      "target": "Overview",
+      "source_files": [
+        "README.fr.md",
+        "guide/00-overview.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories; peripheral node `Guide Claude Cowork` unexpectedly reaches hub `Overview`"
+    },
+    {
+      "source": "Claude Cowork Guide",
+      "target": "CTOC Framework",
+      "source_files": [
+        "README.md",
+        "guide/01-getting-started.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "conceptually_related_to",
+      "why": "inferred connection - not explicitly stated in source; connects across different repos/directories"
+    }
+  ],
+  "tokens": {
+    "input": 234329,
+    "output": 9939
+  }
+}

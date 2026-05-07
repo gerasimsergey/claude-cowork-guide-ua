@@ -1,0 +1,1 @@
+{"nodes": [{"id": "prompts_readme_library", "label": "Cowork Prompt Library", "file_type": "document", "source_file": "prompts/README.fr.md"}], "edges": [{"source": "prompts_readme_library", "target": "building_prompting_skills_ctoc_framework", "relation": "implements", "confidence": "EXTRACTED", "confidence_score": 1.0, "source_file": "prompts/README.fr.md"}], "hyperedges": []}

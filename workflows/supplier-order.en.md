@@ -5,7 +5,7 @@
 > **Category**: 🔧 Production
 > **Professions**: Merchants, Contractors
 
-🌐 **Disponible aussi en [Français](supplier-order.md)**
+🌐 **Languages**: [English](supplier-order.en.md) | [Français](supplier-order.md)
 
 ---
 

@@ -1,6 +1,6 @@
 # Cowork Glossary
 
-🌐 **Languages**: [English](glossary.md) | [Français](glossary.fr.md)
+🌐 **Languages**: [English](glossary.md) | [Français](glossary.fr.md) | [Українська 🇺🇦](glossary.uk.md)
 
 > **Terminology specific to Claude Cowork and related concepts**
 

@@ -5,7 +5,7 @@
 > **Catégorie**: 💼 Commercial
 > **Professions**: Commerçants, Artisans
 
-🌐 **Also available in [English](price-comparison.en.md)**
+🌐 **Langues** : [Français](price-comparison.md) | [English](price-comparison.en.md)
 
 ---
 

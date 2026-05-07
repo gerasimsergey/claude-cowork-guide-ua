@@ -5,7 +5,7 @@
 > **Catégorie**: 📣 Communication
 > **Professions**: Commerçants, Dirigeants
 
-🌐 **Also available in [English](newsletter-creation.en.md)**
+🌐 **Langues** : [Français](newsletter-creation.md) | [English](newsletter-creation.en.md)
 
 ---
 

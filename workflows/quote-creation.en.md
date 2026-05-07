@@ -5,7 +5,7 @@
 > **Category**: 💼 Commercial
 > **Professions**: Contractors, Merchants
 
-🌐 **Disponible aussi en [Français](quote-creation.md)**
+🌐 **Languages**: [English](quote-creation.en.md) | [Français](quote-creation.md)
 
 ---
 

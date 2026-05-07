@@ -5,7 +5,7 @@
 > **Catégorie**: 💼 Commercial
 > **Professions**: Commerçants, Dirigeants
 
-🌐 **Also available in [English](prospect-research.en.md)**
+🌐 **Langues** : [Français](prospect-research.md) | [English](prospect-research.en.md)
 
 ---
 

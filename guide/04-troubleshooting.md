@@ -1,6 +1,6 @@
 # Cowork Troubleshooting Guide
 
-🌐 **Languages**: [English](04-troubleshooting.md) | [Français](04-troubleshooting.fr.md)
+🌐 **Languages**: [English](04-troubleshooting.md) | [Français](04-troubleshooting.fr.md) | [Українська 🇺🇦](04-troubleshooting.uk.md)
 
 > **Reading time**: ~8 minutes
 >

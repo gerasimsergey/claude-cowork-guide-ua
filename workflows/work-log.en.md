@@ -5,7 +5,7 @@
 > **Category**: 🔧 Production
 > **Professions**: Contractors
 
-🌐 **Disponible aussi en [Français](work-log.md)**
+🌐 **Languages**: [English](work-log.en.md) | [Français](work-log.md)
 
 ---
 

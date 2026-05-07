@@ -5,7 +5,7 @@
 > **Catégorie**: 📋 Administratif
 > **Professions**: Tous
 
-🌐 **Also available in [English](payment-reminders.en.md)**
+🌐 **Langues** : [Français](payment-reminders.md) | [English](payment-reminders.en.md)
 
 ---
 

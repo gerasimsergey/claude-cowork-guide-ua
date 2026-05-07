@@ -1,6 +1,6 @@
 # Workflow: File Organization
 
-🌐 **Langues**: [Français](file-organization.md) | [English](file-organization.en.md)
+🌐 **Langues** : [Français](file-organization.md) | [English](file-organization.en.md)
 
 > **Estimated time**: 15 minutes
 > **Difficulty**: Beginner

@@ -1,6 +1,6 @@
 # Capacités de Cowork
 
-🌐 **Langues** : [Français](02-capabilities.fr.md) | [English](02-capabilities.md)
+🌐 **Langues** : [English](02-capabilities.md) | [Français](02-capabilities.fr.md) | [Українська 🇺🇦](02-capabilities.uk.md)
 
 > **Temps de lecture** : ~8 minutes
 >

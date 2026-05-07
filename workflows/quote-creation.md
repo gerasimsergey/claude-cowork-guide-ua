@@ -5,7 +5,7 @@
 > **Catégorie**: 💼 Commercial
 > **Professions**: Artisans, Commerçants
 
-🌐 **Also available in [English](quote-creation.en.md)**
+🌐 **Langues** : [Français](quote-creation.md) | [English](quote-creation.en.md)
 
 ---
 

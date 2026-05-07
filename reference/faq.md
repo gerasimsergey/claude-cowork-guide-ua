@@ -1,6 +1,6 @@
 # Cowork FAQ
 
-🌐 **Langues** : [Français](faq.fr.md) | [English](faq.md)
+🌐 **Languages**: [English](faq.md) | [Français](faq.fr.md)
 
 > **20+ frequently asked questions** about Claude Cowork
 

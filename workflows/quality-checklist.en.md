@@ -5,7 +5,7 @@
 > **Category**: 🔧 Production
 > **Professions**: Contractors, Merchants
 
-🌐 **Disponible aussi en [Français](quality-checklist.md)**
+🌐 **Languages**: [English](quality-checklist.en.md) | [Français](quality-checklist.md)
 
 ---
 

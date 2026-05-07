@@ -5,7 +5,7 @@
 > **Catégorie**: 📋 Administratif
 > **Professions**: Artisans/BTP, Commerçants, Indépendants
 
-🌐 **Also available in [English](invoice-generation.en.md)**
+🌐 **Langues** : [Français](invoice-generation.md) | [English](invoice-generation.en.md)
 
 ---
 

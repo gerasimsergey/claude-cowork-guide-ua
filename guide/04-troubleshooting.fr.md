@@ -1,6 +1,6 @@
 # Guide de dépannage Cowork
 
-🌐 **Langues** : [Français](04-troubleshooting.fr.md) | [English](04-troubleshooting.md)
+🌐 **Langues** : [English](04-troubleshooting.md) | [Français](04-troubleshooting.fr.md) | [Українська 🇺🇦](04-troubleshooting.uk.md)
 
 > **Temps de lecture** : ~8 minutes
 >

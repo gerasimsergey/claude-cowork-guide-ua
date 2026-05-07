@@ -5,7 +5,7 @@
 > **Category**: 📣 Communication
 > **Professions**: All businesses
 
-🌐 **Disponible aussi en [Français](email-templates.md)**
+🌐 **Languages**: [English](email-templates.en.md) | [Français](email-templates.md)
 
 ---
 

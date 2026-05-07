@@ -5,7 +5,7 @@
 > **Catégorie**: 📣 Communication
 > **Professions**: Commerçants, Indépendants, Dirigeants/TPE
 
-🌐 **Also available in [English](review-response.en.md)**
+🌐 **Langues** : [Français](review-response.md) | [English](review-response.en.md)
 
 ---
 

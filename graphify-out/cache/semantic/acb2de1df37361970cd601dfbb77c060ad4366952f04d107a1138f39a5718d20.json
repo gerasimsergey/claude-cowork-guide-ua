@@ -1,0 +1,1 @@
+{"nodes": [{"id": "data_extraction_receipts", "label": "Receipt Data Extraction", "file_type": "concept", "source_file": "prompts/data-extraction.fr.md", "source_location": "Re\u00e7us & Factures #1", "source_url": null, "captured_at": null, "author": null, "contributor": null}], "edges": [], "hyperedges": []}

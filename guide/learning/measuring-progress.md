@@ -6,6 +6,8 @@ tags: [progress, metrics, tracking, ROI, adoption]
 
 # Measuring Progress with Cowork
 
+🌐 **Languages**: [English](measuring-progress.md) | [Français](measuring-progress.fr.md)
+
 Most people who abandon productivity tools do so because they never measured what they gained. Without measurement, good weeks feel like luck and bad weeks feel like the tool doesn't work.
 
 Measurement solves this: it shows you what's working, where to focus next, and when you've actually hit a plateau.

@@ -5,7 +5,7 @@
 > **Catégorie**: 💼 Commercial
 > **Professions**: Tous
 
-🌐 **Also available in [English](client-followup-tracker.en.md)**
+🌐 **Langues** : [Français](client-followup-tracker.md) | [English](client-followup-tracker.en.md)
 
 ---
 

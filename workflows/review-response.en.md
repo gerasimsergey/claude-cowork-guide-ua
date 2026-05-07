@@ -5,7 +5,7 @@
 > **Category**: 📣 Communication
 > **Professions**: Merchants, Freelancers, Small business owners
 
-🌐 **Disponible aussi en [Français](review-response.md)**
+🌐 **Languages**: [English](review-response.en.md) | [Français](review-response.md)
 
 ---
 

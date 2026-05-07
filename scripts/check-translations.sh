@@ -54,72 +54,67 @@ check_translation() {
 }
 
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "📁 WORKFLOWS (FR → EN)"
+echo "📁 WORKFLOWS (FR → EN/RU)"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# Check workflows (FR primary → EN translation)
+# Check workflows (FR primary → EN/RU translation)
 for source in workflows/*.md; do
-    # Skip .en.md and .fr.md files
-    if [[ "$source" == *".en.md" ]] || [[ "$source" == *".fr.md" ]]; then
+    # Skip translation files
+    if [[ "$source" == *".en.md" ]] || [[ "$source" == *".ru.md" ]] || [[ "$source" == *".fr.md" ]]; then
         continue
     fi
 
-    # Get base name without extension
     base="${source%.md}"
-    translation="${base}.en.md"
-
-    check_translation "$source" "$translation" "workflow"
+    check_translation "$source" "${base}.en.md" "workflow-en"
+    check_translation "$source" "${base}.ru.md" "workflow-ru"
 done
 
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "📚 GUIDE (EN → FR)"
+echo "📚 GUIDE (EN → FR/RU)"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# Check guide (EN primary → FR translation)
+# Check guide (EN primary → FR/RU translation)
 for source in guide/*.md; do
-    if [[ "$source" == *".fr.md" ]]; then
+    if [[ "$source" == *".fr.md" ]] || [[ "$source" == *".ru.md" ]]; then
         continue
     fi
 
     base="${source%.md}"
-    translation="${base}.fr.md"
-
-    check_translation "$source" "$translation" "guide"
+    check_translation "$source" "${base}.fr.md" "guide-fr"
+    check_translation "$source" "${base}.ru.md" "guide-ru"
 done
 
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "💬 PROMPTS (EN → FR)"
+echo "💬 PROMPTS (EN → FR/RU)"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# Check prompts (EN primary → FR translation)
+# Check prompts (EN primary → FR/RU translation)
 for source in prompts/*.md; do
-    if [[ "$source" == *".fr.md" ]]; then
+    if [[ "$source" == *".fr.md" ]] || [[ "$source" == *".ru.md" ]]; then
         continue
     fi
 
     base="${source%.md}"
-    translation="${base}.fr.md"
-
-    check_translation "$source" "$translation" "prompts"
+    check_translation "$source" "${base}.fr.md" "prompts-fr"
+    check_translation "$source" "${base}.ru.md" "prompts-ru"
 done
 
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "📖 REFERENCE (EN → FR)"
+echo "📖 REFERENCE (EN → FR/RU)"
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 
-# Check reference (EN primary → FR translation)
+# Check reference (EN primary → FR/RU translation)
 for source in reference/*.md; do
-    if [[ "$source" == *".fr.md" ]]; then
+    if [[ "$source" == *".fr.md" ]] || [[ "$source" == *".ru.md" ]]; then
         continue
     fi
 
     base="${source%.md}"
-    translation="${base}.fr.md"
-
-    check_translation "$source" "$translation" "reference"
+    check_translation "$source" "${base}.fr.md" "reference-fr"
+    check_translation "$source" "${base}.ru.md" "reference-ru"
 done
 
 echo ""
@@ -129,7 +124,8 @@ echo "━━━━━━━━━━━━━━━━━━━━━━━━�
 
 # Check README
 if [ -f "README.md" ]; then
-    check_translation "README.md" "README.fr.md" "root"
+    check_translation "README.md" "README.fr.md" "root-fr"
+    check_translation "README.md" "README.ru.md" "root-ru"
 fi
 
 echo ""

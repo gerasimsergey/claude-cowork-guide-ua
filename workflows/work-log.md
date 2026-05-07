@@ -5,7 +5,7 @@
 > **Catégorie**: 🔧 Production
 > **Professions**: Artisans/BTP
 
-🌐 **Also available in [English](work-log.en.md)**
+🌐 **Langues** : [Français](work-log.md) | [English](work-log.en.md)
 
 ---
 

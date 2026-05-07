@@ -5,7 +5,7 @@
 > **Catégorie**: 🔧 Production
 > **Professions**: Commerçants, Artisans
 
-🌐 **Also available in [English](inventory-tracking.en.md)**
+🌐 **Langues** : [Français](inventory-tracking.md) | [English](inventory-tracking.en.md)
 
 ---
 

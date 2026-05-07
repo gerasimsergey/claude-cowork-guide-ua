@@ -1,6 +1,6 @@
 # Workflow: Meeting Preparation
 
-🌐 **Langues**: [Français](meeting-prep.md) | [English](meeting-prep.en.md)
+🌐 **Langues** : [Français](meeting-prep.md) | [English](meeting-prep.en.md)
 
 > **Estimated time**: 20 minutes
 > **Difficulty**: Intermediate

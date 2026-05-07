@@ -1,6 +1,6 @@
 # Guide de sécurité Cowork
 
-🌐 **Langues** : [Français](03-security.fr.md) | [English](03-security.md)
+🌐 **Langues** : [English](03-security.md) | [Français](03-security.fr.md) | [Українська 🇺🇦](03-security.uk.md)
 
 > **Temps de lecture** : ~12 minutes
 >

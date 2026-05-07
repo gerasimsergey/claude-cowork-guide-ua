@@ -5,7 +5,7 @@
 > **Category**: 💼 Commercial
 > **Professions**: Business Owners, Freelancers
 
-🌐 **Disponible aussi en [Français](presentation-slides.md)**
+🌐 **Languages**: [English](presentation-slides.en.md) | [Français](presentation-slides.md)
 
 ---
 

@@ -4,6 +4,8 @@ description: "Working methodologies for non-technical users: CTOC, iterative ref
 tags: [methodologies, ctoc, workflow, quality, batch]
 ---
 
+🌐 **Languages**: [English](methodologies.md) | [Українська 🇺🇦](methodologies.uk.md)
+
 # Methodologies — Working with Cowork
 
 Five core methodologies that make the difference between random results and consistent, professional outputs.

@@ -6,6 +6,8 @@ tags: [learning, habits, uval, profiles, 30-day-plan]
 
 # Learning with AI — Working Effectively with Cowork
 
+🌐 **Languages**: [English](learning-with-ai.md) | [Français](learning-with-ai.fr.md) | [Українська 🇺🇦](learning-with-ai.uk.md)
+
 Most people use Cowork the same way they used Google: type something, get something, close it. That works. But it leaves 80% of the value on the table.
 
 This guide is about the other 20%: how to build habits that compound.

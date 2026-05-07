@@ -6,6 +6,8 @@ tags: [apprentissage, prompting, ctoc, compétences, bibliothèque]
 
 # Développer ses compétences en prompting — du copier-coller à l'écriture autonome
 
+🌐 **Langues** : [Français](building-prompting-skills.fr.md) | [English](building-prompting-skills.md)
+
 La plupart des gens commencent par copier des prompts. C'est exactement ce qu'il faut faire. Mais copier indéfiniment crée une dépendance permanente à la bibliothèque de quelqu'un d'autre, à sa structure, à son contexte. L'objectif est d'atteindre un niveau où on peut écrire un prompt pour n'importe quelle tâche, pas seulement celles qui sont déjà couvertes.
 
 Ce guide cartographie la progression : trois niveaux, des exercices concrets, et une structure de bibliothèque utilisable dès aujourd'hui.

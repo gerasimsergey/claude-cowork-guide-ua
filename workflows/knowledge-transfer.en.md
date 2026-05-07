@@ -5,7 +5,7 @@
 > **Category**: 🗂️ Organization
 > **Professions**: Contractors, Small business owners
 
-🌐 **Disponible aussi en [Français](knowledge-transfer.md)**
+🌐 **Languages**: [English](knowledge-transfer.en.md) | [Français](knowledge-transfer.md)
 
 ---
 

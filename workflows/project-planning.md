@@ -5,7 +5,7 @@
 > **Catégorie**: 🔧 Production
 > **Professions**: Artisans/BTP, Dirigeants
 
-🌐 **Also available in [English](project-planning.en.md)**
+🌐 **Langues** : [Français](project-planning.md) | [English](project-planning.en.md)
 
 ---
 

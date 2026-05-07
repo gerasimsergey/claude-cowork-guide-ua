@@ -6,6 +6,8 @@ tags: [apprentissage, habitudes, uval, profils, plan-30-jours]
 
 # Apprendre avec l'IA — Travailler efficacement avec Cowork
 
+🌐 **Langues** : [Français](learning-with-ai.fr.md) | [English](learning-with-ai.md)
+
 La plupart des gens utilisent Cowork comme Google : on tape quelque chose, on obtient quelque chose, on ferme. Ça marche. Mais ça laisse 80% de la valeur sur la table.
 
 Ce guide porte sur les 20% restants : comment construire des habitudes qui se renforcent avec le temps.

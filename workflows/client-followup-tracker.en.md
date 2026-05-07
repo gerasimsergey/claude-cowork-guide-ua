@@ -5,7 +5,7 @@
 > **Category**: 📋 Administrative
 > **Professions**: All
 
-🌐 **Disponible aussi en [Français](client-followup-tracker.md)**
+🌐 **Languages**: [English](client-followup-tracker.en.md) | [Français](client-followup-tracker.md)
 
 ---
 

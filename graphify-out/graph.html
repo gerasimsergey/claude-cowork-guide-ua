@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>graphify - graphify-out/graph.html</title>
+<script src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0f0f1a; color: #e0e0e0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; display: flex; height: 100vh; overflow: hidden; }
+  #graph { flex: 1; }
+  #sidebar { width: 280px; background: #1a1a2e; border-left: 1px solid #2a2a4e; display: flex; flex-direction: column; overflow: hidden; }
+  #search-wrap { padding: 12px; border-bottom: 1px solid #2a2a4e; }
+  #search { width: 100%; background: #0f0f1a; border: 1px solid #3a3a5e; color: #e0e0e0; padding: 7px 10px; border-radius: 6px; font-size: 13px; outline: none; }
+  #search:focus { border-color: #4E79A7; }
+  #search-results { max-height: 140px; overflow-y: auto; padding: 4px 12px; border-bottom: 1px solid #2a2a4e; display: none; }
+  .search-item { padding: 4px 6px; cursor: pointer; border-radius: 4px; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .search-item:hover { background: #2a2a4e; }
+  #info-panel { padding: 14px; border-bottom: 1px solid #2a2a4e; min-height: 140px; }
+  #info-panel h3 { font-size: 13px; color: #aaa; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+  #info-content { font-size: 13px; color: #ccc; line-height: 1.6; }
+  #info-content .field { margin-bottom: 5px; }
+  #info-content .field b { color: #e0e0e0; }
+  #info-content .empty { color: #555; font-style: italic; }
+  .neighbor-link { display: block; padding: 2px 6px; margin: 2px 0; border-radius: 3px; cursor: pointer; font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; border-left: 3px solid #333; }
+  .neighbor-link:hover { background: #2a2a4e; }
+  #neighbors-list { max-height: 160px; overflow-y: auto; margin-top: 4px; }
+  #legend-wrap { flex: 1; overflow-y: auto; padding: 12px; }
+  #legend-wrap h3 { font-size: 13px; color: #aaa; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.05em; }
+  .legend-item { display: flex; align-items: center; gap: 8px; padding: 4px 0; cursor: pointer; border-radius: 4px; font-size: 12px; }
+  .legend-item:hover { background: #2a2a4e; padding-left: 4px; }
+  .legend-item.dimmed { opacity: 0.35; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+  .legend-label { flex: 1; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .legend-count { color: #666; font-size: 11px; }
+  #stats { padding: 10px 14px; border-top: 1px solid #2a2a4e; font-size: 11px; color: #555; }
+  #legend-controls { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; padding: 4px 0; }
+  #legend-controls label { display: flex; align-items: center; gap: 6px; cursor: pointer; font-size: 12px; color: #aaa; user-select: none; }
+  #legend-controls label:hover { color: #e0e0e0; }
+  .legend-cb, #select-all-cb { appearance: none; -webkit-appearance: none; width: 14px; height: 14px; border: 1.5px solid #3a3a5e; border-radius: 3px; background: #0f0f1a; cursor: pointer; position: relative; flex-shrink: 0; }
+  .legend-cb:checked, #select-all-cb:checked { background: #4E79A7; border-color: #4E79A7; }
+  .legend-cb:checked::after, #select-all-cb:checked::after { content: ''; position: absolute; left: 3.5px; top: 1px; width: 4px; height: 7px; border: solid #fff; border-width: 0 2px 2px 0; transform: rotate(45deg); }
+  #select-all-cb:indeterminate { background: #4E79A7; border-color: #4E79A7; }
+  #select-all-cb:indeterminate::after { content: ''; position: absolute; left: 2px; top: 5px; width: 8px; height: 2px; background: #fff; border: none; transform: none; }
+</style>
+</head>
+<body>
+<div id="graph"></div>
+<div id="sidebar">
+  <div id="search-wrap">
+    <input id="search" type="text" placeholder="Search nodes..." autocomplete="off">
+    <div id="search-results"></div>
+  </div>
+  <div id="info-panel">
+    <h3>Node Info</h3>
+    <div id="info-content"><span class="empty">Click a node to inspect it</span></div>
+  </div>
+  <div id="legend-wrap">
+    <h3>Communities</h3>
+    <div id="legend-controls">
+      <label><input type="checkbox" id="select-all-cb" checked onchange="toggleAllCommunities(!this.checked)">Select All</label>
+    </div>
+    <div id="legend"></div>
+  </div>
+  <div id="stats">62 nodes &middot; 47 edges &middot; 21 communities</div>
+</div>
+<script>
+const RAW_NODES = [{"id": "payment_reminders_workflow", "label": "Workflow: G\u00e9n\u00e9ration de Relances Impay\u00e9s", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 28.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Workflow: G\u00e9n\u00e9ration de Relances Impay\u00e9s", "community": 3, "community_name": "Community 3", "source_file": "workflows/payment-reminders.md", "file_type": "document", "degree": 3}, {"id": "price_comparison_workflow", "label": "Workflow: Comparatif Prix Fournisseurs", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Workflow: Comparatif Prix Fournisseurs", "community": 4, "community_name": "Community 4", "source_file": "workflows/price-comparison.md", "file_type": "document", "degree": 1}, {"id": "readme_en", "label": "Cowork Workflows Index", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 34.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Cowork Workflows Index", "community": 4, "community_name": "Community 4", "source_file": "workflows/README.en.md", "file_type": "document", "degree": 4}, {"id": "scheduled_automation_en", "label": "Scheduled Automation", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 22.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Scheduled Automation", "community": 4, "community_name": "Community 4", "source_file": "workflows/scheduled-automation.en.md", "file_type": "document", "degree": 2}, {"id": "invoice_generation_en", "label": "Workflow: Invoice Generation", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Workflow: Invoice Generation", "community": 4, "community_name": "Community 4", "source_file": "workflows/invoice-generation.en.md", "file_type": "document", "degree": 1}, {"id": "scheduled_automation_fr", "label": "Automatisation par t\u00e2ches planifi\u00e9es", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Automatisation par t\u00e2ches planifi\u00e9es", "community": 4, "community_name": "Community 4", "source_file": "workflows/scheduled-automation.md", "file_type": "document", "degree": 1}, {"id": "newsletter_creation_en", "label": "Workflow: Newsletter Creation", "color": {"background": "#FF9DA7", "border": "#FF9DA7", "highlight": {"background": "#ffffff", "border": "#FF9DA7"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Workflow: Newsletter Creation", "community": 7, "community_name": "Community 7", "source_file": "workflows/newsletter-creation.en.md", "file_type": "document", "degree": 1}, {"id": "competitor_analysis_workflow", "label": "Workflow: Analyse Concurrentielle Locale", "color": {"background": "#59A14F", "border": "#59A14F", "highlight": {"background": "#ffffff", "border": "#59A14F"}}, "size": 10.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Workflow: Analyse Concurrentielle Locale", "community": 14, "community_name": "Community 14", "source_file": "workflows/competitor-analysis.md", "file_type": "document", "degree": 0}, {"id": "meeting_prep_workflow", "label": "Workflow: Meeting Preparation", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 10.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Workflow: Meeting Preparation", "community": 15, "community_name": "Community 15", "source_file": "workflows/meeting-prep.md", "file_type": "document", "degree": 0}, {"id": "inventory_tracking_en", "label": "Workflow: Inventory Tracking", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Workflow: Inventory Tracking", "community": 3, "community_name": "Community 3", "source_file": "workflows/inventory-tracking.en.md", "file_type": "document", "degree": 1}, {"id": "prospect_research_workflow", "label": "Workflow: Recherche Informations Entreprise/Client", "color": {"background": "#B07AA1", "border": "#B07AA1", "highlight": {"background": "#ffffff", "border": "#B07AA1"}}, "size": 10.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Workflow: Recherche Informations Entreprise/Client", "community": 16, "community_name": "Community 16", "source_file": "workflows/prospect-research.md", "file_type": "document", "degree": 0}, {"id": "presentation_slides_en", "label": "Workflow: Client Presentation Creation", "color": {"background": "#9C755F", "border": "#9C755F", "highlight": {"background": "#ffffff", "border": "#9C755F"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Workflow: Client Presentation Creation", "community": 8, "community_name": "Community 8", "source_file": "workflows/presentation-slides.en.md", "file_type": "document", "degree": 1}, {"id": "social_media_posts_en", "label": "Workflow: Social Media Posts", "color": {"background": "#FF9DA7", "border": "#FF9DA7", "highlight": {"background": "#ffffff", "border": "#FF9DA7"}}, "size": 10.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Workflow: Social Media Posts", "community": 17, "community_name": "Community 17", "source_file": "workflows/social-media-posts.en.md", "file_type": "document", "degree": 0}, {"id": "client_followup_tracker_en", "label": "Workflow: Client Follow-up Tracker", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Workflow: Client Follow-up Tracker", "community": 3, "community_name": "Community 3", "source_file": "workflows/client-followup-tracker.en.md", "file_type": "document", "degree": 1}, {"id": "newsletter_creation_fr", "label": "Workflow: Cr\u00e9ation de Newsletter", "color": {"background": "#FF9DA7", "border": "#FF9DA7", "highlight": {"background": "#ffffff", "border": "#FF9DA7"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Workflow: Cr\u00e9ation de Newsletter", "community": 7, "community_name": "Community 7", "source_file": "workflows/newsletter-creation.md", "file_type": "document", "degree": 1}, {"id": "quality_checklist_workflow", "label": "Workflow: Listes de Contr\u00f4le Qualit\u00e9", "color": {"background": "#9C755F", "border": "#9C755F", "highlight": {"background": "#ffffff", "border": "#9C755F"}}, "size": 10.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Workflow: Listes de Contr\u00f4le Qualit\u00e9", "community": 18, "community_name": "Community 18", "source_file": "workflows/quality-checklist.md", "file_type": "document", "degree": 0}, {"id": "workforce_planning_en", "label": "Workflow: Workforce Planning", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Workflow: Workforce Planning", "community": 3, "community_name": "Community 3", "source_file": "workflows/workforce-planning.en.md", "file_type": "document", "degree": 1}, {"id": "presentation_slides_fr", "label": "Workflow: Cr\u00e9ation Pr\u00e9sentation Client", "color": {"background": "#9C755F", "border": "#9C755F", "highlight": {"background": "#ffffff", "border": "#9C755F"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Workflow: Cr\u00e9ation Pr\u00e9sentation Client", "community": 8, "community_name": "Community 8", "source_file": "workflows/presentation-slides.md", "file_type": "document", "degree": 1}, {"id": "cowork_desktop", "label": "Cowork in Claude Desktop", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 22.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Cowork in Claude Desktop", "community": 3, "community_name": "Community 3", "source_file": "", "file_type": "concept", "degree": 2}, {"id": "cowork_workspace", "label": "Cowork-Workspace Folder", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 34.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Cowork-Workspace Folder", "community": 3, "community_name": "Community 3", "source_file": "", "file_type": "concept", "degree": 4}, {"id": "readme_fr_guide_claude_cowork", "label": "Guide Claude Cowork (FR)", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 22.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Guide Claude Cowork (FR)", "community": 0, "community_name": "Community 0", "source_file": "README.fr.md", "file_type": "document", "degree": 2}, {"id": "llms_claude_cowork_guide", "label": "Claude Cowork Guide (LLMS)", "color": {"background": "#BAB0AC", "border": "#BAB0AC", "highlight": {"background": "#ffffff", "border": "#BAB0AC"}}, "size": 10.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Claude Cowork Guide (LLMS)", "community": 19, "community_name": "Community 19", "source_file": "llms.txt", "file_type": "document", "degree": 0}, {"id": "changelog_cowork_documentation", "label": "Changelog Cowork Documentation", "color": {"background": "#B07AA1", "border": "#B07AA1", "highlight": {"background": "#ffffff", "border": "#B07AA1"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Changelog Cowork Documentation", "community": 6, "community_name": "Community 6", "source_file": "CHANGELOG.md", "file_type": "document", "degree": 1}, {"id": "manifest_cowork_documentation", "label": "Cowork Documentation Manifest", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Cowork Documentation Manifest", "community": 0, "community_name": "Community 0", "source_file": "MANIFEST.yaml", "file_type": "document", "degree": 1}, {"id": "guide_00_overview", "label": "Overview", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 28.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Overview", "community": 0, "community_name": "Community 0", "source_file": "guide/00-overview.md", "file_type": "document", "degree": 3}, {"id": "guide_01_getting_started", "label": "Getting Started", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 22.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Getting Started", "community": 0, "community_name": "Community 0", "source_file": "guide/01-getting-started.md", "file_type": "document", "degree": 2}, {"id": "guide_02_capabilities", "label": "Capabilities", "color": {"background": "#B07AA1", "border": "#B07AA1", "highlight": {"background": "#ffffff", "border": "#B07AA1"}}, "size": 28.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Capabilities", "community": 6, "community_name": "Community 6", "source_file": "guide/02-capabilities.md", "file_type": "document", "degree": 3}, {"id": "guide_03_security", "label": "Security", "color": {"background": "#B07AA1", "border": "#B07AA1", "highlight": {"background": "#ffffff", "border": "#B07AA1"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Security", "community": 6, "community_name": "Community 6", "source_file": "guide/03-security.md", "file_type": "document", "degree": 1}, {"id": "guide_04_troubleshooting", "label": "Troubleshooting", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 10.0, "font": {"size": 0, "color": "#ffffff"}, "title": "Troubleshooting", "community": 20, "community_name": "Community 20", "source_file": "guide/04-troubleshooting.md", "file_type": "document", "degree": 0}, {"id": "concept_claude_cowork", "label": "Claude Cowork", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 28.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Claude Cowork", "community": 0, "community_name": "Community 0", "source_file": "README.md", "file_type": "concept", "degree": 3}, {"id": "concept_desktop_commander", "label": "Desktop Commander", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Desktop Commander", "community": 0, "community_name": "Community 0", "source_file": "guide/01-getting-started.md", "file_type": "concept", "degree": 1}, {"id": "concept_mcp_connectors", "label": "MCP Connectors", "color": {"background": "#B07AA1", "border": "#B07AA1", "highlight": {"background": "#ffffff", "border": "#B07AA1"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "MCP Connectors", "community": 6, "community_name": "Community 6", "source_file": "guide/02-capabilities.md", "file_type": "concept", "degree": 1}, {"id": "concept_ctoc_framework", "label": "CTOC Framework", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 22.0, "font": {"size": 12, "color": "#ffffff"}, "title": "CTOC Framework", "community": 0, "community_name": "Community 0", "source_file": "guide/01-getting-started.md", "file_type": "concept", "degree": 2}, {"id": "machine_readable_reference_yaml", "label": "Cowork Reference Index", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 40.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Cowork Reference Index", "community": 1, "community_name": "Community 1", "source_file": "machine-readable/reference.yaml", "file_type": "document", "degree": 5}, {"id": "prompts_readme_fr_md", "label": "Biblioth\u00e8que de prompts Cowork", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 34.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Biblioth\u00e8que de prompts Cowork", "community": 5, "community_name": "Community 5", "source_file": "prompts/README.fr.md", "file_type": "document", "degree": 4}, {"id": "prompts_research_fr_md", "label": "Prompts de Recherche", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Prompts de Recherche", "community": 5, "community_name": "Community 5", "source_file": "prompts/research.fr.md", "file_type": "document", "degree": 1}, {"id": "prompts_file_ops_fr_md", "label": "Prompts d'op\u00e9rations sur fichiers", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Prompts d&#x27;op\u00e9rations sur fichiers", "community": 5, "community_name": "Community 5", "source_file": "prompts/file-ops.fr.md", "file_type": "document", "degree": 1}, {"id": "prompts_document_creation_md", "label": "Document Creation Prompts", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 22.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Document Creation Prompts", "community": 1, "community_name": "Community 1", "source_file": "prompts/document-creation.md", "file_type": "document", "degree": 2}, {"id": "prompts_data_extraction_md", "label": "Data Extraction Prompts", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 22.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Data Extraction Prompts", "community": 1, "community_name": "Community 1", "source_file": "prompts/data-extraction.md", "file_type": "document", "degree": 2}, {"id": "prompts_file_ops_md", "label": "File Operations Prompts", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 22.0, "font": {"size": 12, "color": "#ffffff"}, "title": "File Operations Prompts", "community": 1, "community_name": "Community 1", "source_file": "prompts/file-ops.md", "file_type": "document", "degree": 2}, {"id": "prompts_document_creation_fr_md", "label": "Prompts de Cr\u00e9ation de Documents", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Prompts de Cr\u00e9ation de Documents", "community": 5, "community_name": "Community 5", "source_file": "prompts/document-creation.fr.md", "file_type": "document", "degree": 1}, {"id": "prompts_readme_md", "label": "Cowork Prompt Library", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 34.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Cowork Prompt Library", "community": 1, "community_name": "Community 1", "source_file": "prompts/README.md", "file_type": "document", "degree": 4}, {"id": "prompts_research_md", "label": "Research Prompts", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 22.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Research Prompts", "community": 1, "community_name": "Community 1", "source_file": "prompts/research.md", "file_type": "document", "degree": 2}, {"id": "prompts_data_extraction_fr_md", "label": "Prompts d'Extraction de Donn\u00e9es", "color": {"background": "#EDC948", "border": "#EDC948", "highlight": {"background": "#ffffff", "border": "#EDC948"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Prompts d&#x27;Extraction de Donn\u00e9es", "community": 5, "community_name": "Community 5", "source_file": "prompts/data-extraction.fr.md", "file_type": "document", "degree": 1}, {"id": "reference_glossary_fr_md", "label": "Glossaire Cowork", "color": {"background": "#BAB0AC", "border": "#BAB0AC", "highlight": {"background": "#ffffff", "border": "#BAB0AC"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Glossaire Cowork", "community": 9, "community_name": "Community 9", "source_file": "reference/glossary.fr.md", "file_type": "document", "degree": 1}, {"id": "reference_comparison_md", "label": "Claude Products Comparison", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Claude Products Comparison", "community": 10, "community_name": "Community 10", "source_file": "reference/comparison.md", "file_type": "document", "degree": 1}, {"id": "reference_glossary_md", "label": "Cowork Glossary", "color": {"background": "#BAB0AC", "border": "#BAB0AC", "highlight": {"background": "#ffffff", "border": "#BAB0AC"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Cowork Glossary", "community": 9, "community_name": "Community 9", "source_file": "reference/glossary.md", "file_type": "document", "degree": 1}, {"id": "reference_faq_md", "label": "Cowork FAQ", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Cowork FAQ", "community": 11, "community_name": "Community 11", "source_file": "reference/faq.md", "file_type": "document", "degree": 1}, {"id": "reference_cheatsheet_md", "label": "Cowork Cheatsheet", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Cowork Cheatsheet", "community": 12, "community_name": "Community 12", "source_file": "reference/cheatsheet.md", "file_type": "document", "degree": 1}, {"id": "reference_faq_fr_md", "label": "FAQ Cowork", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "FAQ Cowork", "community": 11, "community_name": "Community 11", "source_file": "reference/faq.fr.md", "file_type": "document", "degree": 1}, {"id": "reference_cheatsheet_fr_md", "label": "Aide-m\u00e9moire Cowork", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Aide-m\u00e9moire Cowork", "community": 12, "community_name": "Community 12", "source_file": "reference/cheatsheet.fr.md", "file_type": "document", "degree": 1}, {"id": "reference_comparison_fr_md", "label": "Comparaison des produits Claude", "color": {"background": "#4E79A7", "border": "#4E79A7", "highlight": {"background": "#ffffff", "border": "#4E79A7"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Comparaison des produits Claude", "community": 10, "community_name": "Community 10", "source_file": "reference/comparison.fr.md", "file_type": "document", "degree": 1}, {"id": "tools_onboarding_prompt_md", "label": "Onboarding Personnalis\u00e9 Claude Cowork", "color": {"background": "#F28E2B", "border": "#F28E2B", "highlight": {"background": "#ffffff", "border": "#F28E2B"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Onboarding Personnalis\u00e9 Claude Cowork", "community": 1, "community_name": "Community 1", "source_file": "tools/onboarding-prompt.md", "file_type": "document", "degree": 1}, {"id": "compliance_checklist_workflow", "label": "Workflow: Compliance Checklist", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 40.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Workflow: Compliance Checklist", "community": 2, "community_name": "Community 2", "source_file": "workflows/compliance-checklist.en.md", "file_type": "document", "degree": 5}, {"id": "compliance_checklist_fr", "label": "Compliance Checklist (French)", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Compliance Checklist (French)", "community": 2, "community_name": "Community 2", "source_file": "compliance-checklist.md", "file_type": "document", "degree": 1}, {"id": "checklist_construction_xlsx", "label": "Construction Compliance Checklist", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 22.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Construction Compliance Checklist", "community": 2, "community_name": "Community 2", "source_file": "workflows/compliance-checklist.en.md", "file_type": "code", "degree": 2}, {"id": "checklist_retail_xlsx", "label": "Retail Compliance Checklist", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Retail Compliance Checklist", "community": 2, "community_name": "Community 2", "source_file": "workflows/compliance-checklist.en.md", "file_type": "code", "degree": 1}, {"id": "status_report_pdf", "label": "Compliance Status Report", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 22.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Compliance Status Report", "community": 2, "community_name": "Community 2", "source_file": "workflows/compliance-checklist.en.md", "file_type": "code", "degree": 2}, {"id": "action_plan_xlsx", "label": "Compliance Action Plan", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Compliance Action Plan", "community": 2, "community_name": "Community 2", "source_file": "workflows/compliance-checklist.en.md", "file_type": "code", "degree": 1}, {"id": "client_package_pdf", "label": "Client Compliance Package", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "Client Compliance Package", "community": 13, "community_name": "Community 13", "source_file": "workflows/compliance-checklist.en.md", "file_type": "code", "degree": 1}, {"id": "sam_gov", "label": "SAM.gov Registration", "color": {"background": "#E15759", "border": "#E15759", "highlight": {"background": "#ffffff", "border": "#E15759"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "SAM.gov Registration", "community": 2, "community_name": "Community 2", "source_file": "workflows/compliance-checklist.en.md", "file_type": "concept", "degree": 1}, {"id": "osha_compliance", "label": "OSHA Compliance", "color": {"background": "#76B7B2", "border": "#76B7B2", "highlight": {"background": "#ffffff", "border": "#76B7B2"}}, "size": 16.0, "font": {"size": 12, "color": "#ffffff"}, "title": "OSHA Compliance", "community": 13, "community_name": "Community 13", "source_file": "workflows/compliance-checklist.en.md", "file_type": "concept", "degree": 1}];
+const RAW_EDGES = [{"from": "payment_reminders_workflow", "to": "readme_en", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "payment_reminders_workflow", "to": "cowork_desktop", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "payment_reminders_workflow", "to": "cowork_workspace", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "price_comparison_workflow", "to": "readme_en", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "readme_en", "to": "invoice_generation_en", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "readme_en", "to": "scheduled_automation_en", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "scheduled_automation_en", "to": "scheduled_automation_fr", "label": "semantically_similar_to", "title": "semantically_similar_to [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "newsletter_creation_en", "to": "newsletter_creation_fr", "label": "semantically_similar_to", "title": "semantically_similar_to [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "inventory_tracking_en", "to": "cowork_workspace", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "presentation_slides_en", "to": "presentation_slides_fr", "label": "semantically_similar_to", "title": "semantically_similar_to [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "client_followup_tracker_en", "to": "cowork_workspace", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "workforce_planning_en", "to": "cowork_workspace", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "cowork_desktop", "to": "compliance_checklist_workflow", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "readme_fr_guide_claude_cowork", "to": "concept_claude_cowork", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "readme_fr_guide_claude_cowork", "to": "guide_00_overview", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "changelog_cowork_documentation", "to": "guide_02_capabilities", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "manifest_cowork_documentation", "to": "guide_00_overview", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "guide_00_overview", "to": "concept_claude_cowork", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "guide_01_getting_started", "to": "concept_desktop_commander", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "guide_01_getting_started", "to": "concept_ctoc_framework", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "guide_02_capabilities", "to": "concept_mcp_connectors", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "guide_02_capabilities", "to": "guide_03_security", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "concept_claude_cowork", "to": "concept_ctoc_framework", "label": "conceptually_related_to", "title": "conceptually_related_to [INFERRED]", "dashes": true, "width": 1, "color": {"opacity": 0.35}, "confidence": "INFERRED"}, {"from": "machine_readable_reference_yaml", "to": "prompts_file_ops_md", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "machine_readable_reference_yaml", "to": "prompts_document_creation_md", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "machine_readable_reference_yaml", "to": "prompts_data_extraction_md", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "machine_readable_reference_yaml", "to": "prompts_research_md", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "machine_readable_reference_yaml", "to": "tools_onboarding_prompt_md", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "prompts_readme_fr_md", "to": "prompts_file_ops_fr_md", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "prompts_readme_fr_md", "to": "prompts_document_creation_fr_md", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "prompts_readme_fr_md", "to": "prompts_data_extraction_fr_md", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "prompts_readme_fr_md", "to": "prompts_research_fr_md", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "prompts_document_creation_md", "to": "prompts_readme_md", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "prompts_data_extraction_md", "to": "prompts_readme_md", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "prompts_file_ops_md", "to": "prompts_readme_md", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "prompts_readme_md", "to": "prompts_research_md", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "reference_glossary_fr_md", "to": "reference_glossary_md", "label": "semantically_similar_to", "title": "semantically_similar_to [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "reference_comparison_md", "to": "reference_comparison_fr_md", "label": "semantically_similar_to", "title": "semantically_similar_to [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "reference_faq_md", "to": "reference_faq_fr_md", "label": "semantically_similar_to", "title": "semantically_similar_to [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "reference_cheatsheet_md", "to": "reference_cheatsheet_fr_md", "label": "semantically_similar_to", "title": "semantically_similar_to [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "compliance_checklist_workflow", "to": "compliance_checklist_fr", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "compliance_checklist_workflow", "to": "checklist_construction_xlsx", "label": "implements", "title": "implements [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "compliance_checklist_workflow", "to": "checklist_retail_xlsx", "label": "implements", "title": "implements [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "compliance_checklist_workflow", "to": "sam_gov", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "checklist_construction_xlsx", "to": "status_report_pdf", "label": "references", "title": "references [INFERRED]", "dashes": true, "width": 1, "color": {"opacity": 0.35}, "confidence": "INFERRED"}, {"from": "status_report_pdf", "to": "action_plan_xlsx", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}, {"from": "client_package_pdf", "to": "osha_compliance", "label": "references", "title": "references [EXTRACTED]", "dashes": false, "width": 2, "color": {"opacity": 0.7}, "confidence": "EXTRACTED"}];
+const LEGEND = [{"cid": 0, "color": "#4E79A7", "label": "Community 0", "count": 7}, {"cid": 1, "color": "#F28E2B", "label": "Community 1", "count": 7}, {"cid": 2, "color": "#E15759", "label": "Community 2", "count": 7}, {"cid": 3, "color": "#76B7B2", "label": "Community 3", "count": 6}, {"cid": 4, "color": "#59A14F", "label": "Community 4", "count": 5}, {"cid": 5, "color": "#EDC948", "label": "Community 5", "count": 5}, {"cid": 6, "color": "#B07AA1", "label": "Community 6", "count": 4}, {"cid": 7, "color": "#FF9DA7", "label": "Community 7", "count": 2}, {"cid": 8, "color": "#9C755F", "label": "Community 8", "count": 2}, {"cid": 9, "color": "#BAB0AC", "label": "Community 9", "count": 2}, {"cid": 10, "color": "#4E79A7", "label": "Community 10", "count": 2}, {"cid": 11, "color": "#F28E2B", "label": "Community 11", "count": 2}, {"cid": 12, "color": "#E15759", "label": "Community 12", "count": 2}, {"cid": 13, "color": "#76B7B2", "label": "Community 13", "count": 2}, {"cid": 14, "color": "#59A14F", "label": "Community 14", "count": 1}, {"cid": 15, "color": "#EDC948", "label": "Community 15", "count": 1}, {"cid": 16, "color": "#B07AA1", "label": "Community 16", "count": 1}, {"cid": 17, "color": "#FF9DA7", "label": "Community 17", "count": 1}, {"cid": 18, "color": "#9C755F", "label": "Community 18", "count": 1}, {"cid": 19, "color": "#BAB0AC", "label": "Community 19", "count": 1}, {"cid": 20, "color": "#4E79A7", "label": "Community 20", "count": 1}];
+
+// HTML-escape helper — prevents XSS when injecting graph data into innerHTML
+function esc(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+}
+
+// Build vis datasets
+const nodesDS = new vis.DataSet(RAW_NODES.map(n => ({
+  id: n.id, label: n.label, color: n.color, size: n.size,
+  font: n.font, title: n.title,
+  _community: n.community, _community_name: n.community_name,
+  _source_file: n.source_file, _file_type: n.file_type, _degree: n.degree,
+})));
+
+const edgesDS = new vis.DataSet(RAW_EDGES.map((e, i) => ({
+  id: i, from: e.from, to: e.to,
+  label: '',
+  title: e.title,
+  dashes: e.dashes,
+  width: e.width,
+  color: e.color,
+  arrows: { to: { enabled: true, scaleFactor: 0.5 } },
+})));
+
+const container = document.getElementById('graph');
+const network = new vis.Network(container, { nodes: nodesDS, edges: edgesDS }, {
+  physics: {
+    enabled: true,
+    solver: 'forceAtlas2Based',
+    forceAtlas2Based: {
+      gravitationalConstant: -60,
+      centralGravity: 0.005,
+      springLength: 120,
+      springConstant: 0.08,
+      damping: 0.4,
+      avoidOverlap: 0.8,
+    },
+    stabilization: { iterations: 200, fit: true },
+  },
+  interaction: {
+    hover: true,
+    tooltipDelay: 100,
+    hideEdgesOnDrag: true,
+    navigationButtons: false,
+    keyboard: false,
+  },
+  nodes: { shape: 'dot', borderWidth: 1.5 },
+  edges: { smooth: { type: 'continuous', roundness: 0.2 }, selectionWidth: 3 },
+});
+
+network.once('stabilizationIterationsDone', () => {
+  network.setOptions({ physics: { enabled: false } });
+});
+
+function showInfo(nodeId) {
+  const n = nodesDS.get(nodeId);
+  if (!n) return;
+  const neighborIds = network.getConnectedNodes(nodeId);
+  const neighborItems = neighborIds.map(nid => {
+    const nb = nodesDS.get(nid);
+    const color = nb ? nb.color.background : '#555';
+    return `<span class="neighbor-link" style="border-left-color:${esc(color)}" onclick="focusNode(${JSON.stringify(nid)})">${esc(nb ? nb.label : nid)}</span>`;
+  }).join('');
+  document.getElementById('info-content').innerHTML = `
+    <div class="field"><b>${esc(n.label)}</b></div>
+    <div class="field">Type: ${esc(n._file_type || 'unknown')}</div>
+    <div class="field">Community: ${esc(n._community_name)}</div>
+    <div class="field">Source: ${esc(n._source_file || '-')}</div>
+    <div class="field">Degree: ${n._degree}</div>
+    ${neighborIds.length ? `<div class="field" style="margin-top:8px;color:#aaa;font-size:11px">Neighbors (${neighborIds.length})</div><div id="neighbors-list">${neighborItems}</div>` : ''}
+  `;
+}
+
+function focusNode(nodeId) {
+  network.focus(nodeId, { scale: 1.4, animation: true });
+  network.selectNodes([nodeId]);
+  showInfo(nodeId);
+}
+
+// Track hovered node — hover detection is more reliable than click params
+let hoveredNodeId = null;
+network.on('hoverNode', params => {
+  hoveredNodeId = params.node;
+  container.style.cursor = 'pointer';
+});
+network.on('blurNode', () => {
+  hoveredNodeId = null;
+  container.style.cursor = 'default';
+});
+container.addEventListener('click', () => {
+  if (hoveredNodeId !== null) {
+    showInfo(hoveredNodeId);
+    network.selectNodes([hoveredNodeId]);
+  }
+});
+network.on('click', params => {
+  if (params.nodes.length > 0) {
+    showInfo(params.nodes[0]);
+  } else if (hoveredNodeId === null) {
+    document.getElementById('info-content').innerHTML = '<span class="empty">Click a node to inspect it</span>';
+  }
+});
+
+const searchInput = document.getElementById('search');
+const searchResults = document.getElementById('search-results');
+searchInput.addEventListener('input', () => {
+  const q = searchInput.value.toLowerCase().trim();
+  searchResults.innerHTML = '';
+  if (!q) { searchResults.style.display = 'none'; return; }
+  const matches = RAW_NODES.filter(n => n.label.toLowerCase().includes(q)).slice(0, 20);
+  if (!matches.length) { searchResults.style.display = 'none'; return; }
+  searchResults.style.display = 'block';
+  matches.forEach(n => {
+    const el = document.createElement('div');
+    el.className = 'search-item';
+    el.textContent = n.label;
+    el.style.borderLeft = `3px solid ${n.color.background}`;
+    el.style.paddingLeft = '8px';
+    el.onclick = () => {
+      network.focus(n.id, { scale: 1.5, animation: true });
+      network.selectNodes([n.id]);
+      showInfo(n.id);
+      searchResults.style.display = 'none';
+      searchInput.value = '';
+    };
+    searchResults.appendChild(el);
+  });
+});
+document.addEventListener('click', e => {
+  if (!searchResults.contains(e.target) && e.target !== searchInput)
+    searchResults.style.display = 'none';
+});
+
+const hiddenCommunities = new Set();
+
+const selectAllCb = document.getElementById('select-all-cb');
+
+function updateSelectAllState() {
+  const total = LEGEND.length;
+  const hidden = hiddenCommunities.size;
+  selectAllCb.checked = hidden === 0;
+  selectAllCb.indeterminate = hidden > 0 && hidden < total;
+}
+
+function toggleAllCommunities(hide) {
+  document.querySelectorAll('.legend-item').forEach(item => {
+    hide ? item.classList.add('dimmed') : item.classList.remove('dimmed');
+  });
+  document.querySelectorAll('.legend-cb').forEach(cb => {
+    cb.checked = !hide;
+  });
+  LEGEND.forEach(c => {
+    if (hide) hiddenCommunities.add(c.cid); else hiddenCommunities.delete(c.cid);
+  });
+  const updates = RAW_NODES.map(n => ({ id: n.id, hidden: hide }));
+  nodesDS.update(updates);
+  updateSelectAllState();
+}
+
+const legendEl = document.getElementById('legend');
+LEGEND.forEach(c => {
+  const item = document.createElement('div');
+  item.className = 'legend-item';
+  const cb = document.createElement('input');
+  cb.type = 'checkbox';
+  cb.className = 'legend-cb';
+  cb.checked = true;
+  cb.addEventListener('change', (e) => {
+    e.stopPropagation();
+    if (cb.checked) {
+      hiddenCommunities.delete(c.cid);
+      item.classList.remove('dimmed');
+    } else {
+      hiddenCommunities.add(c.cid);
+      item.classList.add('dimmed');
+    }
+    const updates = RAW_NODES
+      .filter(n => n.community === c.cid)
+      .map(n => ({ id: n.id, hidden: !cb.checked }));
+    nodesDS.update(updates);
+    updateSelectAllState();
+  });
+  item.innerHTML = `<div class="legend-dot" style="background:${c.color}"></div>
+    <span class="legend-label">${c.label}</span>
+    <span class="legend-count">${c.count}</span>`;
+  item.prepend(cb);
+  item.onclick = (e) => {
+    if (e.target === cb) return;
+    cb.checked = !cb.checked;
+    cb.dispatchEvent(new Event('change'));
+  };
+  legendEl.appendChild(item);
+});
+</script>
+<script>
+// Render hyperedges as shaded regions
+const hyperedges = [];
+// afterDrawing passes ctx already transformed to network coordinate space.
+// Draw node positions raw — no manual pan/zoom/DPR math needed.
+network.on('afterDrawing', function(ctx) {
+    hyperedges.forEach(h => {
+        const positions = h.nodes
+            .map(nid => network.getPositions([nid])[nid])
+            .filter(p => p !== undefined);
+        if (positions.length < 2) return;
+        ctx.save();
+        ctx.globalAlpha = 0.12;
+        ctx.fillStyle = '#6366f1';
+        ctx.strokeStyle = '#6366f1';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        // Centroid and expanded hull in network coordinates
+        const cx = positions.reduce((s, p) => s + p.x, 0) / positions.length;
+        const cy = positions.reduce((s, p) => s + p.y, 0) / positions.length;
+        const expanded = positions.map(p => ({
+            x: cx + (p.x - cx) * 1.15,
+            y: cy + (p.y - cy) * 1.15
+        }));
+        ctx.moveTo(expanded[0].x, expanded[0].y);
+        expanded.slice(1).forEach(p => ctx.lineTo(p.x, p.y));
+        ctx.closePath();
+        ctx.fill();
+        ctx.globalAlpha = 0.4;
+        ctx.stroke();
+        // Label
+        ctx.globalAlpha = 0.8;
+        ctx.fillStyle = '#4f46e5';
+        ctx.font = 'bold 11px sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(h.label, cx, cy - 5);
+        ctx.restore();
+    });
+});
+</script>
+</body>
+</html>

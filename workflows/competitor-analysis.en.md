@@ -5,7 +5,7 @@
 > **Category**: 💼 Commercial
 > **Professions**: Merchants, Business Owners
 
-🌐 **Disponible aussi en [Français](competitor-analysis.md)**
+🌐 **Languages**: [English](competitor-analysis.en.md) | [Français](competitor-analysis.md)
 
 ---
 

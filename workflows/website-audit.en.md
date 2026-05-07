@@ -5,7 +5,7 @@
 > **Category**: 📣 Communication
 > **Professions**: All (tradespeople, retailers, freelancers)
 
-🌐 **Disponible aussi en [Français](website-audit.md)**
+🌐 **Languages**: [English](website-audit.en.md) | [Français](website-audit.md)
 
 ---
 

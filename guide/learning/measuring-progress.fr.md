@@ -6,6 +6,8 @@ tags: [progrès, métriques, suivi, ROI, adoption]
 
 # Mesurer ses progrès avec Cowork
 
+🌐 **Langues** : [Français](measuring-progress.fr.md) | [English](measuring-progress.md)
+
 La plupart des personnes qui abandonnent les outils de productivité le font parce qu'elles n'ont jamais mesuré ce qu'elles gagnaient. Sans mesure, les bonnes semaines ressemblent à de la chance et les mauvaises semaines font conclure que l'outil ne fonctionne pas.
 
 La mesure résout ça : elle montre ce qui fonctionne, où concentrer l'effort, et quand on a vraiment atteint un palier.

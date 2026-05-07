@@ -4,10 +4,10 @@
 
 **Target professions**: Contractors · Merchants · Small business owners · Freelancers
 
-🌐 **Languages**: [Français](README.md) | [English](README.en.md)
+🌐 **Languages**: [English](README.en.md) | [Français](README.md) | [Українська 🇺🇦](README.uk.md)
 
-> 📝 **Note**: Each workflow is available in French (.md) and English (.en.md)
-> Example: `invoice-generation.md` (French) and `invoice-generation.en.md` (English)
+> 📝 **Note**: Each workflow is available in French (.md), English (.en.md), and Russian (.ru.md)
+> Example: `invoice-generation.md` (French), `invoice-generation.en.md` (English), and `invoice-generation.ru.md` (Russian)
 
 ---
 

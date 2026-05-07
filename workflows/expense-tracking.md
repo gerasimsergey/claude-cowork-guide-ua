@@ -1,6 +1,6 @@
 # Workflow: Expense Tracking
 
-🌐 **Langues**: [Français](expense-tracking.md) | [English](expense-tracking.en.md)
+🌐 **Langues** : [Français](expense-tracking.md) | [English](expense-tracking.en.md)
 
 > **Estimated time**: 20 minutes
 > **Difficulty**: Intermediate

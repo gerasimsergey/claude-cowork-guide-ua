@@ -1,6 +1,6 @@
 # File Operations Prompts
 
-🌐 **Languages**: [English](file-ops.md) | [Français](file-ops.fr.md)
+🌐 **Languages**: [English](file-ops.md) | [Français](file-ops.fr.md) | [Українська 🇺🇦](file-ops.uk.md)
 
 > **15+ ready-to-use prompts for file organization, renaming, and cleanup**
 

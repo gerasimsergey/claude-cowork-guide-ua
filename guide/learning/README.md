@@ -6,6 +6,8 @@ tags: [learning, progression, prompting, skills]
 
 # Apprendre à travailler avec l'IA
 
+🌐 **Languages**: [English](README.en.md) | [Français](README.md) | [Українська 🇺🇦](README.uk.md)
+
 La différence entre quelqu'un qui utilise Cowork 5 minutes par jour et quelqu'un qui en tire 3h de travail économisées par semaine, ce n'est pas l'outil. C'est comment ils l'utilisent.
 
 Cette section est pour ceux qui veulent progresser, pas juste utiliser.

@@ -5,7 +5,7 @@
 > **Category**: 📣 Communication
 > **Professions**: Merchants, Business Owners, Freelancers
 
-🌐 **Disponible aussi en [Français](social-media-posts.md)**
+🌐 **Languages**: [English](social-media-posts.en.md) | [Français](social-media-posts.md)
 
 ---
 

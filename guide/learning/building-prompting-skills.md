@@ -6,6 +6,8 @@ tags: [learning, prompting, ctoc, skills, library]
 
 # Building Prompting Skills — From Copy-Paste to Writing Your Own
 
+🌐 **Languages**: [English](building-prompting-skills.md) | [Français](building-prompting-skills.fr.md)
+
 Most people start by copying prompts. That's exactly right. But copying forever means you're always dependent on someone else's library, someone else's structure, someone else's context. The goal is to reach the point where you can write a prompt for any task, not just the ones already covered.
 
 This guide maps the progression: three levels, concrete exercises, and a library structure you can use immediately.

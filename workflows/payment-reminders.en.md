@@ -5,7 +5,7 @@
 > **Category**: 📋 Administrative
 > **Professions**: Contractors, Merchants, Freelancers, Small businesses
 
-🌐 **Disponible aussi en [Français](payment-reminders.md)**
+🌐 **Languages**: [English](payment-reminders.en.md) | [Français](payment-reminders.md)
 
 ---
 

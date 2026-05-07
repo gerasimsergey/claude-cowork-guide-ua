@@ -5,7 +5,7 @@
 > **Category**: 🔧 Production
 > **Professions**: Contractors, Business Owners
 
-🌐 **Disponible aussi en [Français](project-planning.md)**
+🌐 **Languages**: [English](project-planning.en.md) | [Français](project-planning.md)
 
 ---
 

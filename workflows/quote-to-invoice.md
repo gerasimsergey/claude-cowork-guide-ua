@@ -5,7 +5,7 @@
 > **Catégorie**: 📋 Administratif
 > **Professions**: Tous
 
-🌐 **Also available in [English](quote-to-invoice.en.md)**
+🌐 **Langues** : [Français](quote-to-invoice.md) | [English](quote-to-invoice.en.md)
 
 ---
 

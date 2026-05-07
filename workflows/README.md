@@ -4,10 +4,10 @@
 
 **Professions ciblées**: Artisans/BTP · Commerçants · Dirigeants TPE/PME · Indépendants
 
-🌐 **Languages**: [Français](README.md) | [English](README.en.md)
+🌐 **Langues** : [Français](README.md) | [English](README.en.md) | [Українська 🇺🇦](README.uk.md)
 
-> 📝 **Note**: Chaque workflow est disponible en français (.md) et anglais (.en.md)
-> Exemple: `invoice-generation.md` (français) et `invoice-generation.en.md` (anglais)
+> 📝 **Note** : Chaque workflow est disponible en français (.md), anglais (.en.md), russe (.ru.md) et ukrainien (.uk.md)
+> Exemple : `invoice-generation.md` (français), `invoice-generation.en.md` (anglais), `invoice-generation.ru.md` (russe) et `invoice-generation.uk.md` (ukrainien)
 
 ---
 

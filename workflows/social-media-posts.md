@@ -5,7 +5,7 @@
 > **Catégorie**: 📣 Communication
 > **Professions**: Tous
 
-🌐 **Also available in [English](social-media-posts.en.md)**
+🌐 **Langues** : [Français](social-media-posts.md) | [English](social-media-posts.en.md)
 
 ---
 

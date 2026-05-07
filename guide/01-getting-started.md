@@ -1,6 +1,6 @@
 # Getting Started with Cowork
 
-🌐 **Languages**: [English](01-getting-started.md) | [Français](01-getting-started.fr.md)
+🌐 **Languages**: [English](01-getting-started.md) | [Français](01-getting-started.fr.md) | [Українська 🇺🇦](01-getting-started.uk.md)
 
 > **Reading time**: ~10 minutes
 >

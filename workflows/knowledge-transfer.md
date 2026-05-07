@@ -5,7 +5,7 @@
 > **Catégorie**: 🗂️ Organisation
 > **Professions**: Artisans/BTP, Dirigeants/TPE
 
-🌐 **Also available in [English](knowledge-transfer.en.md)**
+🌐 **Langues** : [Français](knowledge-transfer.md) | [English](knowledge-transfer.en.md)
 
 ---
 

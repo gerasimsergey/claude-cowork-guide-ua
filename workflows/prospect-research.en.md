@@ -5,7 +5,7 @@
 > **Category**: 💼 Commercial
 > **Professions**: Merchants, Business Owners
 
-🌐 **Disponible aussi en [Français](prospect-research.md)**
+🌐 **Languages**: [English](prospect-research.en.md) | [Français](prospect-research.md)
 
 ---
 
