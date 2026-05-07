@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Claude Cowork — Diagrammes visuels"
 description: "32 diagrammes Mermaid interactifs couvrant tous les concepts Claude Cowork"
 tags: [reference, diagrammes, mermaid, workflows]

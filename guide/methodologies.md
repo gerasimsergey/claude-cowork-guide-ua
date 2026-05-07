@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Methodologies Cowork"
 description: "Working methodologies for non-technical users: CTOC, iterative refinement, batch processing, quality verification"
 tags: [methodologies, ctoc, workflow, quality, batch]

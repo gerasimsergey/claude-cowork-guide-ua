@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Apprendre avec l'IA — Travailler efficacement avec Cowork"
 description: "Comment construire de bonnes habitudes avec Cowork : profils d'utilisateurs, protocole UVAL adapté aux non-développeurs, plan 30 jours"
 tags: [apprentissage, habitudes, uval, profils, plan-30-jours]

@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Apprendre à travailler avec l'IA"
 description: "Section apprentissage : progresser avec Cowork, construire ses compétences en prompting, mesurer ses progrès"
 tags: [learning, progression, prompting, skills]

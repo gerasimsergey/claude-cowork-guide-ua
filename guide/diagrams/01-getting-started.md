@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Diagrammes — Prise en main"
 description: "5 diagrammes : Cowork vs Chat vs Code, setup workspace, anatomie CTOC, choix du modèle, décision d'usage Cowork"
 tags: [getting-started, ctoc, workspace, decision, modele]

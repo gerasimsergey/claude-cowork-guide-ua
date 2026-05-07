@@ -1,3 +1,5 @@
+---
+---
 # Guide de dépannage Cowork
 
 🌐 **Langues** : [English](04-troubleshooting.md) | [Français](04-troubleshooting.fr.md) | [Українська 🇺🇦](04-troubleshooting.uk.md)

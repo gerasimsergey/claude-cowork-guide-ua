@@ -1,3 +1,5 @@
+---
+---
 # Workflow: Transmission Savoir-Faire
 
 > **Temps estimé**: 2-4 heures (selon complexité métier)

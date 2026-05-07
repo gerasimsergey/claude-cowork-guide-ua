@@ -1,3 +1,5 @@
+---
+---
 # Workflow: Création de Newsletter
 
 > **Temps estimé**: 25 minutes

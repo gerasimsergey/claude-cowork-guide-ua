@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Diagrammes — Dépannage"
 description: "1 diagramme : arbre diagnostic complet quand Cowork ne fonctionne pas"
 tags: [troubleshooting, diagnostic, erreurs, vpn]

@@ -1,3 +1,5 @@
+---
+---
 # Навчання за допомогою ШІ (Learning with AI)
 
 🌐 **Мови**: [English](learning-with-ai.md) | [Français](learning-with-ai.fr.md) | [Українська 🇺🇦](learning-with-ai.uk.md)

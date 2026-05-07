@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Diagrammes — Workflows Production"
 description: "3 diagrammes : planification projet, cycle inventaire, contrôle qualité"
 tags: [production, projet, inventaire, qualite]

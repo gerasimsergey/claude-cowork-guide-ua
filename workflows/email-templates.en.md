@@ -1,3 +1,5 @@
+---
+---
 # Workflow: Email Template Library
 
 > **Estimated time**: 15 minutes setup + 2 min per email after

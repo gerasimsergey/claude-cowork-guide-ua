@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Learning with AI — Working Effectively with Cowork"
 description: "How to build productive habits with Cowork: user profiles, UVAL protocol adapted for non-technical users, 30-day plan"
 tags: [learning, habits, uval, profiles, 30-day-plan]

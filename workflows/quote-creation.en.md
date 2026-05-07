@@ -1,3 +1,5 @@
+---
+---
 # Workflow: Quote Creation
 
 > **Estimated time**: 20 minutes

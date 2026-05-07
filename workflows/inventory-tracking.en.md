@@ -1,3 +1,5 @@
+---
+---
 # Workflow: Inventory Tracking
 
 > **Estimated time**: 20 minutes

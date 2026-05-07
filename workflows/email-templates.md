@@ -1,3 +1,5 @@
+---
+---
 # Workflow: Templates d'Emails Clients
 
 > **Temps estimé**: 10 minutes

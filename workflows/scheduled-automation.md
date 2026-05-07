@@ -1,3 +1,5 @@
+---
+---
 # Automatisation par tâches planifiées
 
 🌐 **Langues** : [Français](scheduled-automation.md) | [English](scheduled-automation.en.md)

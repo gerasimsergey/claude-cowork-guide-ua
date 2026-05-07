@@ -1,3 +1,5 @@
+---
+---
 # Розвиток навичок промптингу (Building Prompting Skills)
 
 🌐 **Мови**: [English](building-prompting-skills.md) | [Français](building-prompting-skills.fr.md) | [Українська 🇺🇦](building-prompting-skills.uk.md)

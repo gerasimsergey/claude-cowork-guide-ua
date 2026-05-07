@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Diagrammes — Workflows Commerciaux"
 description: "3 diagrammes : pipeline prospection SIREN, framework analyse concurrence, cycle de vie client"
 tags: [commercial, prospection, siren, concurrence, client]

@@ -1,3 +1,5 @@
+---
+---
 # Cowork Capabilities
 
 🌐 **Languages**: [English](02-capabilities.md) | [Français](02-capabilities.fr.md) | [Українська 🇺🇦](02-capabilities.uk.md)

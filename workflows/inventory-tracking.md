@@ -1,3 +1,5 @@
+---
+---
 # Workflow: Suivi de Stock et Alertes
 
 > **Temps estimé**: 20 minutes

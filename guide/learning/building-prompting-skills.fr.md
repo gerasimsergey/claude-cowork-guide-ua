@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Développer ses compétences en prompting — du copier-coller à l'écriture autonome"
 description: "Guide de progression du prompting : de l'utilisation des prompts prêts à l'emploi à l'écriture de prompts CTOC complets, avec exercices pratiques et modèle de bibliothèque"
 tags: [apprentissage, prompting, ctoc, compétences, bibliothèque]

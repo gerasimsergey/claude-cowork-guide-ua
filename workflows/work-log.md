@@ -1,3 +1,5 @@
+---
+---
 # Workflow: Journal de Chantier / Activité
 
 > **Temps estimé**: 10 minutes

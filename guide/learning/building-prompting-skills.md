@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Building Prompting Skills — From Copy-Paste to Writing Your Own"
 description: "A progression guide from copying ready-made prompts to writing your own CTOC prompts from scratch, with practical exercises and a prompt library template"
 tags: [learning, prompting, ctoc, skills, library]

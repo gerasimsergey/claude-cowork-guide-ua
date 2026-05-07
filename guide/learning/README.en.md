@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Learning to Work with AI"
 description: "Learning section: progressing with Cowork, building prompting skills, measuring progress"
 tags: [learning, progression, prompting, skills]

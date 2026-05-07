@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Diagrammes — Workflows Administratifs"
 description: "4 diagrammes : pipeline facturation, flux devis-facture, conformité par secteur, escalade relances"
 tags: [admin, facturation, devis, relances, conformite]

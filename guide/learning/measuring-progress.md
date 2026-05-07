@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Measuring Progress with Cowork"
 description: "Concrete metrics and tracking templates to know if your Cowork usage is actually working"
 tags: [progress, metrics, tracking, ROI, adoption]

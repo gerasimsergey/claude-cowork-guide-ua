@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Mesurer ses progrès avec Cowork"
 description: "Métriques concrètes et templates de suivi pour savoir si votre usage de Cowork fonctionne vraiment"
 tags: [progrès, métriques, suivi, ROI, adoption]

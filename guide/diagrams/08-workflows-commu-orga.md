@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Diagrammes — Communication et Organisation"
 description: "4 diagrammes : création contenu, choix template email, organisation fichiers, transfert connaissances"
 tags: [communication, organisation, contenu, email, fichiers]

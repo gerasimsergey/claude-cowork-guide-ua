@@ -1,3 +1,5 @@
+---
+---
 # Démarrage avec Cowork
 
 🌐 **Langues** : [Français](01-getting-started.fr.md) | [English](01-getting-started.md)

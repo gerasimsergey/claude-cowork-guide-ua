@@ -1,4 +1,6 @@
 ---
+---
+---
 title: "Diagrammes — Capacités"
 description: "3 diagrammes : carte des capacités, écosystème 11 plugins, patterns d'automatisation planifiée"
 tags: [capabilities, plugins, features, automation, scheduled]

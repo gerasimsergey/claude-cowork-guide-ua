@@ -1,3 +1,5 @@
+---
+---
 # Навчання з Claude Cowork
 
 🌐 **Мови**: [English](README.en.md) | [Français](README.md) | [Українська 🇺🇦](README.uk.md)

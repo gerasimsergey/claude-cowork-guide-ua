@@ -1,3 +1,5 @@
+---
+---
 # Workflow: Génération de Factures
 
 > **Temps estimé**: 15 minutes
