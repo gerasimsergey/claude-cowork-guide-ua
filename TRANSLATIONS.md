@@ -10,7 +10,7 @@ This file tracks the synchronization status between French, English, and Ukraini
 | **guide/** | English (EN) | `file.md` (EN) + `file.fr.md` (FR) + `file.uk.md` (UA) |
 | **prompts/** | English (EN) | `file.md` (EN) + `file.fr.md` (FR) + `file.uk.md` (UA) |
 | **reference/** | English (EN) | `file.md` (EN) + `file.fr.md` (FR) + `file.uk.md` (UA) |
-| **README** | English (EN) | `README.md` (EN) + `README.fr.md` (FR) + `README.uk.md` (UA) |
+| **README** | Ukrainian (UA) | `README.md` (UA) + `README.en.md` (EN) + `README.fr.md` (FR) |
 
 ## Status Legend
 
@@ -123,9 +123,9 @@ This file tracks the synchronization status between French, English, and Ukraini
 
 ## Root Files (1 file)
 
-| File | Primary | EN Status | FR Status | UA Status | Last Sync |
+| File | Primary | UA Status | EN Status | FR Status | Last Sync |
 |------|---------|-----------|-----------|-----------|-----------|
-| README.md | EN | ✅ Current | ✅ Current | ✅ Current | 2026-05-07 |
+| README.md | UA | ✅ Current | ✅ Current | ✅ Current | 2026-05-07 |
 
 **Summary**: 1/1 UA translations complete (0 pending)
 

@@ -1,20 +1,25 @@
-# Claude Cowork Guide
+---
+title: "Посібник з Claude Cowork"
+description: "Повний посібник з використання десктопного асистента Claude для автоматизації офісних завдань, роботи з файлами та документами"
+---
 
-🌐 **Languages**: [English](README.md) | [Français](README.fr.md) | [Українська 🇺🇦](README.uk.md)
+# Посібник з Claude Cowork
 
-## Table of Contents
+🌐 **Мови**: [English](README.en.md) | [Français](README.fr.md) | [Українська 🇺🇦](README.md)
 
-- [Quick Start](#-quick-start)
-- [Why this guide?](#why-this-guide)
-- [Learning Paths](#-learning-paths)
-- [Content](#-content)
-- [Golden Rules](#-golden-rules)
-- [About](#-about)
-- [Contributing](#-contributing)
-- [License](#-license)
+## Зміст
+
+- [Швидкий старт](#-швидкий-старт)
+- [Чому цей посібник?](#чому-цей-посібник)
+- [Шляхи навчання](#-шляхи-навчання)
+- [Зміст](#-зміст)
+- [Золоті правила](#-золоті-правила)
+- [Про проєкт](#-про-проєкт)
+- [Сприяння розробці](#-сприяння-розробці)
+- [Ліцензія](#-ліцензія)
 
 <p align="center">
-  <strong><a href="https://florianbruniaux.github.io/claude-cowork-guide-landing/">🌐 Official Website</a></strong>
+  <strong><a href="https://florianbruniaux.github.io/claude-cowork-guide-landing/index.html">🌐 Офіційний сайт</a></strong>
 </p>
 
 <p align="center">
@@ -30,265 +35,148 @@
   <img src="https://img.shields.io/badge/Version-1.5.0-orange" alt="Version"/>
 </p>
 
-> Complete guide to Claude's desktop assistant for knowledge workers and small businesses.
-> Invoices, quotes, follow-ups, prospecting — automated without coding.
-
-<p align="center">
-  <a href="https://starmapper.bruniaux.com/FlorianBruniaux/claude-cowork-guide">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://starmapper.bruniaux.com/api/map-image/FlorianBruniaux/claude-cowork-guide?theme=dark" />
-      <source media="(prefers-color-scheme: light)" srcset="https://starmapper.bruniaux.com/api/map-image/FlorianBruniaux/claude-cowork-guide?theme=light" />
-      <img alt="StarMapper — see who stars this repo on a world map" src="https://starmapper.bruniaux.com/api/map-image/FlorianBruniaux/claude-cowork-guide" />
-    </picture>
-  </a>
-</p>
+> Вичерпний посібник з десктопного асистента Claude для фахівців інтелектуальної праці та малого бізнесу.
+> Рахунки, кошториси, нагадування, пошук клієнтів — автоматизовано без кодування.
 
 ---
 
-## ⚡ Quick Start
+## ⚡ Швидкий старт
 
-### 1. Enable Cowork
-Settings → Features → Enable Cowork → Grant folder access
+### 1. Увімкніть Cowork
+Settings → Features → Enable Cowork → Allow access to folders
 
-### 2. First workflow
+### 2. Перший воркфлоу
 ```bash
 mkdir -p ~/Cowork-Workspace/{input,output}
-# Add files to input/, then:
+# Додайте файли в input/, потім :
 ```
-> "Organize the files in ~/Cowork-Workspace/input/ by type"
+> "Organize the files in ~/Cowork-Workspace/input/ by type" (Впорядкуй файли в ~/Cowork-Workspace/input/ за типом)
 
-### 3. Go further
-- 📋 [Cheatsheet](reference/cheatsheet.md) — Print this
-- 📖 [Complete guide](guide/01-getting-started.md) — 10 min
+### 3. Дізнайтеся більше
+- 📋 [Cheatsheet](reference/cheatsheet.ru.md) — Шпаргалка (робоча версія)
+- 📖 [Повний посібник](guide/01-getting-started.uk.md) — 10 хв
 
 <details>
-<summary><strong>Prerequisites</strong></summary>
+<summary><strong>Вимоги</strong></summary>
 
-- **Subscription**: Pro ($20/mo) or Max ($100-200/mo)
-- **Platform**: macOS and Windows
-- **App**: Claude Desktop (latest version)
+- **Підписка**: Pro ($20/міс) або Max ($100-200/міс)
+- **Платформа**: macOS та Windows
+- **Додаток**: Claude Desktop (остання версія)
 
 </details>
 
 ---
 
-## Why this guide?
+## Чому цей посібник?
 
-**The problem**: Official docs are dense. Tutorials get outdated quickly.
-You need ready-to-use workflows, not feature lists.
+**Проблема**: Офіційна документація занадто стисла або технічно складна. Навчальні матеріали швидко стають неактуальними. Вам потрібні готові воркфлоу, а не просто списки функцій.
 
-**This guide**: 28 business workflows, 70 copy-paste prompts, 11 official plugins documented, Desktop Commander guide, Skills/Customize Tab documentation, practical examples.
+**Цей посібник**: 28 бізнес-воркфлоу, 70 промптів для копіювання, 11 задокументованих офіційних плагінів, інструкції для Desktop Commander, документація по Skills та налаштуванню інструментів, практичні приклади.
 
-**Reading time**: Getting started 5 min | Complete guide 45 min
-
----
-
-## 👨‍💻 Are you a developer?
-
-**Claude Code** is the guide for developers — same AI, terminal interface, code execution.
-
-→ [Claude Code Guide](https://github.com/FlorianBruniaux/claude-code-ultimate-guide)
+**Час на ознайомлення**: Старт 5 хв | Повний посібник 45 хв
 
 ---
 
-## 🎯 Learning Paths
+## 👨‍💻 Ви розробник?
 
-<details>
-<summary><strong>Beginner</strong> — First week (5 steps)</summary>
+**Claude Code** — це посібник для розробників: той самий ШІ, але в інтерфейсі термінала, з можливістю виконання коду.
 
-1. [Overview](guide/00-overview.md) — What Cowork can do
-2. [Getting Started](guide/01-getting-started.md) — Installation and first workflow
-3. [File Organization](workflows/file-organization.md) — Practical example
-4. [Prompts Library](prompts/file-ops.md) — 20 ready prompts
-5. [Cheatsheet](reference/cheatsheet.md) — Print this
-
-</details>
-
-<details>
-<summary><strong>Decision Maker</strong> — Overview (4 steps)</summary>
-
-1. [Content](#-content) — Capabilities and resources
-2. [Golden Rules](#-golden-rules) — Essential principles
-3. [Security](guide/03-security.md) — Best practices
-4. [Comparison](reference/comparison.md) — vs Copilot/Gemini/ChatGPT
-
-</details>
-
-<details>
-<summary><strong>Power User</strong> — Deep dive (6 steps)</summary>
-
-1. [Complete Capabilities](guide/02-capabilities.md) — Feature matrix
-2. [All Workflows](workflows/) — 28 step-by-step guides
-
-3. [Troubleshooting](guide/04-troubleshooting.md) — Error resolution
-4. [FAQ](reference/faq.md) — 20+ questions
-5. [Advanced Prompts](prompts/research.md) — Research and synthesis
-6. [Glossary](reference/glossary.md) — Terminology
-
-</details>
+→ [Claude Code Ultimate Guide](https://github.com/FlorianBruniaux/claude-code-ultimate-guide)
 
 ---
 
-## 📚 Content
-
-### Guides (5 files)
-
-| Guide | What you'll learn | Time |
-|-------|-------------------|------|
-| [Overview](guide/00-overview.md) | What Cowork can do | 5 min |
-| [Getting Started](guide/01-getting-started.md) | Installation, first workflow | 10 min |
-| [Capabilities](guide/02-capabilities.md) | What works, what doesn't | 8 min |
-| [Security](guide/03-security.md) | Best practices | 12 min |
-| [Troubleshooting](guide/04-troubleshooting.md) | Common issues | 8 min |
-
-### Plugins (11 official)
-
-Claude Cowork supports 11 official plugins: Asana, Canva, Cloudflare, Figma, GitHub, Google Drive, Jira, Linear, Notion, Sentry, Slack. Plugins extend Cowork's capabilities by connecting to external tools directly.
-
-### Workflows (28 guides)
-
-**📋 Administrative** (6)
-- [Invoice Generation](workflows/invoice-generation.md) — Professional templates
-- [Quote → Invoice](workflows/quote-to-invoice.md) — Automatic transformation
-- [Payment Reminders](workflows/payment-reminders.md) — R1, R2, R3, legal notice
-- [Compliance Checklist](workflows/compliance-checklist.md) — Required documents
-- [Client Follow-up Tracker](workflows/client-followup-tracker.md) — Excel dashboard
-- [Price Comparison](workflows/price-comparison.md) — Multi-supplier with scoring
-
-**💼 Sales & Marketing** (5)
-- [Prospect Research](workflows/prospect-research.md) — Company data, decision makers
-- [Quote Creation](workflows/quote-creation.md) — Detailed with variants
-- [Competitor Analysis](workflows/competitor-analysis.md) — Pricing, offers, reviews
-- [Presentation Slides](workflows/presentation-slides.md) — PowerPoint/Keynote
-- [Newsletter Creation](workflows/newsletter-creation.md) — Responsive HTML
-
-**🔧 Operations** (5)
-- [Project Planning](workflows/project-planning.md) — Gantt, milestones, dependencies
-- [Inventory Tracking](workflows/inventory-tracking.md) — Restocking alerts
-- [Work Log](workflows/work-log.md) — Compliant documentation
-- [Quality Checklist](workflows/quality-checklist.md) — Standardized lists
-- [Supplier Orders](workflows/supplier-order.md) — Optimized procurement
-
-**📣 Communication** (6)
-- [Social Media Posts](workflows/social-media-posts.md) — LinkedIn/Facebook/Instagram
-- [Email Templates](workflows/email-templates.md) — Reusable library
-- [Review Responses](workflows/review-response.md) — Google/Facebook
-- [Website Audit](workflows/website-audit.md) — Site diagnosis and action plan
-- [Knowledge Transfer](workflows/knowledge-transfer.md) — Training, succession
-
-**🗂️ Organization** (6)
-- [File Organization](workflows/file-organization.md) — Automatic folder sorting
-- [Expense Tracking](workflows/expense-tracking.md) — Receipts to Excel
-- [Meeting Prep](workflows/meeting-prep.md) — Client/supplier briefings
-- [Scheduled Automation](workflows/scheduled-automation.md) — Recurring task automation
-- [Memory Setup](workflows/memory-setup.md) — Cross-session memory with Desktop Commander
-
-→ [All workflows](workflows/README.md)
+## 🎯 Шляхи навчання
 
 <details>
-<summary><strong>Ready-to-use prompts</strong> (70)</summary>
+<summary><strong>Новачок</strong> — Перший тиждень (5 кроків)</summary>
 
-| Collection | Count | Examples |
-|------------|-------|----------|
-| [Files](prompts/file-ops.md) | 20 | Organize, rename, deduplicate |
-| [Documents](prompts/document-creation.md) | 15 | Reports, summaries, Excel |
-| [Extraction](prompts/data-extraction.md) | 15 | PDF, OCR, images |
-| [Research](prompts/research.md) | 17 | Web, synthesis |
+1. [Огляд](guide/00-overview.uk.md) — Що може Cowork
+2. [Початок роботи](guide/01-getting-started.uk.md) — Встановлення та перший воркфлоу
+3. [Організація файлів](workflows/file-organization.ru.md) — Практичний приклад
+4. [Бібліотека промптів](prompts/file-ops.ru.md) — 20 готових запитів
+5. [Шпаргалка](reference/cheatsheet.ru.md) — Для друку
 
 </details>
 
 <details>
-<summary><strong>References</strong></summary>
+<summary><strong>Керівник</strong> — Загальна картина (4 кроки)</summary>
 
-| Resource | Description |
-|----------|-------------|
-| [Cheatsheet](reference/cheatsheet.md) | 1-page printable |
-| [Comparison](reference/comparison.md) | vs Copilot, Gemini, ChatGPT |
-| [FAQ](reference/faq.md) | 20+ questions |
-| [Glossary](reference/glossary.md) | Cowork terminology |
+1. [Зміст](#-зміст) — Можливості та ресурси
+2. [Золоті правила](#-золоті-правила) — Основні принципи
+3. [Безпека](guide/03-security.uk.md) — Найкращі практики
+4. [Порівняння](reference/comparison.uk.md) — vs Copilot/Gemini/ChatGPT
+
+</details>
+
+<details>
+<summary><strong>Просунутий користувач</strong> — Глибоке занурення (6 кроків)</summary>
+
+1. [Повні можливості](guide/02-capabilities.uk.md) — Матриця функцій
+2. [Усі воркфлоу](workflows/) — 28 покрокових інструкцій
+3. [Усунення несправностей](guide/04-troubleshooting.uk.md) — Вирішення помилок
+4. [FAQ](reference/faq.uk.md) — 20+ запитань
+5. [Просунуті промпти](prompts/research.ru.md) — Дослідження та синтез
+6. [Глосарій](reference/glossary.ru.md) — Термінологія
 
 </details>
 
 ---
 
-## 🔑 Golden Rules
+## 📚 Зміст
 
-1. **Always review the plan** before approval — Cowork proposes, you decide
-2. **Dedicated folder only** — Never grant access to Documents/Desktop/system
-3. **No credentials** — Keep passwords and API keys elsewhere
-4. **Verify sources** — Downloaded files may contain malicious prompts
-5. **Disconnect VPN** — Issue #1, breaks VM networking
-6. **Backup before deletion** — No undo possible
+### Посібники (5 файлів)
 
-> See [Security Guide](guide/03-security.md) for detailed practices.
+| Посібник | Чого ви навчитеся | Час |
+|-------|------------------------|-------|
+| [Огляд](guide/00-overview.uk.md) | Що може і чого не може робити Cowork | 5 хв |
+| [Початок роботи](guide/01-getting-started.uk.md) | Встановлення, перший воркфлоу | 10 хв |
+| [Можливості](guide/02-capabilities.uk.md) | Матриця функцій та обмежень | 8 хв |
+| [Безпека](guide/03-security.uk.md) | Найкращі практики захисту даних | 12 хв |
+| [Усунення несправностей](guide/04-troubleshooting.uk.md) | Вирішення типових проблем | 8 хв |
 
----
+### Плагіни (11 офіційних)
 
-## 🌍 About
+Claude Cowork підтримує 11 офіційних плагінів: Asana, Canva, Cloudflare, Figma, GitHub, Google Drive, Jira, Linear, Notion, Sentry та Slack. Плагіни розширюють можливості Cowork, підключаючись безпосередньо до зовнішніх сервісів.
 
-<details>
-<summary><strong>Origins & Philosophy</strong></summary>
+### Воркфлоу (28 посібників)
 
-This guide exists because official docs are dense and tutorials get outdated quickly.
+→ [Усі воркфлоу](workflows/README.uk.md)
 
-**Philosophy**: Practical over theoretical. Real workflows, not feature lists.
+### Промпти для копіювання (70)
 
-**Focus v1.1**: Small businesses and knowledge workers worldwide.
-
-**Created with Claude Code**. Maintained by [Florian BRUNIAUX](https://github.com/FlorianBruniaux).
-
-**Related**: [Claude Code Guide](https://github.com/FlorianBruniaux/claude-code-ultimate-guide) — For developers
-
-</details>
-
-<details>
-<summary><strong>Privacy</strong></summary>
-
-Cowork sends prompts, files, and results to Anthropic servers.
-
-| Plan | Retention | Training |
-|------|-----------|----------|
-| Default | 5 years | Yes |
-| Opt-out | 30 days | No |
-| Enterprise | 0 | No |
-
-**Action**: [Disable training](https://claude.ai/settings/data-privacy-controls)
-
-</details>
-
-<details>
-<summary><strong>Current Limitations</strong> (February 2026)</summary>
-
-**Platform**: macOS and Windows
-
-**Known issues**:
-- VPN incompatible (VM routing conflict)
-- Usage resets every 5 hours
-- Pro: ~1-1.5h intensive use before limit
-- OCR: ~97% fields, ~63% line items accuracy
-
-**Status**: Research preview — expect bugs
-
-</details>
+| Колекція | Кількість | Приклади |
+|------------|--------|----------|
+| [Файли](prompts/file-ops.ru.md) | 20 | Організація, перейменування, видалення дублікатів |
+| [Документи](prompts/document-creation.ru.md) | 15 | Звіти, резюме, Excel |
+| [Вилучення даних](prompts/data-extraction.ru.md) | 15 | PDF, OCR, зображення |
+| [Дослідження](prompts/research.ru.md) | 17 | Веб-пошук, синтез інформації |
 
 ---
 
-## 🤝 Contributing
+## 🔑 Золоті правила
 
-Found an error? Have a workflow to share?
-
-**How to help**: ⭐ Star the repo • 🐛 Report issues • 📝 Submit workflows
-
-→ [CONTRIBUTING.md](./CONTRIBUTING.md) | [Open an issue](https://github.com/FlorianBruniaux/claude-cowork-guide/issues)
-
----
-
-## 📄 License
-
-Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
-
-**Follow**: [Releases](https://github.com/FlorianBruniaux/claude-cowork-guide/releases) | [Discussions](https://github.com/FlorianBruniaux/claude-cowork-guide/discussions) | [LinkedIn](https://www.linkedin.com/in/florian-bruniaux-43408b83/)
+1. **Завжди перевіряйте план** перед схваленням — Cowork пропонує, ви вирішуєте.
+2. **Тільки виділена папка** — ніколи не надавайте доступ до всього диска чи системних папок.
+3. **Жодних паролів** — тримайте облікові дані та API-ключі поза межами робочої папки.
+4. **Перевіряйте джерела** — завантажені файли можуть містити шкідливі інструкції.
+5. **Вимикайте VPN** — головна причина помилок підключення до віртуальної машини.
+6. **Резервне копіювання** — видалення файлів у Cowork є безповоротним.
 
 ---
 
-*Version 1.5.0 | February 2026 | Part of [Claude Code Ultimate Guide](../README.md) | Crafted with Claude*
+## 🌍 Про проєкт
+
+Цей посібник створено для того, щоб зробити роботу з Claude Cowork простою та ефективною.
+
+**Створено за допомогою Claude Code**. Підтримується [Florian BRUNIAUX](https://github.com/FlorianBruniaux).
+
+**Українська локалізація**: [Serhii (MacPlus Software)](https://macplus-software.com) — адаптовано для українських користувачів з акцентом на міжнародні стандарти.
+
+---
+
+## 📄 Ліцензія
+
+Розповсюджується на умовах ліцензії [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+
+---
+*Версія 1.5.0 | Лютий 2026 | Створено з Claude*
