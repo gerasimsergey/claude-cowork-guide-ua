@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'uk' }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% seo %}
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container">
+            <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+            <nav class="site-nav">
+                <div class="trigger">
+                    <a class="page-link" href="{{ '/guide/00-overview.uk.html' | relative_url }}">Посібник</a>
+                    <a class="page-link" href="{{ '/workflows/README.uk.html' | relative_url }}">Процеси</a>
+                    <a class="page-link" href="{{ '/reference/faq.uk.html' | relative_url }}">FAQ</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content" aria-label="Content">
+        <div class="container">
+            {{ content }}
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}. Локалізація для України.</p>
+        </div>
+    </footer>
+</body>
+</html>

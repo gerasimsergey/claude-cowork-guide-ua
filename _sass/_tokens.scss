@@ -1,0 +1,116 @@
+// ─────────────────────────────────────────────────────────────
+// Tokens — Editorial Docs
+// Warm cream background, espresso text, terracotta accent.
+// All colors original; safe under any brand guideline.
+// ─────────────────────────────────────────────────────────────
+
+:root {
+  // ── Surfaces (warm neutrals) ─────────────────────────────
+  --color-bg:            #faf7f0;   // page cream
+  --color-bg-elevated:   #f4efe3;   // sidebar / sunken panels
+  --color-bg-inset:      #ede6d4;   // code chip, table stripes
+  --color-bg-overlay:    rgba(42, 37, 32, 0.04);
+
+  // ── Ink ─────────────────────────────────────────────────
+  --color-ink:           #2a2520;   // body text (espresso)
+  --color-ink-soft:      #5a5048;   // captions, meta
+  --color-ink-muted:     #8a7f73;   // tertiary
+  --color-ink-faint:     #b8ad9e;   // borders, dividers feel
+
+  // ── Lines ───────────────────────────────────────────────
+  --color-rule:          #e3dac6;   // standard hairline
+  --color-rule-strong:   #c9bfa8;   // emphasized rule
+
+  // ── Accent (terracotta, oklch for harmony) ──────────────
+  --color-accent:        oklch(0.58 0.13 38);   // terracotta
+  --color-accent-soft:   oklch(0.92 0.04 38);   // tinted bg
+  --color-accent-ink:    oklch(0.42 0.12 38);   // pressed/visited
+
+  // ── Semantic callouts (muted, all share chroma ~0.08) ──
+  --color-note:          oklch(0.55 0.08 240);  // blue-ish
+  --color-note-bg:       oklch(0.95 0.02 240);
+  --color-warn:          oklch(0.58 0.12 60);   // amber
+  --color-warn-bg:       oklch(0.94 0.04 60);
+  --color-tip:           oklch(0.52 0.10 155);  // sage
+  --color-tip-bg:        oklch(0.94 0.03 155);
+  --color-danger:        oklch(0.52 0.15 25);   // red-clay
+  --color-danger-bg:     oklch(0.94 0.04 25);
+
+  // ── Type ────────────────────────────────────────────────
+  --font-serif:  "Source Serif 4", "Source Serif Pro", Charter, "Iowan Old Style",
+                 "Apple Garamond", Georgia, "Times New Roman", serif;
+  --font-sans:   "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 system-ui, sans-serif;
+  --font-mono:   "JetBrains Mono", "SF Mono", "Cascadia Mono", Menlo,
+                 Consolas, monospace;
+
+  // Type scale (editorial — tighter ratio for docs)
+  --fs-xs:    0.8125rem;   // 13
+  --fs-sm:    0.875rem;    // 14
+  --fs-base:  1.0625rem;   // 17 — body, denser than 18 but softer than 16
+  --fs-md:    1.1875rem;   // 19
+  --fs-lg:    1.4375rem;   // 23
+  --fs-xl:    1.75rem;     // 28
+  --fs-2xl:   2.25rem;     // 36
+  --fs-3xl:   3rem;        // 48 — h1
+
+  --lh-tight:  1.18;
+  --lh-snug:   1.35;
+  --lh-body:   1.65;
+  --lh-prose:  1.72;
+
+  // ── Spacing (4px base, comfortable) ────────────────────
+  --sp-1:  0.25rem;
+  --sp-2:  0.5rem;
+  --sp-3:  0.75rem;
+  --sp-4:  1rem;
+  --sp-5:  1.5rem;
+  --sp-6:  2rem;
+  --sp-7:  3rem;
+  --sp-8:  4rem;
+  --sp-9:  6rem;
+
+  // ── Radii / shadows (soft, paper-like) ─────────────────
+  --radius-sm: 3px;
+  --radius-md: 6px;
+  --radius-lg: 10px;
+
+  --shadow-sm: 0 1px 0 rgba(42, 37, 32, 0.04),
+               0 1px 2px rgba(42, 37, 32, 0.05);
+  --shadow-md: 0 2px 4px rgba(42, 37, 32, 0.06),
+               0 8px 24px rgba(42, 37, 32, 0.08);
+
+  // ── Layout ──────────────────────────────────────────────
+  --layout-sidebar:  260px;
+  --layout-toc:      220px;
+  --layout-content:  720px;
+  --layout-gutter:   var(--sp-7);
+  --layout-max:      1280px;
+
+  // ── Motion ──────────────────────────────────────────────
+  --ease:        cubic-bezier(0.2, 0.8, 0.2, 1);
+  --dur-fast:    120ms;
+  --dur:         200ms;
+}
+
+// ── Optional dark mode (auto) ────────────────────────────
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg:          #1c1814;
+    --color-bg-elevated: #221d18;
+    --color-bg-inset:    #2a2520;
+    --color-bg-overlay:  rgba(250, 247, 240, 0.04);
+
+    --color-ink:         #ede6d4;
+    --color-ink-soft:    #b8ad9e;
+    --color-ink-muted:   #8a7f73;
+    --color-ink-faint:   #5a5048;
+
+    --color-rule:        #3a3530;
+    --color-rule-strong: #4d4640;
+
+    --color-accent:      oklch(0.72 0.13 38);
+    --color-accent-soft: oklch(0.30 0.06 38);
+    --color-accent-ink:  oklch(0.85 0.10 38);
+  }
+}

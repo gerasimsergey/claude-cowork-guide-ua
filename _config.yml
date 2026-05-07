@@ -1,0 +1,48 @@
+title: "Claude Cowork Guide 🇺🇦"
+email: contact@macplus-software.com
+description: >-
+  Повний посібник з використання Claude Cowork українською мовою. 
+  Автоматизація бізнесу за допомогою ШІ.
+baseurl: "" # залиште порожнім для основного домену
+url: "https://claudcodeua.link"
+author: "Serhii (MacPlus Software)"
+
+# Налаштування мов
+languages: ["uk", "en", "fr"]
+
+# Markdown налаштування
+markdown: kramdown
+highlighter: rouge
+
+# Колекції для автоматичного меню
+collections:
+  guide:
+    output: true
+    permalink: /guide/:path/
+  workflows:
+    output: true
+    permalink: /workflows/:path/
+
+# Виключення технічних файлів зі збірки
+exclude:
+  - Dockerfile
+  - docker-compose.yml
+  - scripts/
+  - tools/
+  - .agent/
+  - .github/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"

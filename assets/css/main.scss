@@ -1,0 +1,51 @@
+---
+# Основний файл стилів
+---
+
+@import "tokens";
+@import "base";
+@import "components";
+@import "layout";
+
+/* Додаткові кастомні стилі для посібника */
+.main-content {
+    padding: 2rem 0;
+    min-height: 80vh;
+}
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.site-title {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.site-nav {
+    float: right;
+}
+
+.page-link {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+}
+
+.page-link:hover {
+    color: #007AFF;
+}
