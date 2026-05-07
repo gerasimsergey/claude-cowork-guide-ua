@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: 'uk' }}">
+<html lang="{{ page.lang | default: 'uk' }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,27 +11,56 @@
 </head>
 <body>
     <header class="site-header">
-        <div class="container">
+        <div class="container flex-header">
             <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
             <nav class="site-nav">
-                <div class="trigger">
-                    <a class="page-link" href="{{ '/guide/00-overview.uk.html' | relative_url }}">Посібник</a>
-                    <a class="page-link" href="{{ '/workflows/README.uk.html' | relative_url }}">Процеси</a>
-                    <a class="page-link" href="{{ '/reference/faq.uk.html' | relative_url }}">FAQ</a>
-                </div>
+                <a class="page-link" href="{{ '/en/' | relative_url }}">EN</a>
+                <a class="page-link" href="{{ '/fr/' | relative_url }}">FR</a>
+                <a class="page-link" href="https://github.com/gerasimsergey/claude-cowork-guide-ua">GitHub</a>
             </nav>
         </div>
     </header>
 
-    <main class="main-content" aria-label="Content">
-        <div class="container">
+    <div class="container site-layout">
+        <aside class="sidebar">
+            <nav class="sidebar-nav">
+                <p class="nav-title">📚 Посібник</p>
+                <ul>
+                    <li><a href="{{ '/guide/00-overview.uk.html' | relative_url }}">Огляд</a></li>
+                    <li><a href="{{ '/guide/01-getting-started.uk.html' | relative_url }}">Початок роботи</a></li>
+                    <li><a href="{{ '/guide/02-capabilities.uk.html' | relative_url }}">Можливості</a></li>
+                    <li><a href="{{ '/guide/03-security.uk.html' | relative_url }}">Безпека</a></li>
+                </ul>
+
+                <p class="nav-title">🚀 Процеси</p>
+                <ul>
+                    <li><a href="{{ '/workflows/README.uk.html' | relative_url }}">Всі воркфлоу</a></li>
+                    <li><a href="{{ '/workflows/invoice-generation.uk.html' | relative_url }}">Інвойси</a></li>
+                    <li><a href="{{ '/workflows/market-research.uk.html' | relative_url }}">Аналіз ринку</a></li>
+                </ul>
+
+                <p class="nav-title">✍️ Промпти</p>
+                <ul>
+                    <li><a href="{{ '/prompts/README.uk.html' | relative_url }}">Бібліотека</a></li>
+                    <li><a href="{{ '/prompts/file-ops.uk.html' | relative_url }}">Файли</a></li>
+                </ul>
+
+                <p class="nav-title">📖 Довідка</p>
+                <ul>
+                    <li><a href="{{ '/reference/faq.uk.html' | relative_url }}">FAQ</a></li>
+                    <li><a href="{{ '/reference/glossary.uk.html' | relative_url }}">Глосарій</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content" aria-label="Content">
             {{ content }}
-        </div>
-    </main>
+        </main>
+    </div>
 
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}. Локалізація для України.</p>
+            <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}.</p>
         </div>
     </footer>
 </body>
