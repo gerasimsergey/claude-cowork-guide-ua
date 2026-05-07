@@ -25,3 +25,23 @@ claudedocs/
 
 # Whitepapers (work in progress, not public yet)
 whitepapers/
+
+# Localization tools
+LOCALIZATION_GUIDE.md
+LOCALIZATION_LOG.uk.md
+audit-prompt.md
+IDEAS.md
+TRANSLATIONS.md
+
+# Security & Credentials
+.env*
+*.pem
+*.p12
+*.pfx
+*.key
+secrets/
+credentials/
+
+# Graphify output
+graphify-out/
+
