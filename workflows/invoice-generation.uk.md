@@ -258,3 +258,7 @@ Johnson Plumbing LLC, 456 Main Avenue, New York, NY 10002
 ---
 
 *[Назад до воркфлоу](README.uk.md) | [Документація Cowork](../README.md)*
+---
+**Локалізація**: [Serhii (MacPlus Software)](https://macplus-software.com)
+*Остання синхронізація: Травень 2026*
+

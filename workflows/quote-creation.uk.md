@@ -321,3 +321,7 @@ PDF: ~/Cowork-Workspace/output/quotes/Q2026-018-Johnson.pdf
 ---
 
 *[Назад до воркфлоу](README.uk.md) | [Документація Cowork](../README.md)*
+---
+**Локалізація**: [Serhii (MacPlus Software)](https://macplus-software.com)
+*Остання синхронізація: Травень 2026*
+

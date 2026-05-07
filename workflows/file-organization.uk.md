@@ -269,3 +269,7 @@ chmod 644 ~/Cowork-Workspace/input/*
 ---
 
 *[Назад до воркфлоу](README.uk.md) | [Документація Cowork](../README.md)*
+---
+**Локалізація**: [Serhii (MacPlus Software)](https://macplus-software.com)
+*Остання синхронізація: Травень 2026*
+

@@ -633,3 +633,7 @@ PDF звіт: ~/Cowork-Workspace/output/tracking/pipeline-analysis-[month].pdf
 ---
 
 *[Назад до воркфлоу](README.uk.md) | [Документація Cowork](../README.md)*
+---
+**Локалізація**: [Serhii (MacPlus Software)](https://macplus-software.com)
+*Остання синхронізація: Травень 2026*
+
